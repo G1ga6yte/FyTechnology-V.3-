@@ -1,0 +1,45 @@
+.G-flex-between{
+  display: flex;
+  justify-content: space-between;
+}
+.G-flex-center{
+  display: flex;
+  justify-content: center;
+}
+.G-flex-wrap{
+  display: flex;
+  flex-wrap: wrap;
+}
+.G-flex-column{
+  display: flex;
+  flex-direction: column;
+}
+.G-alignItems-center{
+  display: flex;
+  align-items: center;
+}
+.G-Text-center{
+  text-align: center;
+}
+
+.G-transition10{
+  transition: 1s ease-in-out all;
+}
+.G-transition05{
+  transition: 0.5s ease-in-out all;
+}
+.G-transition03{
+  transition: 0.3s ease-in-out all;
+}
+
+.G-container{
+  max-width: 1920px;
+  width: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+  display: block;
+}
+
+
+//   cursor: url(../cursorH.svg), auto;
+

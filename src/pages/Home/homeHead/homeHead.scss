@@ -1,0 +1,103 @@
+@import "../../../source/styles/mixin.scss";
+
+.HomeHead{
+  max-width: 1440px;
+    width: 100%;
+  padding: 0 10px;
+  position: relative;
+  z-index: 3;
+  margin: 250px auto;
+  @include screen($wide-l){
+    margin: 200px auto;
+  }
+  @include screen($tablet-l){
+    margin: 170px auto;
+  }
+  @include screen($wide-s){
+    margin: 100px auto;
+  }
+
+  .header{
+    font-size: 104px;
+    font-family: 'PlexMono-Medium', sans-serif;
+    color: black;
+    transition: 1s ease-in-out;
+    white-space: nowrap;
+    letter-spacing: -3px;
+    @include screen($wide-l){
+      font-size: 90px;
+    }
+    @include screen($desktop){
+      font-size: 80px;
+      white-space: unset;
+    }
+    @include screen($tablet-l){
+      font-size: 64px;
+    }
+    @include screen($tablet){
+      font-size: 40px;
+    }
+    &:nth-child(1){
+      animation: fromRight 10s linear;
+    }
+    &:nth-child(2){
+      animation: fromLeft 10s linear;
+    }
+  }
+  .prg{
+    margin-top: 24px;
+    font-size: 28px;
+    font-family: 'PlexMono-Regular', sans-serif;
+    color: black;
+    max-width: 60%;
+    line-height: 36px;
+    letter-spacing: 0 !important;
+    animation: fromRight 10s;
+    @include screen($wide-l){
+      font-size: 26px;
+    }
+    @include screen($tablet-l){
+      max-width: 80%;
+    }
+    @include screen($tablet){
+      max-width: 100%;
+    }
+  }
+}
+
+@keyframes fromRight {
+  0%{
+    transform: translateX(100%);
+    opacity: 0;
+    letter-spacing: 10px;
+  }
+  85%{
+    transform: translateX(100%);
+    opacity: 0;
+    letter-spacing: 10px;
+  }
+  100%{
+    transform: translateX(0);
+    opacity: 1;
+    letter-spacing: -3px;
+  }
+}
+
+@keyframes fromLeft {
+  0%{
+    transform: translateX(-100%);
+    opacity: 0;
+    letter-spacing: 10px;
+  }
+  85%{
+    transform: translateX(-100%);
+    opacity: 0;
+    letter-spacing: 10px;
+  }
+  100%{
+    transform: translateX(0);
+    opacity: 1;
+    letter-spacing: -3px;
+  }
+}
+

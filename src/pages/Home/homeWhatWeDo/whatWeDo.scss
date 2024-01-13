@@ -1,0 +1,193 @@
+@import "../../../source/styles/mixin.scss";
+
+.WhatWeDo {
+  width: 90%;
+  position: relative;
+  margin: 0 auto;
+  padding: 100px 10px;
+
+  .header {
+    position: relative;
+    z-index: 2;
+    font-size: 80px;
+    color: black;
+    font-family: 'PlexMono-Regular', sans-serif;
+    margin-bottom: 16px;
+    transition: 1s ease-in-out;
+  }
+
+  .skillsMainCont{
+    position: relative;
+    z-index: 2;
+    border-radius: 16px;
+    border: 1px solid #EAEAEA;
+    background: #FAFAFA;
+    padding: 48px;
+
+    .links{
+
+      .link{
+        color: #B8B8B8;
+        font-size: 20px;
+        font-family: 'PlexMono-Regular', sans-serif;
+        margin-bottom: 16px;
+        line-height: 26px;
+        position: relative;
+        transition: 0.2s ease-in-out;
+        cursor: pointer;
+        &:hover{
+          color: black;
+          &::before{
+            background-color: black;
+          }
+        }
+        &::before{
+          transition: 0.2s ease-in-out;
+          content: ' ';
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          position: absolute;
+          left: -18px;
+          top: 8px;
+        }
+      }
+      .active{
+        color: black !important;
+        &:before{
+          background-color: black !important;
+        }
+      }
+    }
+    .imageBlock{
+      width: 35%;
+      position: relative;
+      img{
+        border-radius: 12px;
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+    .mainOfLinks{
+      height: available;
+      position: relative;
+      width: 25%;
+
+      .mainHeader{
+        font-size: 20px;
+        color: black;
+        font-family: 'PlexMono-Medium', sans-serif;
+        margin-bottom: 24px;
+      }
+      .mainEl{
+        margin-bottom: 8px;
+        font-size: 20px;
+        font-family: 'PlexMono-Regular', sans-serif;
+        color: black;
+        line-height: 24px;
+      }
+      .mainSkill{
+        padding: 8px;
+        font-size: 20px;
+        color: #cecece;
+        font-family: 'PlexMono-Regular', sans-serif;
+        margin-bottom: 8px;
+        border-radius: 12px;
+        border: 1px solid #CECECE;
+        width: max-content;
+      }
+      .marginTop{
+        margin-top: 24px;
+      }
+
+
+      .FindOutMore{
+        display: flex;
+        text-decoration: none;
+        padding: 8px 16px;
+        border-radius: 20px;
+        background-color: black;
+        cursor: pointer;
+        position: absolute;
+        bottom: 0;
+        @include screen($mobile-m){
+          padding: 6px 10px;
+          border-radius: 16px;
+        }
+
+
+        &:hover{
+          .letter{
+            &:nth-child(3n+1){
+              transition: 0.4s ease-in-out all;
+              transform: translateY(-100%);
+            }
+            &:nth-child(3n+2){
+              transition: 0.2s ease-in-out all;
+              transform: translateY(-100%);
+            }
+            &:nth-child(3n+3){
+              transition: 0.6s ease-in-out all;
+              transform: translateY(-100%);
+            }
+          }
+          .arrowBlock{
+            img{
+              transition: 1s ease-in-out;
+              transform: translateX(-100%);
+            }
+          }
+
+
+        }
+        .textBlock{
+          height: 35px;
+          overflow: hidden;
+
+          .textLine{
+
+
+            .letter{
+              font-size: 24px;
+              font-family: 'PlexMono-Medium', sans-serif;
+              color: white;
+              line-height: 35px;
+              @include screen($mobile-m){
+                font-size: 20px;
+              }
+
+              &:nth-child(3n+1){
+                transition: 0.4s ease-in-out all;
+              }
+              &:nth-child(3n+2){
+                transition: 0.2s ease-in-out all;
+              }
+              &:nth-child(3n+3){
+                transition: 0.6s ease-in-out all;
+              }
+            }
+            .space{
+              width: 15px;
+            }
+          }
+        }
+        .middleLine{
+          margin: 0 8px;
+          background-color: #383838;
+          width: 2px;
+          height: 35px;
+        }
+        .arrowBlock{
+          display: flex;
+          width: 24px;
+          height: 24px;
+          overflow: hidden;
+        }
+      }
+    }
+
+  }
+
+}

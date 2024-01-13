@@ -1,0 +1,258 @@
+@import "../../source/styles/mixin.scss";
+.Home{
+  position: relative;
+
+  .bckLines{
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+
+    .lineBckBlock {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 70%;
+      overflow: hidden;
+      background-color: rgba(68, 68, 68, 0.3);
+      padding: 0 1px 1px 0;
+      border-radius: 0 0 199px 0;
+      @include screen($wide-l){
+        border-radius: 0 0 150px 0;
+      }
+
+      &:nth-child(1){
+        z-index: 10;
+        .line{
+          height: 720px;
+          @include screen($wide-l){
+            height: 540px;
+          }
+        }
+        .lightingBlock{
+          animation: progressLineS 8s;
+
+          @include screen($wide-l){
+            animation: progressLineSW 8s;
+          }
+        }
+      }
+      &:nth-child(2){
+        z-index: 9;
+        width: 75%;
+        .line{
+          height: 800px;
+          @include screen($wide-l){
+            height: 600px;
+          }
+
+        }
+        .lightingBlock{
+          animation: progressLineM 11s;
+          @include screen($wide-l){
+            animation: progressLineMW 11s;
+          }
+        }
+      }
+      &:nth-child(3){
+        z-index: 8;
+        width: 80%;
+        .line{
+          height: 880px;
+          @include screen($wide-l){
+            height: 660px;
+          }
+
+        }
+        .lightingBlock{
+          animation: progressLineL 14s;
+          @include screen($wide-l){
+            animation: progressLineLW 14s;
+          }
+        }
+      }
+
+      .line {
+        position: relative;
+        z-index: 11;
+        width: 100%;
+        height: 750px;
+        border-radius: 0 0 199px 0;
+        background: white;
+        overflow: hidden;
+        @include screen($wide-l){
+          height: 560px;
+          border-radius: 0 0 150px 0;
+
+        }
+
+      }
+
+      .lightingBlock {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        top: -100px;
+        right: -50px;
+        border-radius: 50%;
+        background-color: #0038FF;
+        filter: drop-shadow(0px 0px 5px rgba(0, 56, 255, 1.8));
+        animation-iteration-count: infinite !important;
+        animation-timing-function: linear !important;
+      }
+    }
+  }
+  .spline{
+    z-index: 2;
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    animation: fromRight 10s linear;
+  }
+
+}
+
+@keyframes fromRight {
+  0%{
+    transform: translateX(150%);
+  }
+  85%{
+    transform: translateX(150%);
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
+
+@keyframes progressLineS {
+  0% {
+    transform: translate(0, -50px);
+  }
+  12% {
+    transform: translate(0, 670px);
+    @include screen($wide-l){
+      transform: translate(0, 500px);
+    }
+  }
+  15% {
+    transform: translate(-100px, 770px);
+    @include screen($wide-l){
+      transform: translate(-100px, 575px);
+    }
+  }
+  25% {
+    transform: translate(-750px, 770px);
+    @include screen($wide-l){
+      transform: translate(-750px, 575px);
+    }
+  }
+  37% {
+    transform: translate(-1500px, 770px);
+    @include screen($wide-l){
+      transform: translate(-1500px, 575px);
+    }
+  }
+  0% {
+    transform: translate(0, -50px);
+  }
+}
+@keyframes progressLineSW {
+  0% {
+    transform: translate(0, -50px);
+  }
+  12% {
+      transform: translate(0, 500px);
+  }
+  15% {
+      transform: translate(-100px, 575px);
+  }
+  25% {
+      transform: translate(-750px, 575px);
+  }
+  37% {
+      transform: translate(-1500px, 575px);
+  }
+  0% {
+    transform: translate(0, -50px);
+  }
+}
+@keyframes progressLineM {
+  60% {
+    transform: translate(0, -50px);
+  }
+  72% {
+    transform: translate(0, 750px);
+  }
+  75% {
+    transform: translate(-100px, 850px);
+  }
+  85% {
+    transform: translate(-800px, 850px);
+  }
+  97% {
+    transform: translate(-1600px, 850px);
+  }
+  0% {
+    transform: translate(0, -50px);
+  }
+}
+@keyframes progressLineMW {
+  60% {
+    transform: translate(0, -50px);
+  }
+  72% {
+    transform: translate(0, 562px);
+  }
+  75% {
+    transform: translate(-100px, 635px);
+  }
+  85% {
+    transform: translate(-800px, 635px);
+  }
+  97% {
+    transform: translate(-1600px, 635px);
+  }
+  0% {
+    transform: translate(0, -50px);
+  }
+}
+@keyframes progressLineL {
+  30% {
+    transform: translate(0, -50px);
+  }
+  42% {
+    transform: translate(0, 830px);
+  }
+  45% {
+    transform: translate(-100px, 930px);
+  }
+  55% {
+    transform: translate(-850px, 930px);
+  }
+  67% {
+    transform: translate(-1700px, 930px);
+  }
+  0% {
+    transform: translate(0, -50px);
+  }
+}
+@keyframes progressLineLW {
+  30% {
+    transform: translate(0, -50px);
+  }
+  42% {
+    transform: translate(0, 620px);
+  }
+  45% {
+    transform: translate(-100px, 700px);
+  }
+  55% {
+    transform: translate(-850px, 700px);
+  }
+  67% {
+    transform: translate(-1700px, 700px);
+  }
+  0% {
+    transform: translate(0, -50px);
+  }
+}
