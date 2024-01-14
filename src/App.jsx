@@ -6,6 +6,7 @@ import Home from "./pages/Home/home.jsx";
 import Navigation from "./pages/navigation/navigation";
 import VideoPlay from "./source/videos/VideoPlayer";
 import {useCartContext} from "./pages/Home/homeHead/CartContext";
+import Footer from "./pages/footer/footer";
 
 function App() {
   const [appSettings, setAppSettings] = useState({
@@ -36,6 +37,7 @@ function App() {
            <Route path="/home" element={<Home/>} /> // Home
 
          </Routes>
+         <Footer/>
        </div>
     )
   }

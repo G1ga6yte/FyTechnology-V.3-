@@ -40,6 +40,38 @@
   display: block;
 }
 
+.scrollAnimation{
+  animation-name: scrollAnim;
+  animation-duration: 1s;
+}
+
+@keyframes scrollAnim {
+  0%{
+    transform: translateX(-75%);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+.scrollAnimation2{
+  animation-name: scrollAnim2;
+  animation-duration: 1s;
+}
+
+@keyframes scrollAnim2 {
+  0%{
+    transform: translateX(75%);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 
 //   cursor: url(../cursorH.svg), auto;
 

@@ -1,5 +1,6 @@
 import React, {createContext, useContext, useState} from "react";
 import {useLocation} from "react-router-dom";
+import {OpportunityData} from "../homeWhatWeDo/opportunityData";
 const CartContext = createContext();
 
 
@@ -11,13 +12,14 @@ export const CartProvider = ({children}) => {
   }
   
   const [loading, setLoading] = useState(true)
+  const [activeData, setActiveData] = useState(OpportunityData[0])
   
   
   
   
   
   return (<CartContext.Provider value={{
-    Call, loading, setLoading
+    Call, loading, setLoading, activeData, setActiveData
   }}>
     {children}
   </CartContext.Provider>);
