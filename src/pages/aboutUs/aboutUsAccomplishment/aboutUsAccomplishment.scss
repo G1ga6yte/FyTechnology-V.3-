@@ -1,0 +1,182 @@
+@import "../../../source/styles/mixin.scss";
+
+.aboutUsAccomplishment {
+  padding: 60px 100px;
+  width: 100%;
+  max-width: 1920px;
+  position: relative;
+  z-index: 3;
+  @include screen($wide) {
+    padding: 50px 10px;
+  }
+
+
+  .header {
+    position: relative;
+    z-index: 3;
+    font-size: 80px;
+    font-family: 'PlexMono-Medium', sans-serif;
+    margin-bottom: 16px;
+    @include screen($tablet-l) {
+      font-size: 64px;
+    }
+    @include screen($tablet) {
+      font-size: 40px;
+    }
+  }
+
+  .prg {
+    position: relative;
+    z-index: 3;
+    font-size: 36px;
+    font-family: 'PlexMono-Regular', sans-serif;
+    line-height: 46px;
+    max-width: 1200px;
+    @include screen($tablet) {
+      font-size: 28px;
+      line-height: 32px;
+    }
+  }
+
+  .MainBlocks {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 32px;
+    position: relative;
+    z-index: 3;
+    @include screen($tablet-l){
+      flex-direction: column;
+    }
+
+    .EachBlock {
+      width: 40%;
+      position: relative;
+      overflow: hidden;
+      @include screen($wide-l){
+        width: 44%;
+      }
+      @include screen($tablet-l){
+        width: 90%;
+        margin: 10px auto;
+      }
+      @include screen($tablet-m){
+        width: 100%;
+      }
+
+
+
+      &:nth-child(2) {
+        width: 45%;
+        @include screen($wide-l){
+          width: 54%;
+        }
+        @include screen($tablet-l){
+          width: 90%;
+          margin: 10px auto;
+        }
+        @include screen($tablet-m){
+          width: 100%;
+        }
+
+
+
+      }
+
+      .color {
+        border-radius: 16px;
+        background: #0038FF;
+        width: 122px;
+        height: 122px;
+        position: absolute;
+        z-index: -1;
+        bottom: 0;
+        left: 0;
+      }
+
+      .color2 {
+        border-radius: 16px;
+        background: #FFA06B;
+        width: 122px;
+        height: 122px;
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        right: 0;
+      }
+
+      .textBlock{
+        padding: 80px 70px 120px;
+        height: 100%;
+        width: 100%;
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.10);
+        box-shadow: -55.2px 55.2px 55.2px 0px rgba(255, 255, 255, 0.10) inset, 55.2px -55.2px 55.2px 0px rgba(194, 194, 194, 0.10) inset;
+        backdrop-filter: blur(45.20000076293945px);
+        @include screen($wide-s){
+          padding: 60px 40px 100px;
+        }
+        @include screen($tablet-m){
+          padding: 50px 20px 80px;
+        }
+
+
+
+        .name {
+          font-size: 36px;
+          font-family: "PlexMono-Medium", sans-serif;
+          max-width: 500px;
+          margin-bottom: 25px;
+          line-height: 46px;
+          @include screen($tablet-m){
+            font-size: 28px;
+            line-height: 38px;
+          }
+        }
+        .underName{
+          font-size: 28px;
+          line-height: 36px;
+          font-family: 'PlexMono-Regular', sans-serif;
+          margin-bottom: 34px;
+          @include screen($tablet-m){
+            font-size: 24px;
+            line-height: 28px;
+          }
+
+        }
+        .total{
+          font-size: 108px;
+          font-family: 'PlexMono-Medium', sans-serif;
+          line-height: 140px;
+          @include screen($tablet-m){
+            font-size: 80px;
+          }
+
+        }
+
+
+      }
+
+    }
+
+  }
+
+  .BlocksCont{
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    @include screen($tablet-l){
+      display: none;
+    }
+
+    .BlocksLine{
+      display: flex;
+      .Block{
+        height: 50px;
+        width: 5%;
+        border: 1px solid #EAEAEA;
+      }
+    }
+  }
+}

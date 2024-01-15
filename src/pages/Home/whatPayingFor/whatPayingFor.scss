@@ -5,12 +5,24 @@
   margin: 0 auto;
   position: relative;
   z-index: 3;
+  @include screen($wide-l){
+    width: 100%;
+  }
+  @include screen($tablet){
+    margin-top: 50px;
+  }
 
   .header{
     font-size: 80px;
     font-family: 'PlexMono-Regular', sans-serif;
     color: black;
     margin-bottom: 24px;
+    @include screen($tablet-l){
+      font-size: 64px;
+    }
+    @include screen($tablet){
+      font-size: 32px;
+    }
   }
 
   .MainCont{
@@ -21,14 +33,28 @@
     display: flex;
     justify-content: space-between;
     overflow: hidden;
+    @include screen($tablet-l){
+      flex-direction: column;
+    }
+    @include screen($tablet){
+      padding: 24px;
+    }
 
 
     .EachBlock{
       width: 48%;
       position: relative;
+      @include screen($tablet-l){
+        width: 100%;
+      }
+
       &:nth-child(1){
         border-right: 1px solid #EAEAEA;
         padding-right: 20px;
+        @include screen($tablet-l){
+          padding: 0;
+          border: none;
+        }
       }
 
       .miniHeader{
@@ -36,6 +62,9 @@
         font-family: 'PlexMono-Medium', sans-serif;
         color: black;
         margin-bottom: 20px;
+        @include screen($tablet){
+          font-size: 28px;
+        }
       }
       .prg{
         font-size: 20px;
@@ -43,6 +72,9 @@
         color: black;
         font-family: 'PlexMono-Regular', sans-serif;
         max-width: 500px;
+        @include screen($tablet){
+          font-size: 16px;
+        }
         span{
           background-color:#FFA06B;
           color: white;
@@ -51,11 +83,27 @@
         }
       }
 
+      .tabletImg{
+        width: 100%;
+        margin: 20px auto;
+        display: none;
+        @include screen($tablet-l){
+          display: block;
+        }
+      }
+
       .SplineBlock{
         width: 600px;
         height: 500px;
         scale: 0.8;
         margin: -50px 0;
+        @include screen($wide-l){
+          margin: -20px -80px;
+          scale: 0.7;
+        }
+        @include screen($tablet-l){
+          display: none;
+        }
 
         div{
 
@@ -83,6 +131,14 @@
         padding: 6px 10px;
         border-radius: 16px;
       }
+      @include screen($tablet-l){
+        position: relative;
+        width: 100%;
+        justify-content: center;
+        bottom: 0;
+        margin: 20px 0;
+      }
+
 
 
       &:hover{
@@ -121,9 +177,10 @@
             font-family: 'PlexMono-Medium', sans-serif;
             color: black;
             line-height: 35px;
-            @include screen($mobile-m){
+            @include screen($tablet){
               font-size: 20px;
             }
+
 
             &:nth-child(3n+1){
               transition: 0.4s ease-in-out all;

@@ -9,6 +9,8 @@ import Pricing from "./Pricing/pricing";
 import PartnerSlide from "./partnerSlide/partnerSlide";
 import FyTechAnimation from "./fyTechAnimation/fyTechAnimation";
 import LastVideoScene from "./lastVideoScene/lastVideoScene";
+import PricingTablet from "./PricingTablet/PricingTablet";
+import FeaturedWorkTablet from "./FeaturedWorkTablet/featuredWorkTablet";
 
 function Home() {
   const [ballRight, setBallRight] = useState(-20);
@@ -76,9 +78,11 @@ function Home() {
        
        <HomeHead/>
        <WhatWeDo/>
+       <FeaturedWorkTablet/>
        <FeaturedWork/>
        <WhatPayingFor/>
        <Pricing/>
+       <PricingTablet/>
        <PartnerSlide/>
        <FyTechAnimation/>
        <LastVideoScene/>

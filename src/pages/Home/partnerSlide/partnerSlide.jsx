@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import "./partnerSlide.scss"
 import Slider from "react-slick";
 
@@ -18,11 +18,22 @@ function PartnerSlide () {
     "triggerOnce": true
   })
   
+  const [slidesToShow, setSlidesToShow] = useState(5)
+  
+  useEffect(()=>{
+    if (window.innerWidth <= 1600){
+      setSlidesToShow(4)
+    }
+    if (window.innerWidth <=1200){
+      setSlidesToShow(3)
+    }
+  }, [])
+  
   const settings = {
     dots: false,
     infinite: true,
     speed: 2000,
-    slidesToShow: 5,
+    slidesToShow: slidesToShow,
     slidesToScroll: 1,
     autoplay: true,
     easing: "linear",

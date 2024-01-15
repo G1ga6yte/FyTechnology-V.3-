@@ -1,0 +1,208 @@
+@import "../../../source/styles/mixin.scss";
+
+.PricingTablet{
+  width: 100%;
+  padding: 0 10px;
+  display: none;
+  position: relative;
+  z-index: 3;
+  background-color: white;
+  margin-top: 50px;
+  @include screen($tablet-l){
+    display: block;
+  }
+
+  .header{
+    font-size: 64px;
+    color: black;
+    line-height: 83px;
+    font-family: 'PlexMono-Regular', sans-serif;
+    @include screen($tablet){
+      font-size: 32px;
+    }
+    span{
+      color: #B8B8B8;
+    }
+  }
+
+  .textBlock{
+    width: 100%;
+    padding: 16px 24px;
+    border-radius: 16px;
+    background: #F9F9F9;
+    margin-bottom: 16px;
+
+    .miniHeader{
+      font-size: 32px;
+      font-family: 'PlexMono-Regular', sans-serif;
+      color: black;
+      margin-bottom: 8px;
+      @include screen($tablet){
+        font-size: 26px;
+      }
+    }
+    .prg{
+      font-size: 20px;
+      font-family: 'PlexMono-Regular', sans-serif;
+      color: black;
+      @include screen($tablet){
+        font-size: 16px;
+      }
+
+    }
+
+  }
+
+  .planBlock{
+    border-radius: 16px;
+    border: 1px solid #EAEAEA;
+    background: #F9F9F9;
+    margin-bottom: 16px;
+    padding: 48px 40px;
+    @include screen($tablet){
+      padding: 24px 20px;
+    }
+
+    &:nth-child(6){
+      background: linear-gradient(71deg, #0038FF 2.82%, rgba(0, 71, 255, 0.78) 22.8%, #0038FF 44.53%);
+
+      .planTypeCallBlock{
+        .planType{
+          .planName{
+            color: white;
+            span{
+              white-space: nowrap;
+              background-color: white;
+              border-radius: 3px;
+              color: #0038FF;
+              font-size: 16px;
+              font-family: 'PlexMono-SemiBold', sans-serif;
+              padding: 8px 16px;
+            }
+          }
+          .price{
+            color: white;
+          }
+          .planDesc{
+            color: white;
+          }
+        }
+        .callButton{
+          border-color: white;
+          span{
+            color: white;
+          }
+        }
+      }
+      .innerPlan{
+        .list{
+          color: white;
+        }
+        .subsButton{
+          background-color: transparent;
+          border: 2px solid white;
+        }
+      }
+
+
+    }
+
+    .planTypeCallBlock{
+      padding-bottom: 24px;
+      margin-bottom: 30px;
+      border-bottom: 1px solid #EAEAEA;
+      position: relative;
+      .planType{
+        .planName{
+          font-size: 32px;
+          font-family: 'PlexMono-Medium', sans-serif;
+          color: black;
+          margin-bottom: 13px;
+          @include screen($mobile-m){
+            font-size: 28px;
+          }
+        }
+        .planDesc{
+          font-size: 20px;
+          font-family: 'PlexMono-Regular', sans-serif;
+          color: black;
+          margin-bottom: 13px;
+        }
+        .price{
+          font-size: 40px;
+          font-family: 'PlexMono-Medium', sans-serif;
+          color: black;
+        }
+      }
+      .callButton{
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 8px 16px;
+        border-radius: 45px;
+        border: 2px solid black;
+        height: min-content;
+        width: max-content;
+        text-decoration: none;
+        @include screen($mobile-m){
+          top: 40px;
+        }
+        span{
+          white-space: nowrap;
+          color: black;
+          font-size: 24px;
+          font-family: 'PlexMono-Medium', sans-serif;
+          @include screen($tablet){
+            display: none;
+          }
+        }
+        img{
+          display: none;
+          @include screen($tablet){
+            display: block;
+          }
+        }
+      }
+    }
+
+    .innerPlan{
+
+      .list{
+        font-size: 20px;
+        font-family: 'PlexMono-Regular', sans-serif;
+        color: black;
+        display: flex;
+        align-items: center;
+        margin-bottom: 6px;
+        img{
+          margin-right: 8px;
+        }
+      }
+      .subsButton{
+        text-decoration: none;
+        background-color: black;
+        border-radius: 20px;
+        padding: 10px 0;
+        font-size: 24px;
+        font-family: 'PlexMono-Medium', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        margin: 40px 0 15px;
+        img{
+          margin-left: 8px;
+        }
+      }
+      .underText{
+        color: #B8B8B8;
+        font-size: 16px;
+        font-family: 'PlexMono-Regular', sans-serif;
+        text-align: center;
+      }
+    }
+
+  }
+
+
+}

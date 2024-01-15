@@ -1,0 +1,104 @@
+@import "../../../source/styles/mixin.scss";
+
+.aboutUsValues{
+  padding: 50px 100px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  z-index: 3;
+  @include screen($wide){
+    padding: 50px 10px;
+  }
+
+
+  .header{
+    font-family: 'PlexMono-Medium', sans-serif;
+    font-size: 80px;
+    margin-bottom: 16px;
+    @include screen($tablet-l){
+      font-size: 64px;
+    }
+    @include screen($tablet){
+      font-size: 40px;
+    }
+  }
+  .underText{
+    font-size: 36px;
+    font-family: 'PlexMono-Regular', sans-serif;
+    margin-bottom: 30px;
+    @include screen($tablet){
+      font-size: 24px;
+    }
+  }
+
+  .CardsCont{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    @include screen($tablet-l){
+      flex-direction: column;
+    }
+
+    .CardCont{
+      width: 32%;
+
+      @include screen($tablet-l){
+        width: 90%;
+        margin: 10px auto;
+      }
+
+    }
+
+
+    .cardBlock{
+      cursor: pointer;
+      width: 100%;
+      height: 100%;
+      border-radius: 16px;
+      border: 1px solid #EAEAEA;
+      background: #FAFAFA;
+      padding: 32px;
+      transform-style: preserve-3d;
+      @include screen($wide-l){
+        padding: 25px;
+      }
+      img{
+        width: 128px;
+        margin-bottom: 100px;
+        transform-style: preserve-3d;
+        @include screen(1600px){
+          margin-bottom: 50px;
+        }
+        @include screen($wide){
+          width: 100px;
+        }
+        @include screen($tablet-l){
+          width: 125px;
+          margin-bottom: 100px;
+        }
+        @include screen($tablet-m){
+          width: 100px;
+          margin-bottom: 40px;
+        }
+
+      }
+      .name{
+        font-size: 36px;
+        font-family: 'PlexMono-Medium', sans-serif;
+        margin-bottom: 16px;
+        transform-style: preserve-3d;
+        @include screen($wide-l){
+          font-size: 30px;
+        }
+      }
+      .desc{
+        transform-style: preserve-3d;
+        font-size: 28px;
+        font-family: 'PlexMono-Regular', sans-serif;
+        @include screen($wide-l){
+          font-size: 24px;
+        }
+      }
+    }
+  }
+}

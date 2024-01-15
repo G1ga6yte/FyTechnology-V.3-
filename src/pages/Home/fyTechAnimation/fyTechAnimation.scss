@@ -3,8 +3,17 @@
 .FyTechAnimation{
   position: relative;
   z-index: 3;
-  height: 800vh;
+  height: 900vh;
   background-color: white;
+  @include screen(1700px){
+    height: 900vh;
+  }
+  @include screen(1600px){
+    height: 900vh;
+  }
+  @include screen($tablet-l){
+    display: none;
+  }
 
   .gradientL{
     position: fixed;
@@ -58,6 +67,19 @@
       position: absolute;
       bottom: -80%;
       z-index: 7;
+
+      @include screen(1900px){
+        bottom: -100%;
+      }
+      @include screen(1700px){
+        bottom: -90%;
+      }
+      @include screen(1600px){
+        bottom: -50%;
+      }
+      @include screen($wide){
+        bottom: -30%
+      }
       .TextBlock{
         width: 1000px;
         margin-right: 1000px;
@@ -67,12 +89,21 @@
           line-height: 135px;
           margin-bottom: 18px;
           font-family: 'PlexMono-Medium', sans-serif;
+          @include screen(1600px){
+            font-size: 80px;
+            line-height: 100px;
+          }
         }
         .prg{
           font-family: 'PlexMono-Regular', sans-serif;
           font-size: 48px;
           color: white;
           line-height: 62px;
+          @include screen(1600px){
+            font-size: 40px;
+            line-height: 52px;
+          }
+
         }
       }
     }

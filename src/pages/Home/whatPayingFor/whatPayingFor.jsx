@@ -5,6 +5,9 @@ import Arrow from "../../navigation/images/arrow-narrow-right-black.svg";
 import {Link} from "react-router-dom";
 import {useInView} from "react-intersection-observer";
 
+
+import firstImg from "./Untitled@5-1920x1137 4.png"
+import secondImg from "./Untitled@4-1920x1137 1.png"
 function WhatPayingFor() {
   const LeaveRequest = "Leave a request".split('')
   const {ref: myRef, inView: visibleEl} = useInView({
@@ -53,6 +56,7 @@ function WhatPayingFor() {
            <div className="SplineBlock">
               <Spline scene="https://prod.spline.design/vdCC4xR3VaynuWBn/scene.splinecode"/>
            </div>
+           <img className="tabletImg" src={firstImg} alt=""/>
   
            <Link ref={myRef} to="/" className={`FindOutMore G-alignItems-center ${visibleEl ? "scrollAnimation" : ""}`}>
              <div className="textBlock">
@@ -93,7 +97,9 @@ function WhatPayingFor() {
            <p ref={myRef6} className={`prg ${visibleEl6 ? "scrollAnimation2" : ""}`}>
              Payment model <span>is based on the time</span> spent on <span>your project.</span> Once you provide us with the technical requirements, we dedicate our time to your project and <span>you pay for the hours worked.</span> This approach is ideal when tasks are not recurring regularly.
            </p>
-           
+  
+           <img className="tabletImg" src={secondImg} alt=""/>
+  
            <Link ref={myRef1} to="/" className={`FindOutMore G-alignItems-center ${visibleEl1 ? "scrollAnimation2" : ""}`}>
              <div className="textBlock">
                <div className="textLine G-alignItems-center">

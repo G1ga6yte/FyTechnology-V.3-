@@ -62,7 +62,7 @@ function Navigation (){
                 
                 
   
-                <Link onClick={()=>setMenuBar(false)} className="linkToPage" to="/">
+                <Link onClick={()=>setMenuBar(false)} className="linkToPage" to="/aboutUs">
                   <div className="textBlock">
                     <div className="textLine G-alignItems-center">
                       {AboutUs.map((el)=>{

@@ -5,6 +5,9 @@
   height: 300vh;
   z-index: 2;
   width: 100%;
+  @include screen($tablet-l){
+    display: none;
+  }
 
   .header{
     font-size: 80px;

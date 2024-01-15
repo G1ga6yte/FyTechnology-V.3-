@@ -66,8 +66,7 @@
         width: max-content;
         top: 120%;
         left: 0;
-        background: radial-gradient(231% 135.8% at 0.9% 2.98%, rgba(255, 255, 255, 0.60) 0%, rgba(255, 255, 255, 0.20) 100%);
-        backdrop-filter: blur(10px);
+        background-color: white;
 
         @include screen($tablet-m){
           bottom: 120%;

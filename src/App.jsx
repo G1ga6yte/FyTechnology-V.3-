@@ -7,6 +7,7 @@ import Navigation from "./pages/navigation/navigation";
 import VideoPlay from "./source/videos/VideoPlayer";
 import {useCartContext} from "./pages/Home/homeHead/CartContext";
 import Footer from "./pages/footer/footer";
+import AboutUs from "./pages/aboutUs/aboutUs";
 
 function App() {
   const [appSettings, setAppSettings] = useState({
@@ -30,12 +31,12 @@ function App() {
   
   function Pages (){
     return (
-       <div  className="MainRoutes">
+       <div style={{position:"relative", zIndex: 1000}} className="MainRoutes">
          <Navigation/>
          <Routes>
            <Route path="/" element={<Home/>} /> // Home
            <Route path="/home" element={<Home/>} /> // Home
-
+           <Route path="/aboutUs" element={<AboutUs/>}/> // About Us
          </Routes>
          <Footer/>
        </div>

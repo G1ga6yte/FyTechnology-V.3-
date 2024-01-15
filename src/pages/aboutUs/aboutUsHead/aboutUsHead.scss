@@ -1,0 +1,87 @@
+@import "../../../source/styles/mixin.scss";
+
+.aboutUsHead{
+  width: 100%;
+  margin: 0 auto;
+  background-color: #F2F1F2;
+  padding: 150px 100px 200px;
+  position: relative;
+  @include screen(1600px){
+    align-items: center;
+  }
+  @include screen($wide){
+    padding: 150px 10px;
+  }
+  @include screen($tablet-l){
+    flex-direction: column-reverse;
+  }
+
+  .textBlock{
+    width: 60%;
+    @include screen($tablet-l){
+      width: 100%;
+    }
+
+    .header{
+      margin-top: 80px;
+      font-size: 80px;
+      font-family: 'PlexMono-Medium', sans-serif;
+      margin-bottom: 24px;
+      @include screen($tablet-l){
+        font-size: 64px;
+      }
+      @include screen($tablet){
+        font-size: 40px;
+      }
+    }
+    .prg{
+      max-width: 900px;
+      font-size: 28px;
+      font-family: 'PlexMono-Regular', sans-serif;
+      line-height: 36px;
+      margin-bottom: 30px;
+      @include screen($tablet){
+        font-size: 22px;
+        line-height: 26px;
+      }
+    }
+    .skills{
+      .skill{
+        margin-bottom: 10px;
+        padding: 8px;
+        border-radius: 12px;
+        border: 1px solid #000;
+        font-size: 20px;
+        font-family: 'PlexMono-Regular', sans-serif;
+        margin-right: 15px;
+        @include screen($tablet){
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  .BallBlock{
+    overflow: hidden;
+    width: 40%;
+    margin: -50px 100px 0 0;
+    @include screen(1600px){
+      margin: 0;
+    }
+    @include screen($tablet-l){
+      width: 60%;
+    }
+    @include screen($tablet){
+      width: 80%;
+    }
+
+
+    .videoLoading{
+      width: 100%;
+      scale: 1.1;
+    }
+  }
+
+
+
+}

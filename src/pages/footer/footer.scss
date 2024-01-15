@@ -10,6 +10,12 @@
   display: flex;
   justify-content: space-between;
   margin-top: -20px;
+  @include screen($wide){
+    flex-direction: column;
+  }
+  @include screen($tablet-w){
+    padding: 150px 10px 20px;
+  }
 
   .LinksBlock{
     width: 45%;
@@ -17,10 +23,24 @@
     flex-direction: column;
     justify-content: space-between;
 
+    @include screen($wide-l){
+      width: 55%;
+    }
+    @include screen($wide){
+      width: 100%;
+    }
+
+
     .linkFyTech{
       text-decoration: none;
       display: block;
       margin-bottom: 60px;
+      @include screen($tablet-m){
+        width: 80%;
+        img{
+          width: 100%;
+        }
+      }
     }
 
     .prg{
@@ -29,12 +49,23 @@
       color: black;
       line-height: 104px;
       margin-bottom: 90px;
+      @include screen($tablet){
+        font-size: 56px;
+        line-height: 72px;
+      }
+      @include screen($tablet-m){
+        font-size: 32px;
+        line-height: 54px;
+      }
     }
 
     .copyrightText{
       font-size: 16px;
       color: #C2C2C2;
       font-family: 'PlexMono-Medium', sans-serif;
+      @include screen($wide){
+        display: none;
+      }
     }
 
 
@@ -46,6 +77,10 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: end;
+    @include screen($wide){
+      width: 100%;
+    }
+
 
     .textBlock{
       height: 35px;
@@ -91,6 +126,12 @@
         padding: 6px 10px;
         border-radius: 16px;
       }
+      @include screen($wide){
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 20px;
+      }
+
 
 
       &:hover{
@@ -228,9 +269,29 @@
       width: 60%;
       display: flex;
       justify-content: space-between;
+      @include screen($wide){
+        width: 100%;
+      }
+
+    }
+    .policyBottom{
+      text-align: center;
+      color: #C2C2C2;
+      font-size: 16px;
+      font-family: 'PlexMono-Medium', sans-serif;
+      margin: 20px auto;
+      display: none;
+      @include screen($wide){
+        display: block;
+      }
     }
     .linksToPolicy{
       display: flex;
+      @include screen($wide){
+        width: 100%;
+        justify-content: center;
+      }
+
       a{
         text-decoration: none;
         color: #C2C2C2;

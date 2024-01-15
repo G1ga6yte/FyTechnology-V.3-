@@ -6,6 +6,9 @@
   z-index: 3;
   background-color: white;
   padding-top: 50px;
+  @include screen($tablet-l){
+    display: none;
+  }
 
   .header{
     font-size: 80px;

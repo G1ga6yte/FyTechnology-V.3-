@@ -7,6 +7,13 @@
   position: relative;
   z-index: 3;
   margin-top: 100px;
+  @include screen($wide){
+    padding: 50px 10px;
+  }
+  @include screen($tablet-l){
+    display: none;
+  }
+
 
   .Blocks{
     display: flex;
@@ -130,6 +137,12 @@
         margin-left: 2%;
         border-radius: 24px;
         padding: 24px;
+        @include screen(1700px){
+          width: 25%;
+        }
+        @include screen($wide-s){
+          margin-left: 1%;
+        }
 
         &:nth-child(2){
           background: #FFF;
@@ -152,18 +165,35 @@
           font-family: 'PlexMono-Medium', sans-serif;
           color: black;
           margin-bottom: 8px;
+          @include screen($wide-l){
+            font-size: 26px;
+          }
+          @include screen($wide){
+            margin-bottom: 0;
+          }
         }
         .desc{
           font-size: 20px;
           font-family: 'PlexMono-Regular', sans-serif;
           color: black;
           margin-bottom: 30px;
+          @include screen($wide-l){
+            font-size: 16px;
+          }
+          @include screen($wide){
+            margin-bottom: 15px;
+          }
+
         }
         .price{
           margin-bottom: 16px;
           font-size: 40px;
           font-family: 'PlexMono-Medium', sans-serif;
           color: black;
+          @include screen($wide-l){
+            font-size: 32px;
+          }
+
         }
 
 
@@ -277,23 +307,38 @@
           font-size: 24px;
           font-family: 'PlexMono-Regular', sans-serif;
           color: black;
+          @include screen(1700px){
+            width: 25%;
+          }
+          @include screen($wide-l){
+            font-size: 20px;
+          }
         }
         .marked{
           width: 66%;
           display: flex;
           align-items: center;
+          @include screen(1700px){
+            width: 80%;
+          }
           span{
             font-size: 24px;
             font-family: 'PlexMono-Medium', sans-serif;
             color: black;
             width: 34%;
             margin-left: 5%;
+            @include screen($wide-l){
+              font-size: 20px;
+            }
           }
           .img{
             width: 34%;
             margin-left: 5%;
             img{
               width: 55px;
+              @include screen($wide-l){
+                width: 45px;
+              }
             }
           }
         }

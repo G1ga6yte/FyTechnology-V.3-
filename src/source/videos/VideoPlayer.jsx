@@ -30,7 +30,7 @@ function VideoPlay (){
   
   
   return (
-     <div className="VideoLoadingBlock">
+     <div style={{backgroundColor: "white",  zIndex: 2000}} className="VideoLoadingBlock">
        <div className="LoadingWord">
          Loading
          <span></span>
