@@ -37,12 +37,7 @@
     @include screen($tablet){
       font-size: 40px;
     }
-    &:nth-child(1){
-      animation: fromRight 10s linear;
-    }
-    &:nth-child(2){
-      animation: fromLeft 10s linear;
-    }
+
   }
   .prg{
     margin-top: 24px;
@@ -52,7 +47,6 @@
     max-width: 60%;
     line-height: 36px;
     letter-spacing: 0 !important;
-    animation: fromRight 10s;
     @include screen($wide-l){
       font-size: 26px;
     }
