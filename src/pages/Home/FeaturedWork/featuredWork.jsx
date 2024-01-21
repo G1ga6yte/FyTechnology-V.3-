@@ -63,7 +63,6 @@ function FeaturedWork (){
   
   const [contFixed, setContFixed] = useState('relative')
   window.addEventListener('scroll', function(){
-    console.log(this.scrollY);
     if (this.scrollY >= 1300){
       setContFixed('fixed')
     } else {

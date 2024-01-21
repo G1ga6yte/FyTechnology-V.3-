@@ -70,7 +70,7 @@ function AboutUsLast (){
          }} className="aboutUsLast">
            <p ref={myRef1} className={`header ${visible1 ? "scrollAnimation" : ""}`}>How about we do a thing or two together?</p>
       
-           <Link onClick={()=>window.scrollTo(0, 0)} ref={myRef2} to="/contactUs" className={`contactUsBtn G-alignItems-center ${visible2 ? "scrollAnimation2" : ""}`}>
+           <Link onClick={()=>window.scrollTo(0, 0)} ref={myRef2} to="/contact" className={`contactUsBtn G-alignItems-center ${visible2 ? "scrollAnimation2" : ""}`}>
              <div className="textBlock">
                <div className="textLine G-alignItems-center">
                  {ContactUs.map((el)=>{
