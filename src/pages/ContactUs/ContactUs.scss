@@ -8,6 +8,13 @@
   background-color: black;
   padding: 100px;
   position: relative;
+  @include screen($wide-l){
+    padding: 100px 10px;
+  }
+  @include screen($tablet-l){
+    flex-direction: column;
+  }
+
   .closeButton{
     position: absolute;
     top: 30px;
@@ -19,6 +26,18 @@
     background-color: white;
     cursor: pointer;
     border-radius: 50%;
+    @include screen($tablet-l){
+      top: 10px;
+      right: 20px;
+    }
+    @include screen($tablet){
+      top: 20px;
+      right: 30px;
+      img{
+        width: 30px;
+      }
+    }
+
     &:hover{
       transition: 0.3s ease-in-out;
       scale: 1.1;
@@ -31,6 +50,18 @@
     border-radius: 16px;
     background: #FFF;
     padding: 24px 30px;
+    @include screen($wide-l){
+      width: 60%;
+    }
+    @include screen($tablet-l){
+      width: 100%;
+      padding: 16px 24px;
+    }
+    @include screen($tablet){
+      padding: 16px;
+    }
+
+
 
     .inputBlock{
       width: 100%;
@@ -127,6 +158,9 @@
         color: black;
         font-family: 'PlexMono-Regular', sans-serif;
         cursor: pointer;
+        @include screen($tablet){
+          font-size: 12px;
+        }
         &:hover{
           background: #B8B8B8;
         }
@@ -168,6 +202,9 @@
             white-space: nowrap;
             font-size: 12px;
             font-family: 'PlexMono-Regular', sans-serif;
+            @include screen($tablet){
+              font-size: 8px;
+            }
           }
         }
 
@@ -183,6 +220,7 @@
       }
       .buttons{
         display: flex;
+        flex-wrap: wrap;
         .active{
           background-color: black !important;
           color: white !important;
@@ -303,6 +341,14 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    @include screen($wide-l){
+      width: 35%;
+    }
+    @include screen($tablet-l){
+      width: 100%;
+    }
+
+
 
     .prg{
       font-size: 28px;
@@ -310,11 +356,21 @@
       line-height: 36px;
       color: white;
       width: 100%;
+      @include screen($tablet-l){
+        margin: 40px 0;
+      }
+
     }
 
     .linksLine{
       display: flex;
       flex-direction: column;
+      @include screen($tablet-l){
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
       .Link{
         display: flex;
         text-decoration: none;
