@@ -1,5 +1,5 @@
 import React from "react";
-import {Link} from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
 import "./footer.scss"
 
 import arrowRight from "./arrow-narrow-right.svg"
@@ -55,12 +55,17 @@ function Footer (){
     "triggerOnce": true
   })
   
+  function Call(el, el2){
+    const locat = useLocation()
+    return el === locat.pathname
+  }
+  
   
   return(
-     <div className="Footer">
+     <div style={{display: `${Call("/contact") ? "none" : "flex"}`}} className="Footer">
        
        <div className="LinksBlock">
-           <Link ref={myRef1} className={`linkFyTech ${visible1 ? "scrollAnimation" : ""}`} to="/">
+           <Link  onClick={()=>window.scrollTo(0, 0)} ref={myRef1} className={`linkFyTech ${visible1 ? "scrollAnimation" : ""}`} to="/">
              <img className="logoImg" src={fuTech} alt=""/>
            </Link>
          
@@ -72,7 +77,7 @@ function Footer (){
        </div>
        
        <div className="LinksBlock2">
-         <Link ref={myRef3} to="/contactUs" className={`contactUsBtn G-alignItems-center ${visible3 ? "scrollAnimation2" : ""}`}>
+         <Link  onClick={()=>window.scrollTo(0, 0)} ref={myRef3} to="/contactUs" className={`contactUsBtn G-alignItems-center ${visible3 ? "scrollAnimation2" : ""}`}>
            <div className="textBlock">
              <div className="textLine G-alignItems-center">
                {ContactUs.map((el)=>{
@@ -105,7 +110,7 @@ function Footer (){
          
          <div className="linksBlock">
             <div className="linksLine">
-              <Link ref={myRef4} to="/aboutUs" className={`Link G-alignItems-center ${visible4 ? "scrollAnimation2" : ""}`}>
+              <Link  onClick={()=>window.scrollTo(0, 0)} ref={myRef4} to="/aboutUs" className={`Link G-alignItems-center ${visible4 ? "scrollAnimation2" : ""}`}>
                 <div className="textBlock">
                   <div className="textLine G-alignItems-center">
                     {AboutUs.map((el)=>{
@@ -127,7 +132,7 @@ function Footer (){
                   </div>
                 </div>
               </Link>
-              <Link ref={myRef5} to="/services" className={`Link G-alignItems-center ${visible5 ? "scrollAnimation2" : ""}`}>
+              <Link  onClick={()=>window.scrollTo(0, 0)} ref={myRef5} to="/services" className={`Link G-alignItems-center ${visible5 ? "scrollAnimation2" : ""}`}>
                 <div className="textBlock">
                   <div className="textLine G-alignItems-center">
                     {Services.map((el)=>{
@@ -149,7 +154,7 @@ function Footer (){
                   </div>
                 </div>
               </Link>
-              <Link ref={myRef6} to="/projects" className={`Link G-alignItems-center ${visible6 ? "scrollAnimation2" : ""}`}>
+              <Link  onClick={()=>window.scrollTo(0, 0)} ref={myRef6} to="/projects" className={`Link G-alignItems-center ${visible6 ? "scrollAnimation2" : ""}`}>
                 <div className="textBlock">
                   <div className="textLine G-alignItems-center">
                     {Projects.map((el)=>{
@@ -174,7 +179,7 @@ function Footer (){
 
             </div>
             <div className="linksLine">
-              <a ref={myRef4} href="" className={`Link G-alignItems-center ${visible4 ? "scrollAnimation2" : ""}`}>
+              <a  ref={myRef4} href="" className={`Link G-alignItems-center ${visible4 ? "scrollAnimation2" : ""}`}>
                 <div className="textBlock">
                   <div className="textLine G-alignItems-center">
                     {Instagram.map((el)=>{
@@ -266,7 +271,7 @@ function Footer (){
             </div>
          </div>
   
-         <Link ref={myRef8} to="/" className={`Link G-alignItems-center ${visible8 ? "scrollAnimation2" : ""}`}>
+         <Link  onClick={()=>window.scrollTo(0, 0)} ref={myRef8} to="/" className={`Link G-alignItems-center ${visible8 ? "scrollAnimation2" : ""}`}>
            <div className="textBlock">
              <div className="textLine G-alignItems-center">
                {FyTrading.map((el)=>{

@@ -58,7 +58,7 @@ function WhatPayingFor() {
            </div>
            <img className="tabletImg" src={firstImg} alt=""/>
   
-           <Link ref={myRef} to="/" className={`FindOutMore G-alignItems-center ${visibleEl ? "scrollAnimation" : ""}`}>
+           <Link onClick={()=>window.scrollTo(0, 0)} ref={myRef} to="/contact" className={`FindOutMore G-alignItems-center ${visibleEl ? "scrollAnimation" : ""}`}>
              <div className="textBlock">
                <div className="textLine G-alignItems-center">
                  {LeaveRequest.map((el)=>{
@@ -100,7 +100,7 @@ function WhatPayingFor() {
   
            <img className="tabletImg" src={secondImg} alt=""/>
   
-           <Link ref={myRef1} to="/" className={`FindOutMore G-alignItems-center ${visibleEl1 ? "scrollAnimation2" : ""}`}>
+           <Link  onClick={()=>window.scrollTo(0, 0)} ref={myRef1} to="/contact" className={`FindOutMore G-alignItems-center ${visibleEl1 ? "scrollAnimation2" : ""}`}>
              <div className="textBlock">
                <div className="textLine G-alignItems-center">
                  {LeaveRequest.map((el)=>{

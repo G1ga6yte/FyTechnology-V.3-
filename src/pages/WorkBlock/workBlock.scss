@@ -1,0 +1,331 @@
+@import "../../source/styles/mixin.scss";
+
+.WorkBlock{
+  padding: 150px 0 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+  @include screen($tablet){
+    padding: 100px 10px 100px;
+  }
+
+
+  .miniHeader{
+    font-size: 56px;
+    font-family: 'PlexMono-Medium', sans-serif;
+    margin-bottom: 16px;
+    @include screen($tablet-l){
+      margin-bottom: 12px;
+    }
+    @include screen($tablet){
+      font-size: 40px;
+    }
+
+  }
+  .prg{
+    font-size: 28px;
+    line-height: 36px;
+    font-family: 'PlexMono-Regular', sans-serif;
+    max-width: 1300px;
+    @include screen($tablet){
+      font-size: 24px;
+    }
+
+  }
+
+
+
+  .headBlock{
+    width: 75%;
+    @include screen($wide-l){
+      width: 90%;
+    }
+    @include screen($tablet){
+      width: 100%;
+    }
+
+
+    .header{
+      font-size: 104px;
+      font-family: 'PlexMono-Medium', sans-serif;
+      max-width: 650px;
+      margin-bottom: 40px;
+      @include screen($tablet-l){
+        margin-bottom: 24px;
+      }
+      @include screen($tablet){
+        font-size: 64px;
+      }
+      @include screen($tablet-m){
+        font-size: 40px;
+      }
+
+
+    }
+
+  }
+
+  .fullImage{
+    width: 100%;
+    margin: 80px 0;
+    @include screen($tablet-l){
+      margin: 40px 0;
+    }
+    @include screen($tablet){
+      border-radius: 16px;
+    }
+    @include screen($tablet-m){
+      margin: 24px 0;
+    }
+
+
+  }
+
+  .FirstBlock{
+    width: 90%;
+    @include screen($tablet){
+      width: 100%;
+    }
+
+
+    .imgTechStack{
+      display: flex;
+      margin-top: 40px;
+      @include screen($tablet-l){
+        flex-direction: column;
+        margin-top: 24px;
+      }
+      .halfImage{
+        width: 60%;
+        margin-right: 10%;
+        border-radius: 16px;
+        @include screen($wide-l){
+          width: 50%;
+        }
+        @include screen($tablet-l){
+          width: 100%;
+        }
+
+
+      }
+      .TextBlock{
+        width: 30%;
+        @include screen($wide-l){
+          width: 40%;
+        }
+        @include screen($tablet-l){
+          width: 100%;
+        }
+
+
+        .item{
+          font-size: 28px;
+          line-height: 40px;
+          font-family: 'PlexMono-Regular', sans-serif;
+          @include screen($tablet){
+            font-size: 24px;
+          }
+
+        }
+      }
+    }
+
+    .image90{
+      width: 100%;
+      border-radius: 16px;
+      margin: 80px 0;
+      @include screen($tablet-l){
+        margin: 40px 0;
+      }
+      @include screen($tablet-m){
+        margin-top: 24px;
+      }
+
+
+    }
+
+  }
+
+  .secondBlockText{
+    width: 75%;
+    @include screen($wide-l){
+      width: 90%;
+    }
+    @include screen($tablet){
+      width: 100%;
+    }
+
+
+    .prg{
+      max-width: 1250px;
+    }
+  }
+
+  .thirdBlocks{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 80px 0;
+    @include screen($tablet-l){
+      flex-direction: column;
+      margin: 40px 0;
+    }
+    @include screen($tablet){
+      width: 100%;
+    }
+    @include screen($tablet-m){
+      margin: 24px;
+    }
+
+
+
+    .eachBlock{
+      width: 49%;
+      @include screen($tablet-l){
+        width: 100%;
+        margin-top: 24px;
+      }
+
+      img{
+        width: 100%;
+        border-radius: 16px;
+        margin-bottom: 40px;
+        @include screen($tablet-l){
+          margin-bottom: 24px;
+        }
+
+      }
+      .underText{
+        font-size: 28px;
+        font-family: 'PlexMono-Regular', sans-serif;
+      }
+    }
+  }
+
+  .img90{
+    width: 90%;
+    margin-top: 40px;
+    border-radius: 16px;
+    @include screen($tablet-l){
+      margin-top: 24px;
+    }
+    @include screen($tablet){
+      width: 100%;
+    }
+
+
+  }
+
+  .ContactBlock{
+    border-radius: 16px;
+    border: 1px solid #EAEAEA;
+    background: #FAFAFA;
+    width: 90%;
+    padding: 120px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    .ContactHeader{
+      font-size: 80px;
+      text-align: center;
+      font-family: 'PlexMono-Medium', sans-serif;
+      margin-bottom: 48px;
+    }
+
+
+    .textBlock{
+      height: 35px;
+      overflow: hidden;
+
+      .textLine{
+
+
+        .letter{
+          font-size: 24px;
+          font-family: 'PlexMono-Medium', sans-serif;
+          color: white;
+          line-height: 35px;
+          @include screen($mobile-m){
+            font-size: 20px;
+          }
+
+          &:nth-child(3n+1){
+            transition: 0.4s ease-in-out all;
+          }
+          &:nth-child(3n+2){
+            transition: 0.2s ease-in-out all;
+          }
+          &:nth-child(3n+3){
+            transition: 0.6s ease-in-out all;
+          }
+        }
+        .space{
+          width: 15px;
+        }
+      }
+    }
+
+    .contactUsBtn{
+      display: flex;
+      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: 20px;
+      background-color: black;
+      cursor: pointer;
+      width: min-content;
+      @include screen($mobile-m){
+        padding: 6px 10px;
+        border-radius: 16px;
+      }
+      @include screen($wide){
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 20px;
+      }
+
+
+
+      &:hover{
+        .letter{
+          &:nth-child(3n+1){
+            transition: 0.4s ease-in-out all;
+            transform: translateY(-100%);
+          }
+          &:nth-child(3n+2){
+            transition: 0.2s ease-in-out all;
+            transform: translateY(-100%);
+          }
+          &:nth-child(3n+3){
+            transition: 0.6s ease-in-out all;
+            transform: translateY(-100%);
+          }
+        }
+        .arrowBlock{
+          img{
+            transition: 1s ease-in-out;
+            transform: translateX(-100%);
+          }
+        }
+
+
+      }
+
+      .middleLine{
+        margin: 0 8px;
+        background-color: #383838;
+        width: 2px;
+        height: 35px;
+      }
+      .arrowBlock{
+        display: flex;
+        width: 24px;
+        height: 24px;
+        overflow: hidden;
+      }
+    }
+  }
+
+}

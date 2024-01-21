@@ -132,11 +132,9 @@
         }
       }
 
-      .PlanBlock{
+      .PricingCardBlock{
         width: 20%;
         margin-left: 2%;
-        border-radius: 24px;
-        padding: 24px;
         @include screen(1700px){
           width: 25%;
         }
@@ -144,149 +142,171 @@
           margin-left: 1%;
         }
 
-        &:nth-child(2){
-          background: #FFF;
-        }
-        &:nth-child(3){
-          background: linear-gradient(71deg, #0038FF 2.82%, rgba(0, 71, 255, 0.78) 22.8%, #0038FF 44.53%), #FFF;
+        .BlueBlock{
+          background: linear-gradient(71deg, #0038FF 2.82%, rgba(0, 71, 255, 0.78) 22.8%, #0038FF 44.53%), #FFF !important;
+          .PlanName{
+            color: white !important;
+          }
+          .desc{
+            color: white !important;
+          }
+          .price{
+            color: white !important;
+          }
+
           .getStarted{
-            background-color: transparent;
-            border: 1px solid white;
-          }
-
-        }
-        &:nth-child(4){
-          background-color: #FFFFFF;
-        }
-
-
-        .PlanName{
-          font-size: 32px;
-          font-family: 'PlexMono-Medium', sans-serif;
-          color: black;
-          margin-bottom: 8px;
-          @include screen($wide-l){
-            font-size: 26px;
-          }
-          @include screen($wide){
-            margin-bottom: 0;
+            background-color: transparent !important;
+            border: 1px solid white !important;
           }
         }
-        .desc{
-          font-size: 20px;
-          font-family: 'PlexMono-Regular', sans-serif;
-          color: black;
-          margin-bottom: 30px;
-          @include screen($wide-l){
-            font-size: 16px;
+        .cardBlock{
+          width: 100%;
+          height: 100%;
+          border-radius: 24px;
+          padding: 24px;
+          background: #FFF;
+
+
+          &:nth-child(2){
           }
-          @include screen($wide){
-            margin-bottom: 15px;
+          &:nth-child(3){
+
+
+          }
+          &:nth-child(4){
+            background-color: #FFFFFF;
           }
 
-        }
-        .price{
-          margin-bottom: 16px;
-          font-size: 40px;
-          font-family: 'PlexMono-Medium', sans-serif;
-          color: black;
-          @include screen($wide-l){
+
+          .PlanName{
             font-size: 32px;
-          }
-
-        }
-
-
-        .getStarted{
-          display: flex;
-          text-decoration: none;
-          padding: 8px 16px;
-          border-radius: 20px;
-          background-color: black;
-          cursor: pointer;
-          justify-content: center;
-
-
-
-
-          @include screen($mobile-m){
-            padding: 6px 10px;
-            border-radius: 16px;
-          }
-
-
-          &:hover{
-            .letter{
-              &:nth-child(3n+1){
-                transition: 0.4s ease-in-out all;
-                transform: translateY(-100%);
-              }
-              &:nth-child(3n+2){
-                transition: 0.2s ease-in-out all;
-                transform: translateY(-100%);
-              }
-              &:nth-child(3n+3){
-                transition: 0.6s ease-in-out all;
-                transform: translateY(-100%);
-              }
+            font-family: 'PlexMono-Medium', sans-serif;
+            color: black;
+            margin-bottom: 8px;
+            @include screen($wide-l){
+              font-size: 26px;
             }
-            .arrowBlock{
-              img{
-                transition: 1s ease-in-out;
-                transform: translateX(-100%);
-              }
+            @include screen($wide){
+              margin-bottom: 0;
+            }
+          }
+          .desc{
+            font-size: 20px;
+            font-family: 'PlexMono-Regular', sans-serif;
+            color: black;
+            margin-bottom: 30px;
+            @include screen($wide-l){
+              font-size: 16px;
+            }
+            @include screen($wide){
+              margin-bottom: 15px;
             }
 
+          }
+          .price{
+            margin-bottom: 16px;
+            font-size: 40px;
+            font-family: 'PlexMono-Medium', sans-serif;
+            color: black;
+            @include screen($wide-l){
+              font-size: 32px;
+            }
 
           }
-          .textBlock{
-            height: 35px;
-            overflow: hidden;
 
 
-            .textLine{
+          .getStarted{
+            display: flex;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            background-color: black;
+            cursor: pointer;
+            justify-content: center;
 
 
+
+
+            @include screen($mobile-m){
+              padding: 6px 10px;
+              border-radius: 16px;
+            }
+
+
+            &:hover{
               .letter{
-                font-size: 24px;
-                font-family: 'PlexMono-Medium', sans-serif;
-                color: white;
-                line-height: 35px;
-                @include screen($mobile-m){
-                  font-size: 20px;
-                }
-
                 &:nth-child(3n+1){
                   transition: 0.4s ease-in-out all;
+                  transform: translateY(-100%);
                 }
                 &:nth-child(3n+2){
                   transition: 0.2s ease-in-out all;
+                  transform: translateY(-100%);
                 }
                 &:nth-child(3n+3){
                   transition: 0.6s ease-in-out all;
+                  transform: translateY(-100%);
                 }
               }
-              .space{
-                width: 15px;
+              .arrowBlock{
+                img{
+                  transition: 1s ease-in-out;
+                  transform: translateX(-100%);
+                }
+              }
+
+
+            }
+            .textBlock{
+              height: 35px;
+              overflow: hidden;
+
+
+              .textLine{
+
+
+                .letter{
+                  font-size: 24px;
+                  font-family: 'PlexMono-Medium', sans-serif;
+                  color: white;
+                  line-height: 35px;
+                  @include screen($mobile-m){
+                    font-size: 20px;
+                  }
+
+                  &:nth-child(3n+1){
+                    transition: 0.4s ease-in-out all;
+                  }
+                  &:nth-child(3n+2){
+                    transition: 0.2s ease-in-out all;
+                  }
+                  &:nth-child(3n+3){
+                    transition: 0.6s ease-in-out all;
+                  }
+                }
+                .space{
+                  width: 15px;
+                }
               }
             }
+            .middleLine{
+              margin: 0 8px;
+              background-color: #383838;
+              width: 2px;
+              height: 35px;
+            }
+            .arrowBlock{
+              display: flex;
+              width: 24px;
+              height: 24px;
+              overflow: hidden;
+            }
           }
-          .middleLine{
-            margin: 0 8px;
-            background-color: #383838;
-            width: 2px;
-            height: 35px;
-          }
-          .arrowBlock{
-            display: flex;
-            width: 24px;
-            height: 24px;
-            overflow: hidden;
-          }
+
+
         }
-
-
       }
+
 
 
     }

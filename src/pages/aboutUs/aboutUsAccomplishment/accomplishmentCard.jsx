@@ -1,23 +1,8 @@
 import React from "react";
+import {motion, useMotionValue, useSpring, useTransform} from "framer-motion";
 import {useInView} from "react-intersection-observer";
-import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import pagination from "./sticker.svg";
 
-
-function Card (props){
-  const {ref: myRef, inView:visible} = useInView({
-    "threshold": 0,
-    "triggerOnce": true
-  })
-  const {ref: myRef1, inView:visible1} = useInView({
-    "threshold": 0,
-    "triggerOnce": true
-  })
-  const {ref: myRef2, inView:visible2} = useInView({
-    "threshold": 0,
-    "triggerOnce": true
-  })
-  
+function AccomplishmentCard (props){
   const x = useMotionValue(0);
   const y = useMotionValue(0);
   
@@ -27,12 +12,12 @@ function Card (props){
   const rotateX = useTransform(
      mouseYSpring,
      [-0.5, 0.5],
-     ["27.5deg", "-27.5deg"]
+     ["22.5deg", "-22.5deg"]
   );
   const rotateY = useTransform(
      mouseXSpring,
      [-0.5, 0.5],
-     ["-27.5deg", "27.5deg"]
+     ["-22.5deg", "22.5deg"]
   );
   
   const handleMouseMove = (e) => {
@@ -56,24 +41,42 @@ function Card (props){
     y.set(0);
   };
   
+  const {ref: myRef1, inView: visible1} = useInView({
+    "threshold": 0,
+    "triggerOnce": true
+  })
+  
+  const {ref: myRef2, inView: visible2} = useInView({
+    "threshold": 0,
+    "triggerOnce": true
+  })
+  const {ref: myRef3, inView: visible3} = useInView({
+    "threshold": 0,
+    "triggerOnce": true
+  })
+  
   
   return(
-     <div  className="CardCont">
        <motion.div onMouseMove={handleMouseMove}
                    onMouseLeave={handleMouseLeave}
                    style={{
                      rotateY,
                      rotateX,
                      transformStyle: "preserve-3d",
-                   }} className="cardBlock">
-         <div   className="textBlock">
-           <img ref={myRef} className={`${visible ? "scrollAnimation2" : ""}`} src={props.img} alt=""/>
-           <p ref={myRef1} className={`name ${visible2 ? "scrollAnimation" : ""}`}>{props.name}</p>
-           <p ref={myRef2} className={`desc ${visible2 ? "scrollAnimation" : ""}`}>{props.prg}</p>
+                   }} className="EachBlock">
+         <div  style={{
+           transform: "translateZ(75px) !important",
+           transformStyle: "preserve-3d !important",
+         }} className="textBlock">
+           <p ref={myRef1} className={`name ${visible1 ? "scrollAnimation" : ""}`}>{props.header}</p>
+           <p ref={myRef2} className={`underName ${visible2 ? "scrollAnimation" : ""}`}>{props.desc}</p>
+           <p ref={myRef3} className={`total ${visible3 ? "scrollAnimation" : ""}`}>{props.total}</p>
+         </div>
+         <div className={props.color}>
          </div>
        </motion.div>
-     </div>
+     
   )
 }
 
-export default Card
+export default AccomplishmentCard

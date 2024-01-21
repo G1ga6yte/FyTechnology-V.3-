@@ -3,7 +3,7 @@
 .FyTechAnimation{
   position: relative;
   z-index: 3;
-  height: 900vh;
+  height: 800vh;
   background-color: white;
   @include screen(1700px){
     height: 900vh;
@@ -44,11 +44,16 @@
     transform: translate(-25%, 50%);
     position: relative;
     width: 50%;
-    .fyTechLogo{
+
+    .fyTechBlock{
       position: absolute;
       top: 0;
       left: 0;
+      .fyTechLogo{
+
+      }
     }
+
 
     .GradientBlock{
       position: absolute;

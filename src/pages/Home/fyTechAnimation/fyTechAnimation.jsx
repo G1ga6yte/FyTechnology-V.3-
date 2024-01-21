@@ -7,6 +7,7 @@ function FyTechAnimation() {
   const [logoFix, setLogoFix] = useState("relative");
   const [logoBottom, setLogoBottom] = useState(-30);
   const [logoScale, setLogoScale] = useState(0.5);
+  const [logoRotate, setLogoRotate] = useState(0)
   
   const [firstNameTransform, setFirstNameTransform] = useState(150);
   const [firstNameLine, setFirstNameLine] = useState(0);
@@ -15,7 +16,7 @@ function FyTechAnimation() {
   const [gradient, setGradient] = useState("none")
   const [textBlockTransform, setTextBlockTransform] = useState(1500)
   
-  const [gradientBlock, setGradientBlock] = useState(500)
+  const [gradientBlock, setGradientBlock] = useState(700)
   const [displayImg, setDisPlayImg] = useState("block")
   
   const [mainScale, setMainScale] = useState(1)
@@ -26,6 +27,18 @@ function FyTechAnimation() {
       setLogoFix("fixed");
     } else {
       setLogoFix("relative");
+      setLogoBottom(-30)
+      setLogoScale(0.5)
+      setLogoRotate(0)
+      setFirstNameTransform(150)
+      setFirstNameLine(0)
+      setFirstNameLineOpc(1)
+      setGradient("none")
+      setTextBlockTransform(1500)
+      setGradientBlock(700)
+      setDisPlayImg("block")
+      setMainScale(1)
+      setMainLeft(50)
     }
     
     
@@ -35,8 +48,19 @@ function FyTechAnimation() {
       setLogoBottom(bottom);
       setLogoScale(scale);
     }
+    
+    if (this.scrollY >=7800 && this.scrollY <= 9200){
+      let rotate = ((180 / 1400) * (this.scrollY - 7800))
+      setLogoRotate(rotate)
+    } else {
+      setLogoRotate(0)
+    }
+    
+    
+    
+    
     if (this.scrollY >= 7800 && this.scrollY <= 9000) {
-      let scale = 1 + ((4.5 / 1200) * (this.scrollY - 7800));
+      let scale = 1 + ((5.5 / 1200) * (this.scrollY - 7800));
       setLogoScale(scale);
     }
     
@@ -64,23 +88,19 @@ function FyTechAnimation() {
     }
     
     if (this.scrollY >= 13500 && this.scrollY <= 14000){
-      let gradientBlock = 500-((380/500)* (this.scrollY-13500))
+      let gradientBlock = 700-((480/500)* (this.scrollY-13500))
       setGradientBlock(gradientBlock)
-    }
-    
-    if (this.scrollY >= 14000){
-      setDisPlayImg("none")
     } else {
-      setDisPlayImg("block")
+      setGradientBlock(700)
+  
     }
+    //
+    // if (this.scrollY >= 14000){
+    //   setDisPlayImg("none")
+    // } else {
+    //   setDisPlayImg("block")
+    // }
     
-    if (this.scrollY >= 14000 && this.scrollY <= 15000){
-      let scalee =1- ((1/1000)*(this.scrollY-14000))
-      let left = 50 + ((100/1000)*(this.scrollY-14000))
-      
-      setMainLeft(left)
-      setMainScale(scalee)
-    }
     
   });
   
@@ -92,8 +112,9 @@ function FyTechAnimation() {
     
     
     <div style={{position: `${logoFix}`, bottom: `${logoBottom}%`, left: `${mainLeft}%`, scale: `${mainScale}`}} className="logoBlock">
+    <div style={{display: displayImg, transform: ` rotate(${logoRotate}deg)`}} className="fyTechBlock">
       <img src={fyTechLogo} style={{transform: `scale(${logoScale})`, display: displayImg}} className="fyTechLogo" alt=""/>
-      
+    </div>
       <div style={{transform: `translateX(${firstNameTransform}%)`}} className="firstName">
         <p style={{transform: `translateY(-${firstNameLine}%)`, opacity: firstNameLineOpc}}
            className="startName">Values we</p>

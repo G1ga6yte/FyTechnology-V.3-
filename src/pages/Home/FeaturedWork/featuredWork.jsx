@@ -69,6 +69,58 @@ function FeaturedWork (){
     } else {
       setContFixed('relative')
     }
+    if (this.scrollY < 1300){
+      setCircle({
+        width: 20,
+        leftC: 50,
+        bottom: 50
+      })
+      setStyle1({
+        scale: `0.15`,
+        transform: `0`,
+        left: `38`
+      })
+      setStyle2({
+        scale: `0.2`,
+        transform: `0`,
+        left: `35`
+      })
+      setStyle3({
+        scale: `0.2`,
+        transform: `0`,
+        left: `30`
+      })
+      setStyle4({
+        scale: `0.2`,
+        transform: `0`,
+        left: `32`
+      })
+      setStyle5({
+        scale: `0.2`,
+        transform: `0`,
+        left: `30`
+      })
+      setStyle6({
+        scale: `0.2`,
+        transform: `0`,
+        left: `30`
+      })
+      setStyle7({
+        scale: `0.2`,
+        transform: `0`,
+        left: `40`
+      })
+      setStyle8({
+        scale: `0.2`,
+        transform: `0`,
+        left: `60`
+      })
+      setStyle9({
+        scale: `0.2`,
+        transform: `0`,
+        left: `50`
+      })
+    }
     
     
     if (this.scrollY >=1300 && this.scrollY < 3300){

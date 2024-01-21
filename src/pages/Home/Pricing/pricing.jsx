@@ -7,6 +7,7 @@ import Arrow from "../../navigation/images/arrow-narrow-right-black.svg";
 
 import marked from "./check-circle.svg"
 import unMarked from "./x-circle.svg"
+import PricingCard from "./pricingCard";
 function Pricing (){
   const {ref: useRef1, inView: visibleEl1} = useInView({
     "threshold": 0,
@@ -90,7 +91,7 @@ function Pricing (){
         <div className="Main">
             <div className="types">
               
-              <Link ref={useRef2} to="/" className={`bookCall G-alignItems-center ${visibleEl2 ? "scrollAnimation" : ""}`}>
+              <Link  onClick={()=>window.scrollTo(0, 0)} ref={useRef2} to="/contact" className={`bookCall G-alignItems-center ${visibleEl2 ? "scrollAnimation" : ""}`}>
                 <div className="textBlock">
                   <div className="textLine G-alignItems-center">
                     {BookACall.map((el)=>{
@@ -113,95 +114,114 @@ function Pricing (){
                 </div>
               </Link>
 
-              <div ref={useRef4} className={`PlanBlock G-flex-column ${visibleEl4 ? "scrollAnimation2" : ""}`}>
-                  <p className="PlanName">Standard Plan</p>
-                  <p className="desc">Pause or cancel anytime.</p>
-                  <p className="price">$3,499.99/m</p>
+              
+              <PricingCard
+                 buttonText={GetStarted}
+                 planType={"Standard Plan"}
+                 planPrice={"$3,499.99/m"}
+              />
   
-                <Link ref={useRef3} to="/" className={`getStarted G-alignItems-center ${visibleEl3 ? "scrollAnimation" : ""}`}>
-                  <div className="textBlock">
-                    <div className="textLine G-alignItems-center">
-                      {GetStarted.map((el)=>{
-                        if (el !== ' '){
-                          return(<div className="letter">{el}</div>)
-                        } else {
-                          return (<div className="space"></div>)
-                        }
-                      })}
-                    </div>
-                    <div className="textLine G-alignItems-center">
-                      {GetStarted.map((el)=>{
-                        if (el !== ' '){
-                          return(<div className="letter">{el}</div>)
-                        } else {
-                          return (<div className="space"></div>)
-                        }
-                      })}
-                    </div>
-                  </div>
-                </Link>
-
-              </div>
+              <PricingCard
+                 buttonText={GetStarted}
+                 planType={"Essential Plan"}
+                 planPrice={"$5,499.99/m"}
+                 blue={"BlueBlock"}
+              />
   
-              <div ref={useRef5} className={`PlanBlock G-flex-column ${visibleEl4 ? "scrollAnimation2" : ""}`}>
-                <p className="PlanName">Standard Plan</p>
-                <p className="desc">Pause or cancel anytime.</p>
-                <p className="price">$3,499.99/m</p>
-    
-                <Link ref={useRef3} to="/" className={`getStarted G-alignItems-center ${visibleEl3 ? "scrollAnimation" : ""}`}>
-                  <div className="textBlock">
-                    <div className="textLine G-alignItems-center">
-                      {GetStarted.map((el)=>{
-                        if (el !== ' '){
-                          return(<div className="letter">{el}</div>)
-                        } else {
-                          return (<div className="space"></div>)
-                        }
-                      })}
-                    </div>
-                    <div className="textLine G-alignItems-center">
-                      {GetStarted.map((el)=>{
-                        if (el !== ' '){
-                          return(<div className="letter">{el}</div>)
-                        } else {
-                          return (<div className="space"></div>)
-                        }
-                      })}
-                    </div>
-                  </div>
-                </Link>
-  
-              </div>
-  
-              <div ref={useRef6} className={`PlanBlock G-flex-column ${visibleEl4 ? "scrollAnimation2" : ""}`}>
-                <p className="PlanName">Standard Plan</p>
-                <p className="desc">Pause or cancel anytime.</p>
-                <p className="price">$3,499.99/m</p>
-    
-                <Link ref={useRef3} to="/" className={`getStarted G-alignItems-center ${visibleEl3 ? "scrollAnimation" : ""}`}>
-                  <div className="textBlock">
-                    <div className="textLine G-alignItems-center">
-                      {GetStarted.map((el)=>{
-                        if (el !== ' '){
-                          return(<div className="letter">{el}</div>)
-                        } else {
-                          return (<div className="space"></div>)
-                        }
-                      })}
-                    </div>
-                    <div className="textLine G-alignItems-center">
-                      {GetStarted.map((el)=>{
-                        if (el !== ' '){
-                          return(<div className="letter">{el}</div>)
-                        } else {
-                          return (<div className="space"></div>)
-                        }
-                      })}
-                    </div>
-                  </div>
-                </Link>
-  
-              </div>
+              <PricingCard
+                 buttonText={GetStarted}
+                 planType={"Growth Plan"}
+                 planPrice={"$9,499.99/m"}
+              />
+              {/*<div ref={useRef4} className={`PlanBlock G-flex-column ${visibleEl4 ? "scrollAnimation2" : ""}`}>*/}
+              {/*    <p className="PlanName">Standard Plan</p>*/}
+              {/*    <p className="desc">Pause or cancel anytime.</p>*/}
+              {/*    <p className="price">$3,499.99/m</p>*/}
+              
+              {/*  <Link ref={useRef3} to="/" className={`getStarted G-alignItems-center ${visibleEl3 ? "scrollAnimation" : ""}`}>*/}
+              {/*    <div className="textBlock">*/}
+              {/*      <div className="textLine G-alignItems-center">*/}
+              {/*        {GetStarted.map((el)=>{*/}
+              {/*          if (el !== ' '){*/}
+              {/*            return(<div className="letter">{el}</div>)*/}
+              {/*          } else {*/}
+              {/*            return (<div className="space"></div>)*/}
+              {/*          }*/}
+              {/*        })}*/}
+              {/*      </div>*/}
+              {/*      <div className="textLine G-alignItems-center">*/}
+              {/*        {GetStarted.map((el)=>{*/}
+              {/*          if (el !== ' '){*/}
+              {/*            return(<div className="letter">{el}</div>)*/}
+              {/*          } else {*/}
+              {/*            return (<div className="space"></div>)*/}
+              {/*          }*/}
+              {/*        })}*/}
+              {/*      </div>*/}
+              {/*    </div>*/}
+              {/*  </Link>*/}
+              
+              {/*</div>*/}
+              
+              {/*<div ref={useRef5} className={`PlanBlock G-flex-column ${visibleEl4 ? "scrollAnimation2" : ""}`}>*/}
+              {/*  <p className="PlanName">Standard Plan</p>*/}
+              {/*  <p className="desc">Pause or cancel anytime.</p>*/}
+              {/*  <p className="price">$3,499.99/m</p>*/}
+              
+              {/*  <Link ref={useRef3} to="/" className={`getStarted G-alignItems-center ${visibleEl3 ? "scrollAnimation" : ""}`}>*/}
+              {/*    <div className="textBlock">*/}
+              {/*      <div className="textLine G-alignItems-center">*/}
+              {/*        {GetStarted.map((el)=>{*/}
+              {/*          if (el !== ' '){*/}
+              {/*            return(<div className="letter">{el}</div>)*/}
+              {/*          } else {*/}
+              {/*            return (<div className="space"></div>)*/}
+              {/*          }*/}
+              {/*        })}*/}
+              {/*      </div>*/}
+              {/*      <div className="textLine G-alignItems-center">*/}
+              {/*        {GetStarted.map((el)=>{*/}
+              {/*          if (el !== ' '){*/}
+              {/*            return(<div className="letter">{el}</div>)*/}
+              {/*          } else {*/}
+              {/*            return (<div className="space"></div>)*/}
+              {/*          }*/}
+              {/*        })}*/}
+              {/*      </div>*/}
+              {/*    </div>*/}
+              {/*  </Link>*/}
+              
+              {/*</div>*/}
+              
+              {/*<div ref={useRef6} className={`PlanBlock G-flex-column ${visibleEl4 ? "scrollAnimation2" : ""}`}>*/}
+              {/*  <p className="PlanName">Standard Plan</p>*/}
+              {/*  <p className="desc">Pause or cancel anytime.</p>*/}
+              {/*  <p className="price">$3,499.99/m</p>*/}
+              
+              {/*  <Link ref={useRef3} to="/" className={`getStarted G-alignItems-center ${visibleEl3 ? "scrollAnimation" : ""}`}>*/}
+              {/*    <div className="textBlock">*/}
+              {/*      <div className="textLine G-alignItems-center">*/}
+              {/*        {GetStarted.map((el)=>{*/}
+              {/*          if (el !== ' '){*/}
+              {/*            return(<div className="letter">{el}</div>)*/}
+              {/*          } else {*/}
+              {/*            return (<div className="space"></div>)*/}
+              {/*          }*/}
+              {/*        })}*/}
+              {/*      </div>*/}
+              {/*      <div className="textLine G-alignItems-center">*/}
+              {/*        {GetStarted.map((el)=>{*/}
+              {/*          if (el !== ' '){*/}
+              {/*            return(<div className="letter">{el}</div>)*/}
+              {/*          } else {*/}
+              {/*            return (<div className="space"></div>)*/}
+              {/*          }*/}
+              {/*        })}*/}
+              {/*      </div>*/}
+              {/*    </div>*/}
+              {/*  </Link>*/}
+              
+              {/*</div>*/}
               
             </div>
           

@@ -45,7 +45,7 @@ function WhatWeDo (){
           </div>
          
          <div className="imageBlock">
-           <img src={require("./Rectangle 83.png")} alt=""/>
+           <img src={activeData.img} alt=""/>
          </div>
          
          <div className="mainOfLinks G-flex-column">
@@ -54,12 +54,15 @@ function WhatWeDo (){
              return <MainElement el={el} key={index} />
              
            })}
-           <div ref={myRef3} className={`mainSkill marginTop ${visibleEl3 ? "scrollAnimation2" : ''}`}>App development</div>
-           <div ref={myRef3} className={`mainSkill ${visibleEl3 ? "scrollAnimation2" : ''}`}>Web development </div>
-           <div ref={myRef3} className={`mainSkill ${visibleEl3 ? "scrollAnimation2" : ''}`}>Software development</div>
+           
   
+           {
+             activeData.skills.map((el, index) => {
+               return <div key={index} ref={myRef3} className={`mainSkill ${visibleEl3 ? "scrollAnimation2" : ''}`}>{el}</div>
+             })
+           }
   
-           <Link ref={myRef4} to="/" className={`FindOutMore G-alignItems-center ${visibleEl4 ? "scrollAnimation2" : ""}`}>
+           <Link onClick={()=>window.scrollTo(0, 0)} ref={myRef4} to="/" className={`FindOutMore G-alignItems-center ${visibleEl4 ? "scrollAnimation2" : ""}`}>
              <div className="textBlock">
                <div className="textLine G-alignItems-center">
                  {FindOutMore.map((el)=>{

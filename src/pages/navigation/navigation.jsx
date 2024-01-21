@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import {Link} from "react-router-dom";
 import "./navigation.scss"
+import {useLocation} from "react-router-dom";
 
 import FytechLogo from "./images/Group 1261152794.svg"
 import MenuOpen from "./images/menu-01.svg"
@@ -11,27 +12,39 @@ import mail from "./images/mail-02.svg"
 import instagram from "./images/Company=Instagram.svg"
 
 function Navigation (){
-  let ContactUs = "Contact us".split('')
-  let Projects = "Projects".split('')
+  let ContactUs = "Contact".split('')
+  let Work = "Work".split('')
+  let home = "Home".split('')
   let AboutUs = "About us".split('')
+  let Projects = "Projects".split('')
   
   const [menuBar, setMenuBar] = useState(false)
   
+  function Call(el, el2){
+    const locat = useLocation()
+    return el === locat.pathname
+  }
+  
   
   return(
-     <div className="Navigation G-flex-between">
-        <Link className="logoLink" to="/"><img src={FytechLogo} alt=""/></Link>
+     <div style={{display: `${Call("/contact") ? "none" : "flex"}`}} className="Navigation G-flex-between">
+        <Link onClick={()=>{window.scrollTo(0, 0)}} className="logoLink" to="/"><img src={FytechLogo} alt=""/></Link>
         <div className="buttonsBlock G-alignItems-center">
             <div  className="menuBtn">
+              <div onClick={()=>{setMenuBar(false)}} style={{display: `${menuBar ? "block" : "none"}`}} className="clickBackDrop"></div>
               <img onClick={()=> setMenuBar(prev => !prev)} className="barImg" style={{display: `${menuBar ? "none" : "block"}`}} src={MenuOpen} alt=""/>
               <img onClick={()=> setMenuBar(prev => !prev)} className="barImg" style={{display: `${menuBar ? "block" : "none"}`}} src={MenuClose} alt=""/>
               
               <div style={{display: `${menuBar ? "block" : "none"}`}} className="menu G-flex-column">
-                
-                <Link onClick={()=>setMenuBar(false)} className="linkToPage" to="/">
+  
+  
+                <Link  onClick={()=>{
+                  setMenuBar(false)
+                  window.scrollTo(0, 0)
+                }}className="linkToPage" to="/home">
                   <div className="textBlock">
                     <div className="textLine G-alignItems-center">
-                      {Projects.map((el)=>{
+                      {home.map((el)=>{
                         if (el !== ' '){
                           return(<div className="letter">{el}</div>)
                         } else {
@@ -40,7 +53,7 @@ function Navigation (){
                       })}
                     </div>
                     <div className="textLine G-alignItems-center">
-                      {Projects.map((el)=>{
+                      {home.map((el)=>{
                         if (el !== ' '){
                           return(<div className="letter">{el}</div>)
                         } else {
@@ -49,20 +62,23 @@ function Navigation (){
                       })}
                     </div>
                   </div>
-  
+    
                   <div className="arrowBlock">
                     <img src={ArrowBlack} alt=""/>
                     <img src={ArrowBlack} alt=""/>
                   </div>
-  
+    
                   <div className="hoverLineBlock">
                     <div className="line"></div>
                   </div>
                 </Link>
-                
-                
   
-                <Link onClick={()=>setMenuBar(false)} className="linkToPage" to="/aboutUs">
+  
+  
+                <Link onClick={()=>{
+                  setMenuBar(false)
+                  window.scrollTo(0, 0)
+                }} className="linkToPage" to="/aboutUs">
                   <div className="textBlock">
                     <div className="textLine G-alignItems-center">
                       {AboutUs.map((el)=>{
@@ -83,6 +99,77 @@ function Navigation (){
                       })}
                     </div>
                   </div>
+    
+                  <div className="arrowBlock">
+                    <img src={ArrowBlack} alt=""/>
+                    <img src={ArrowBlack} alt=""/>
+                  </div>
+    
+                  <div className="hoverLineBlock">
+                    <div className="line"></div>
+                  </div>
+                </Link>
+  
+                <Link onClick={()=>{
+                  window.scrollTo(0, 0)
+                  setMenuBar(false)
+                }} className="linkToPage" to="/projects">
+                  <div className="textBlock">
+                    <div className="textLine G-alignItems-center">
+                      {Projects.map((el)=>{
+                        if (el !== ' '){
+                          return(<div className="letter">{el}</div>)
+                        } else {
+                          return (<div className="space"></div>)
+                        }
+                      })}
+                    </div>
+                    <div className="textLine G-alignItems-center">
+                      {Projects.map((el)=>{
+                        if (el !== ' '){
+                          return(<div className="letter">{el}</div>)
+                        } else {
+                          return (<div className="space"></div>)
+                        }
+                      })}
+                    </div>
+                  </div>
+    
+                  <div className="arrowBlock">
+                    <img src={ArrowBlack} alt=""/>
+                    <img src={ArrowBlack} alt=""/>
+                  </div>
+    
+                  <div className="hoverLineBlock">
+                    <div className="line"></div>
+                  </div>
+                </Link>
+  
+  
+                <Link onClick={()=>{
+                  window.scrollTo(0, 0)
+                  setMenuBar(false)
+                }} className="linkToPage" to="/work">
+                  <div className="textBlock">
+                    <div className="textLine G-alignItems-center">
+                      {Work.map((el)=>{
+                        if (el !== ' '){
+                          return(<div className="letter">{el}</div>)
+                        } else {
+                          return (<div className="space"></div>)
+                        }
+                      })}
+                    </div>
+                    <div className="textLine G-alignItems-center">
+                      {Work.map((el)=>{
+                        if (el !== ' '){
+                          return(<div className="letter">{el}</div>)
+                        } else {
+                          return (<div className="space"></div>)
+                        }
+                      })}
+                    </div>
+                  </div>
   
                   <div className="arrowBlock">
                     <img src={ArrowBlack} alt=""/>
@@ -93,7 +180,46 @@ function Navigation (){
                     <div className="line"></div>
                   </div>
                 </Link>
-                
+  
+  
+                <Link onClick={()=>{
+                  window.scrollTo(0, 0)
+                  setMenuBar(false)
+                }} className="linkToPage" to="/contact">
+                  <div className="textBlock">
+                    <div className="textLine G-alignItems-center">
+                      {ContactUs.map((el)=>{
+                        if (el !== ' '){
+                          return(<div className="letter">{el}</div>)
+                        } else {
+                          return (<div className="space"></div>)
+                        }
+                      })}
+                    </div>
+                    <div className="textLine G-alignItems-center">
+                      {ContactUs.map((el)=>{
+                        if (el !== ' '){
+                          return(<div className="letter">{el}</div>)
+                        } else {
+                          return (<div className="space"></div>)
+                        }
+                      })}
+                    </div>
+                  </div>
+    
+                  <div className="arrowBlock">
+                    <img src={ArrowBlack} alt=""/>
+                    <img src={ArrowBlack} alt=""/>
+                  </div>
+    
+                  <div className="hoverLineBlock">
+                    <div className="line"></div>
+                  </div>
+                </Link>
+  
+  
+  
+  
                 <div className="OtherLinks G-alignItems-center">
   
                   <a onClick={()=>setMenuBar(false)} target='_blank' className="linkSite" href="https://www.instagram.com/fytechnology/">
@@ -111,7 +237,9 @@ function Navigation (){
               </div>
             </div>
             
-            <Link to="/contactUs" className="contactUsBtn G-alignItems-center">
+            <Link onClick={()=>{
+              window.scrollTo(0, 0)
+            }} to="/contactUs" className="contactUsBtn G-alignItems-center">
               <div className="textBlock">
                 <div className="textLine G-alignItems-center">
                     {ContactUs.map((el)=>{
