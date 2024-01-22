@@ -38,7 +38,7 @@
 
 
   .headBlock{
-    width: 75%;
+    width: 80%;
     @include screen($wide-l){
       width: 90%;
     }
@@ -50,7 +50,6 @@
     .header{
       font-size: 104px;
       font-family: 'PlexMono-Medium', sans-serif;
-      max-width: 650px;
       margin-bottom: 40px;
       @include screen($tablet-l){
         margin-bottom: 24px;

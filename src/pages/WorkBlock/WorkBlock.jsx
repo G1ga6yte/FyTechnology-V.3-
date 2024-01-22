@@ -1,10 +1,21 @@
 import React from "react";
 import "./workBlock.scss";
 
-import img1 from "./Rectangle 7.png";
+// import img1 from "./Rectangle 7.png";
 import {useInView} from "react-intersection-observer";
 import {Link} from "react-router-dom";
 import Arrow from "../navigation/images/arrow-narrow-right.svg";
+
+
+import img1 from "./images/1.png";
+import img2 from "./images/2.png";
+import img3 from "./images/3.png";
+import img4 from "./images/4.png";
+import img5 from "./images/5.png";
+import img6 from "./images/6.png";
+import img7 from "./images/7.png";
+
+
 
 function WorkBlock() {
   const {ref: myRef1, inView: visible1} = useInView({
@@ -101,7 +112,8 @@ function WorkBlock() {
   return (
      <div className="WorkBlock">
        <div className="headBlock">
-         <p ref={myRef1} className={`header ${visible1 ? "scrollAnimation" : ""}`}>The First Super-App</p>
+         <p ref={myRef1} className={`header ${visible1 ? "scrollAnimation" : ""}`}>We're making auto repair transparent
+           for drivers</p>
          <div ref={myRef2} className={`prg ${visible2 ? "scrollAnimation" : ""}`}>
            For several years we’ve been helping Punto Pago explore new digital marketing niches. During this time they
            have worked their way from being a utility bills payment service to launching a superapp as well as a whole
@@ -114,14 +126,13 @@ function WorkBlock() {
        <div className="FirstBlock">
          <p ref={myRef4} className={`miniHeader ${visible4 ? "scrollAnimation" : ""}`}>Customers' goal / challenge</p>
          <p ref={myRef5} className={`prg ${visible5 ? "scrollAnimation" : ""}`}>The Customer is developing a complex
-           product in the e-finance domain that allows users to
-           keep all necessary banking functionality in one app. The Futuro Team had to redone and significantly improve
-           the fundamental web part with the new functionality, develop a mobile application for prepaid card programs,
-           and then integrate them together.</p>
+           product in the e-finance domain that allows users to keep all necessary banking functionality in one app. The
+           Futuro Team had to redone and significantly improve the fundamental web part with the new functionality,
+           develop a mobile application for prepaid card programs, and then integrate them together.</p>
          
          
          <div className="imgTechStack">
-           <img ref={myRef6} className={`halfImage ${visible6 ? "scrollAnimation" : ""}`} src={img1} alt=""/>
+           <img ref={myRef6} className={`halfImage ${visible6 ? "scrollAnimation" : ""}`} src={img2} alt=""/>
            <div className="TextBlock">
              <p ref={myRef7} className={`miniHeader ${visible7 ? "scrollAnimation" : ""}`}>Tech stack</p>
              <p ref={myRef8} className={`item ${visible8 ? "scrollAnimation" : ""}`}>Node.js </p>
@@ -134,14 +145,13 @@ function WorkBlock() {
            </div>
          </div>
          
-         <img ref={myRef10} className={`image90 ${visible10 ? "scrollAnimation" : ""}`} src={img1} alt=""/>
+         <img ref={myRef10} className={`image90 ${visible10 ? "scrollAnimation" : ""}`} src={img3} alt=""/>
        
        </div>
        
        
        <div className="secondBlockText">
-         <p ref={myRef11} className={`miniHeader ${visible11 ? "scrollAnimation" : ""}`}>Product develop and
-           Objectives</p>
+         <p ref={myRef11} className={`miniHeader ${visible11 ? "scrollAnimation" : ""}`}>Product develop and Objectives</p>
          <p ref={myRef12} className={`prg ${visible12 ? "scrollAnimation" : ""}`}>Our initial task was a full rebranding
            and creating a mobile app with an average load of
            500k users per day. Punto Pago required a new strategy as they were moving towards being a multifunctional
@@ -152,13 +162,13 @@ function WorkBlock() {
        
        <div className="thirdBlocks">
          <div className="eachBlock">
-           <img ref={myRef13} className={`${visible13 ? "scrollAnimation" : ""}`} src={img1} alt=""/>
+           <img ref={myRef13} className={`${visible13 ? "scrollAnimation" : ""}`} src={img4} alt=""/>
            <p ref={myRef14} className={`underText ${visible14 ? "scrollAnimation" : ""}`}>Complete brand overhaul and
              development of a new strategy</p>
          </div>
          
          <div className="eachBlock">
-           <img ref={myRef15} className={`${visible15 ? "scrollAnimation2" : ""}`} src={img1} alt=""/>
+           <img ref={myRef15} className={`${visible15 ? "scrollAnimation2" : ""}`} src={img5} alt=""/>
            <p ref={myRef16} className={`underText ${visible16 ? "scrollAnimation2" : ""}`}>Redesigning terminals for
              paying bills in stores, business centers, and hotel</p>
          </div>
@@ -173,12 +183,13 @@ function WorkBlock() {
            consumer numbers, but transaction numbers.</p>
        </div>
        
-       <img ref={myRef19} className={`img90 ${visible19 ? "scrollAnimation" : ""}`} src={img1} alt=""/>
-       <img ref={myRef20} className={`img90 ${visible20 ? "scrollAnimation2" : ""}`} src={img1} alt=""/>
+       <img ref={myRef19} className={`img90 ${visible19 ? "scrollAnimation" : ""}`} src={img6} alt=""/>
+       <img ref={myRef20} className={`img90 ${visible20 ? "scrollAnimation2" : ""}`} src={img7} alt=""/>
        
        
        <div className="ContactBlock">
-         <p ref={myRef21} className={`ContactHeader ${visible21 ? "scrollAnimation" : ""}`}>Would like the same project?</p>
+         <p ref={myRef21} className={`ContactHeader ${visible21 ? "scrollAnimation" : ""}`}>Would like the same
+           project?</p>
          <Link onClick={() => window.scrollTo(0, 0)} ref={myRef22} to="/contact"
                className={`contactUsBtn G-alignItems-center ${visible22 ? "scrollAnimation2" : ""}`}>
            <div className="textBlock">
