@@ -1,13 +1,13 @@
 @import "../../source/styles/mixin.scss";
 .Home{
   position: relative;
-  max-width: 1920px;
-  width: 100%;
+  //max-width: 1920px;
+  width: 100% !important;
   overflow: hidden;
 
   .bckLines{
     width: 100%;
-    position: fixed;
+    position: absolute;
     z-index: 1;
     top: 0;
 

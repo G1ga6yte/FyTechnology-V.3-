@@ -78,8 +78,9 @@
         span{
           background-color:#FFA06B;
           color: white;
-          padding-right: 2px;
+          padding: 2px 5px;
           border-radius: 5px;
+          display: inline-block;
         }
       }
 
@@ -96,7 +97,7 @@
         width: 600px;
         height: 500px;
         scale: 0.8;
-        margin: -50px 0;
+        margin: -50px 0 -50px -100px;
         @include screen($wide-l){
           margin: -20px -80px;
           scale: 0.7;
@@ -125,7 +126,7 @@
       border: 1px solid black;
       cursor: pointer;
       position: absolute;
-      bottom: -40px;
+      bottom: 0;
       right: 15px;
       @include screen($mobile-m){
         padding: 6px 10px;

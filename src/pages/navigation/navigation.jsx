@@ -4,6 +4,7 @@ import "./navigation.scss"
 import {useLocation} from "react-router-dom";
 
 import FytechLogo from "./images/Group 1261152794.svg"
+import FytechLogoWhite from "./images/Group 1261152794white.svg"
 import MenuOpen from "./images/menu-01.svg"
 import MenuClose from "./images/x-close.svg"
 import Arrow from "./images/arrow-narrow-right.svg"
@@ -25,10 +26,27 @@ function Navigation (){
     return el === locat.pathname
   }
   
+  const [contactBtn, setContactBtn] = useState(true)
+  const [whiteLogo, setWhiteLogo] = useState(FytechLogo)
+  
+  window.addEventListener('scroll', function (){
+    if (this.scrollY >= 15000){
+      setContactBtn(false)
+    } else {
+      setContactBtn(true)
+    }
+    
+    if (this.scrollY >= 9000 && this.scrollY <= 15000){
+      setWhiteLogo(FytechLogoWhite)
+    } else{
+      setWhiteLogo(FytechLogo)
+    }
+  })
+  
   
   return(
      <div style={{display: `${Call("/contact") ? "none" : "flex"}`}} className="Navigation G-flex-between">
-        <Link onClick={()=>{window.scrollTo(0, 0)}} className="logoLink" to="/"><img src={FytechLogo} alt=""/></Link>
+        <Link onClick={()=>{window.scrollTo(0, 0)}} className="logoLink" to="/"><img src={whiteLogo} alt=""/></Link>
         <div className="buttonsBlock G-alignItems-center">
             <div  className="menuBtn">
               <div onClick={()=>{setMenuBar(false)}} style={{display: `${menuBar ? "block" : "none"}`}} className="clickBackDrop"></div>
@@ -237,7 +255,7 @@ function Navigation (){
               </div>
             </div>
             
-            <Link onClick={()=>{
+            <Link style={{transform: `translateY(${contactBtn ? "0" : "-200px"})`}} onClick={()=>{
               window.scrollTo(0, 0)
             }} to="/contactUs" className="contactUsBtn G-alignItems-center">
               <div className="textBlock">

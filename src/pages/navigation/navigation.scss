@@ -21,6 +21,7 @@
     @include screen($mobile-m){
       img{
         width: 80px;
+        transition: 0.5s ease-in-out;
       }
     }
   }
@@ -222,6 +223,7 @@
       border-radius: 20px;
       background-color: black;
       cursor: pointer;
+      transition: 0.5s ease-in-out;
       @include screen($mobile-m){
         padding: 6px 10px;
         border-radius: 16px;

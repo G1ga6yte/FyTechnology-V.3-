@@ -3,6 +3,9 @@
   width: 100%;
   position: relative;
   z-index: 3;
+  .videoLastScene{
+    width: 100%;
+  }
   @include screen($tablet-l){
     display: none;
   }

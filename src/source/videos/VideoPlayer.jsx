@@ -4,8 +4,13 @@ import {useCartContext} from "../../pages/Home/homeHead/CartContext";
 function VideoPlay (){
   const [percent, setPercent] = useState(1)
   const [timing, setTiming] = useState(40)
+  const [tablet, setTablet] = useState(false)
   
-  
+  useEffect(()=>{
+    if (window.innerWidth <=1096){
+      setTablet(true)
+    }
+  }, [])
   
   useEffect(()=>{
     
@@ -30,7 +35,7 @@ function VideoPlay (){
   
   
   return (
-     <div style={{backgroundColor: "white",  zIndex: 2000}} className="VideoLoadingBlock">
+     <div style={{backgroundColor: "white",  zIndex: 2000, display: `${tablet ? "none" : "block"}`}} className="VideoLoadingBlock">
        <div className="LoadingWord">
          Loading
          <span></span>

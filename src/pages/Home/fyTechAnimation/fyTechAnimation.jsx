@@ -60,7 +60,7 @@ function FyTechAnimation() {
     
     
     if (this.scrollY >= 7800 && this.scrollY <= 9000) {
-      let scale = 1 + ((5.5 / 1200) * (this.scrollY - 7800));
+      let scale = 1 + ((6.5 / 1200) * (this.scrollY - 7800));
       setLogoScale(scale);
     }
     
@@ -69,7 +69,7 @@ function FyTechAnimation() {
       setFirstNameTransform(transform);
     }
     if (this.scrollY >= 8500 && this.scrollY <= 9500) {
-      let transform = ((400 / 1000) * (this.scrollY - 8500));
+      let transform = ((500 / 1000) * (this.scrollY - 8500));
       let opc = 1 - ((1 / 1000) * (this.scrollY - 8500));
       setFirstNameLine(transform);
       setFirstNameLineOpc(opc);
