@@ -1,0 +1,151 @@
+@import "../../../../source/styles/mixin.scss";
+
+.CardCont{
+  width: 24%;
+  transform-style: preserve-3d;
+  position: relative;
+  z-index: 5;
+  cursor: pointer;
+  margin-bottom: 20px;
+  overflow: hidden;
+
+  .CardDiv{
+    width: 100%;
+    height: 400px;
+    transform-style: preserve-3d;
+
+    .FrontCardSide{
+      height: 100%;
+      width: 100%;
+      padding: 32px 24px;
+      border-radius: 16px;
+      background: #F9F9F9;
+      position: relative;
+      .namePrg{
+        font-size: 24px;
+        color: black;
+        font-family: 'PlexMono-Medium', sans-serif;
+      }
+      .img{
+        width: 60%;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+      }
+    }
+
+    .BackCardSide{
+      height: 100%;
+      width: 100%;
+      padding: 32px 24px;
+      border-radius: 16px;
+      background: #0038FF;
+      position: relative;
+      .namePrg{
+        font-size: 24px;
+        color: white;
+        font-family: 'PlexMono-Medium', sans-serif;
+        margin-bottom: 24px;
+      }
+      .contentPrg{
+        font-size: 15px;
+        font-family: 'PlexMono-Regular', sans-serif;
+        color: white;
+        margin-bottom: 8px;
+        white-space: nowrap;
+      }
+      .FindOutMore{
+        display: flex;
+        text-decoration: none;
+        padding: 8px 16px;
+        border-radius: 20px;
+        cursor: pointer;
+        position: absolute;
+        bottom: 30px;
+        left: 24px;
+
+        @include screen($mobile-m){
+          padding: 6px 10px;
+          border-radius: 16px;
+        }
+        @include screen($tablet-l){
+          position: relative;
+          width: 100%;
+          justify-content: center;
+          bottom: 0;
+          margin: 20px 0;
+        }
+
+
+
+        &:hover{
+          .letter{
+            &:nth-child(3n+1){
+              transition: 0.4s ease-in-out all;
+              transform: translateY(-100%);
+            }
+            &:nth-child(3n+2){
+              transition: 0.2s ease-in-out all;
+              transform: translateY(-100%);
+            }
+            &:nth-child(3n+3){
+              transition: 0.6s ease-in-out all;
+              transform: translateY(-100%);
+            }
+          }
+          .arrowBlock{
+            img{
+              transition: 1s ease-in-out;
+              transform: translateX(-100%);
+            }
+          }
+
+
+        }
+        .textBlock{
+          height: 35px;
+          overflow: hidden;
+          margin-right: 20px;
+
+          .textLine{
+
+
+            .letter{
+              font-size: 24px;
+              font-family: 'PlexMono-Medium', sans-serif;
+              color: white;
+              line-height: 35px;
+              @include screen($tablet){
+                font-size: 20px;
+              }
+
+
+              &:nth-child(3n+1){
+                transition: 0.4s ease-in-out all;
+              }
+              &:nth-child(3n+2){
+                transition: 0.2s ease-in-out all;
+              }
+              &:nth-child(3n+3){
+                transition: 0.6s ease-in-out all;
+              }
+            }
+            .space{
+              width: 15px;
+            }
+          }
+        }
+        .arrowBlock{
+          display: flex;
+          width: 24px;
+          height: 24px;
+          overflow: hidden;
+        }
+      }
+    }
+
+
+  }
+
+
+}

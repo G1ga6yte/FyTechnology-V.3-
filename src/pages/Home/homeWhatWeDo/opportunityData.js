@@ -1,19 +1,19 @@
-import softwareDevelopment from "./images/image 18.png"
-import itInfrastructure from "./images/image 17.png"
-import itConsulting from "./images/image 17 (1).png"
-import itMaintenance from "./images/image 17 (2).png"
-import advancedService from "./images/image 17 (13).png"
-import additionalServices from "./images/image 17 (11).png"
-import commonItDesignServicesInclude from "./images/image 17 (7).png"
-import bigDataAndAnalytics from "./images/image 17 (3).png"
-import newTechnologiesIntegration from "./images/image 17 (4).png"
-import softwareTestingAndQuality from "./images/image 17 (6).png"
-import accountingAndFinancial from "./images/image 17 (5).png"
-import contractDraftingAndReview from "./images/image 17 (8).png"
-import legalResearchAndWriting from "./images/image 17 (9).png"
-import corporateGovernanceAndConsulting from "./images/image 17 (10).png"
-import laborLawAndHumanResourcesServices from "./images/image 17 (12).png"
-import web3 from "./images/image 17 (14).png"
+import softwareDevelopment from "./images/Software development.png"
+import itInfrastructure from "./images/IT infrastructure.png"
+import itConsulting from "./images/IT consulting and strategy.png"
+import itMaintenance from "./images/IT maintenance and support.png"
+import advancedService from "./images/Advanced services.png"
+import additionalServices from "./images/Corporate Governance and Advice.png"
+import commonItDesignServicesInclude from "./images/Common IT design services include.png"
+import bigDataAndAnalytics from "./images/Big Data and Analytics.png"
+import newTechnologiesIntegration from "./images/Integration of new technologies.png"
+import softwareTestingAndQuality from "./images/Software Testing and Quality Assurance.png"
+import accountingAndFinancial from "./images/Full-service accounting services.png"
+import contractDraftingAndReview from "./images/Contract drafting and review.png"
+import legalResearchAndWriting from "./images/Legal research and writing.png"
+import corporateGovernanceAndConsulting from "./images/Corporate Governance and Advice.png"
+import laborLawAndHumanResourcesServices from "./images/Employment law and HR services.png"
+import web3 from "./images/Web 3.png"
 
 
 
@@ -80,9 +80,9 @@ export const OpportunityData = [
       "Cloud computing",
       "DevOps",
       "Agile development",
-      "Data analytics",
-      "User experience (UX) design",
-      "Customer experience (CX) management"
+      // "Data analytics",
+      // "User experience (UX) design",
+      // "Customer experience (CX) management"
     ],
     skills: [
       "Custom Solutions",
@@ -102,12 +102,12 @@ export const OpportunityData = [
     "UI/UX for native mobile apps",
     "UI/UX for enterprise software",
     "UI/UX for web design",
-    "Accessibility consulting",
-    "UI/UX for wearables",
-    "UI/UX for interactive installations",
-    "UI/UX for augmented reality (AR) and virtual reality (VR)",
-    "Brand Identity",
-    "Dashboard design"
+    // "Accessibility consulting",
+    // "UI/UX for wearables",
+    // "UI/UX for interactive installations",
+    // "UI/UX for augmented reality (AR) and virtual reality (VR)",
+    // "Brand Identity",
+    // "Dashboard design"
     ],
     skills: [
        "Supplementary Solutions",
@@ -125,7 +125,7 @@ export const OpportunityData = [
     "Information security design and implementation",
     "IT architecture design and documentation",
     "IT compliance and regulatory design",
-    "IT project management"
+    // "IT project management"
     ],
     skills: [
       "System Architecture",

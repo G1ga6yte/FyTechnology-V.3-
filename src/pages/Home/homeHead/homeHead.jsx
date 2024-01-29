@@ -1,6 +1,7 @@
 import React from "react";
 import "./homeHead.scss"
 import {useInView} from "react-intersection-observer";
+import Lenis from "@studio-freight/lenis";
 
 function HomeHead (){
   const {ref: myRef1, inView: visible1} = useInView({

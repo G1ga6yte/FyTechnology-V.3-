@@ -11,11 +11,14 @@ import FyTechAnimation from "./fyTechAnimation/fyTechAnimation";
 import LastVideoScene from "./lastVideoScene/lastVideoScene";
 import PricingTablet from "./PricingTablet/PricingTablet";
 import FeaturedWorkTablet from "./FeaturedWorkTablet/featuredWorkTablet";
+import Lenis from "@studio-freight/lenis";
+
 
 function Home() {
   const [ballRight, setBallRight] = useState(-20);
   const [ballTop, setBallTop] = useState(0);
   const [ballScale, setBallScale] = useState(1)
+  
   
   window.addEventListener('scroll', function (){
     if (this.scrollY <= 1300){
