@@ -29,7 +29,7 @@ function Home() {
     console.log(this.scrollY);
     if (this.scrollY <= 1300){
       let right = -20 + ((20/1300) * (this.scrollY))
-      let top = ((60/1300)*(this.scrollY))
+      let top = ((70/1300)*(this.scrollY))
       let scale =1- ((0.8/1300)*(this.scrollY))
       
       setBallRight(right)
@@ -38,7 +38,12 @@ function Home() {
     }
     
     
-    
+    if (this.scrollY < 1300 && this.scrollY > 4400){
+      setIconRight(50)
+      setIconBottom(-200)
+      setIconScale(0.2)
+      setIconRotate(0)
+    }
     
     if (this.scrollY >= 1300 && this.scrollY <=2800){
       let bottom =-150 + ((450/1500)*(this.scrollY-1300))
