@@ -7,6 +7,8 @@
   position: relative;
   z-index: 3;
   margin: 250px auto;
+  pointer-events: none;
+  display: flex;
   @include screen($wide-l){
     margin: 200px auto;
   }
@@ -20,11 +22,15 @@
   .header{
     font-size: 164px;
     font-family: 'Darker-Grot', sans-serif;
+    font-weight: 300;
     color: black;
     transition: 1s ease-in-out;
     white-space: nowrap;
     letter-spacing: -3px;
     line-height: 120px;
+    &:nth-child(2){
+      margin-bottom: 50px;
+    }
     @include screen($wide-l){
       font-size: 90px;
     }
@@ -56,6 +62,22 @@
     }
     @include screen($tablet){
       max-width: 100%;
+    }
+  }
+
+  .textBlock{
+    border-left: 1px solid #C7C7C7;
+    padding: 45px 60px;
+    height: min-content;
+    margin-right: 50px;
+    .prgRight{
+      font-size: 40px;
+      width: 265px;
+      line-height: 40px;
+      font-family: 'Darker-Grot', sans-serif;
+      font-weight: 600;
+      border-bottom: 1px solid #C7C7C7;
+      padding-bottom: 65px;
     }
   }
 }
