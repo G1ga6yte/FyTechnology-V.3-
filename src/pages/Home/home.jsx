@@ -13,14 +13,20 @@ import PricingTablet from "./PricingTablet/PricingTablet";
 import FeaturedWorkTablet from "./FeaturedWorkTablet/featuredWorkTablet";
 import Lenis from "@studio-freight/lenis";
 
-
+import fetureImg from "./2d9491c4dfb145b17b3b0a124d05023e.png"
 function Home() {
   const [ballRight, setBallRight] = useState(-20);
   const [ballTop, setBallTop] = useState(0);
   const [ballScale, setBallScale] = useState(1)
   
+  const [iconRight, setIconRight] = useState(50)
+  const [iconBottom, setIconBottom] = useState(-200)
+  const [iconScale, setIconScale] = useState(0.2)
+  const [iconRotate, setIconRotate] = useState(0)
+  
   
   window.addEventListener('scroll', function (){
+    console.log(this.scrollY);
     if (this.scrollY <= 1300){
       let right = -20 + ((20/1300) * (this.scrollY))
       let top = ((60/1300)*(this.scrollY))
@@ -31,23 +37,29 @@ function Home() {
       setBallScale(scale)
     }
     
+    
+    
+    
     if (this.scrollY >= 1300 && this.scrollY <=2800){
-      let top =60- ((50/1500)*(this.scrollY-1300))
-      let scale = 0.2 + ((0.8/1500)*(this.scrollY-1300))
-      setBallScale(scale)
-      setBallTop(top)
+      let bottom =-150 + ((450/1500)*(this.scrollY-1300))
+      let scale = 0.2 + ((7/1500)*(this.scrollY-1300))
+      setIconBottom(bottom)
+      setIconScale(scale)
     }
-    
+
     if (this.scrollY >= 3400 && this.scrollY <=4400){
-      let top = 10 - ((10/1000) * (this.scrollY-3400))
-      let scale = 1 + ((0.8/1000)*(this.scrollY-3400))
-      let right = 0 - ((20/1000)*(this.scrollY-3400))
-      setBallScale(scale)
-      setBallTop(top)
-      setBallRight(right)
+      let bottom = 300 - ((100/1000) * (this.scrollY-3400))
+      let scale = 7.2 + ((6/1000)*(this.scrollY-3400))
+      let right = 50 - ((20/1000)*(this.scrollY-3400))
+      setIconScale(scale)
+      setIconBottom(bottom)
+      setIconRight(right)
     }
     
-    
+    if (this.scrollY >= 1300 && this.scrollY <= 6400){
+      let rotate = ((300/3100)*(this.scrollY-1300))
+      setIconRotate(rotate)
+    }
     
     
   })
@@ -76,6 +88,11 @@ function Home() {
          scale: `${ballScale}`
        }} className="spline">
          <Spline className="Ball" scene="https://prod.spline.design/gQOkQ2BEvut7DqqV/scene.splinecode"/>
+       </div>
+       
+       
+       <div style={{bottom: `${iconBottom}px`, right: `${iconRight}%`,}} className="featureImg">
+         <img style={{scale: `${iconScale}`, rotate: `${iconRotate}deg` }} src={fetureImg} alt=""/>
        </div>
        
        

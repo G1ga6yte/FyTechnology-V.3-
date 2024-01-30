@@ -16,8 +16,8 @@ function HomeHead (){
   
   return(
      <div className="HomeHead">
-        <p ref={myRef1}  className={`header ${visible1 ? "scrollAnimation" : ""}`}>Digital products</p>
-       <p  ref={myRef1} className={`header ${visible1 ? "scrollAnimation" : ""}`}>creatives & Impressive</p>
+        <p ref={myRef1}  className={`header ${visible1 ? "scrollAnimation" : ""}`}>The</p>
+       <p  ref={myRef1} className={`header ${visible1 ? "scrollAnimation" : ""}`}>FyTechnology</p>
 
        <p ref={myRef2} className={`prg ${visible2 ? "scrollAnimation" : ""}`}>We use the latest technologies to create innovative and user-friendly solutions that meet the needs of our clients</p>
 

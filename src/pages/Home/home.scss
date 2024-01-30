@@ -114,6 +114,15 @@
       display: none;
     }
   }
+  .featureImg{
+    z-index: 2;
+    position: fixed;
+    transform: translateX(50%);
+
+    img{
+      width: 100px;
+    }
+  }
 
 }
 
