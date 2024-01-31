@@ -13,6 +13,7 @@ import ContactUs from "./pages/ContactUs/ContactUs";
 import Lenis from "@studio-freight/lenis";
 import Services from "./pages/services/services";
 import Cursor from "./source/cursor/cursor";
+import LoadingComponent from "./pages/loadingComponent/loadingComponent";
 // import { View, Animated, Easing, StyleSheet, TouchableOpacity, Text } from "react-native"
 // import { ReactLenis, useLenis } from '@studio-freight/react-lenis'
 // import {gsap} from "gsap";
@@ -64,6 +65,7 @@ function App() {
      <div style={{height: appSettings.height, overflow: appSettings.overflow}} className="App">
        
        <VideoPlay/>
+       {/*<LoadingComponent/>*/}
        
        <Pages/>
        

@@ -1,19 +1,17 @@
 @import "../../../source/styles/mixin.scss";
 
 .HomeHead{
-  max-width: 1440px;
-    width: 100%;
+  width: 100%;
   padding: 0 10px;
   position: relative;
   z-index: 3;
-  margin: 250px auto;
+  margin: 180px auto;
   pointer-events: none;
-  display: flex;
   @include screen($wide-l){
-    margin: 200px auto;
+    margin: 150px auto;
   }
   @include screen($tablet-l){
-    margin: 170px auto;
+    margin: 130px auto;
   }
   @include screen($wide-s){
     margin: 100px auto;
@@ -46,14 +44,24 @@
     }
 
   }
+  
+  .headerBlock{
+    position: relative;
+    margin-left: 200px;
+  }
   .prg{
     margin-top: 24px;
     font-size: 28px;
-    font-family: 'PlexMono-Regular', sans-serif;
+    font-family: 'Darker-Grot', sans-serif;
+    font-weight: 500;
     color: black;
-    max-width: 60%;
-    line-height: 36px;
+    max-width: 540px;
+    line-height: 30px;
     letter-spacing: 0 !important;
+    position: absolute;
+    rotate: 90deg;
+    left: -340px;
+    top: 40%;
     @include screen($wide-l){
       font-size: 26px;
     }
@@ -75,7 +83,7 @@
       width: 265px;
       line-height: 40px;
       font-family: 'Darker-Grot', sans-serif;
-      font-weight: 600;
+      font-weight: 500;
       border-bottom: 1px solid #C7C7C7;
       padding-bottom: 65px;
     }

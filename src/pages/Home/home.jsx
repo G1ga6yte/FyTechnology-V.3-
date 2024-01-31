@@ -14,7 +14,12 @@ import FeaturedWorkTablet from "./FeaturedWorkTablet/featuredWorkTablet";
 import Lenis from "@studio-freight/lenis";
 
 import fetureImg from "./2d9491c4dfb145b17b3b0a124d05023e.png"
+import {useInView} from "react-intersection-observer";
 function Home() {
+  const {ref: myRef1, inView: visible1} = useInView({
+    "threshold": 0,
+    "triggerOnce": true
+  })
   const [ballRight, setBallRight] = useState(-20);
   const [ballTop, setBallTop] = useState(0);
   const [ballScale, setBallScale] = useState(1)
@@ -87,11 +92,11 @@ function Home() {
          </div>
        </div>
        
-       <div style={{
+       <div ref={myRef1} style={{
          right: `${ballRight}%`,
          top  : `${ballTop}%`,
          scale: `${ballScale}`
-       }} className="spline">
+       }} className={`spline ${visible1 ? "scrollAnimation2" : ""}`}>
          <Spline className="Ball" scene="https://prod.spline.design/gQOkQ2BEvut7DqqV/scene.splinecode"/>
        </div>
        

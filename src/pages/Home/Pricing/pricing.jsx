@@ -118,20 +118,20 @@ function Pricing (){
               <PricingCard
                  buttonText={GetStarted}
                  planType={"Standard Plan"}
-                 planPrice={"$3,499.99/m"}
+                 planPrice={"$1,499.99/m"}
               />
   
               <PricingCard
                  buttonText={GetStarted}
                  planType={"Essential Plan"}
-                 planPrice={"$5,499.99/m"}
+                 planPrice={"$3,499.99/m"}
                  blue={"BlueBlock"}
               />
   
               <PricingCard
                  buttonText={GetStarted}
                  planType={"Growth Plan"}
-                 planPrice={"$9,499.99/m"}
+                 planPrice={"$4,499.99/m"}
               />
               {/*<div ref={useRef4} className={`PlanBlock G-flex-column ${visibleEl4 ? "scrollAnimation2" : ""}`}>*/}
               {/*    <p className="PlanName">Standard Plan</p>*/}

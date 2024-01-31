@@ -67,7 +67,7 @@ function PricingTablet (){
               <div className="planType">
                   <p className="planName">Standard Plan</p>
                 <p className="planDesc">Pause or cancel anytime.</p>
-                <p className="price">$3,499.99/m</p>
+                <p className="price">$1,499.99/m</p>
               </div>
             
             <a href="" className="callButton">
@@ -95,7 +95,7 @@ function PricingTablet (){
            <div className="planType">
              <p className="planName">Essential Plan <span>Most popular</span></p>
              <p className="planDesc">Pause or cancel anytime.</p>
-             <p className="price">$5,499.99/m</p>
+             <p className="price">$3,499.99/m</p>
            </div>
       
            <a href="" className="callButton">
@@ -122,7 +122,7 @@ function PricingTablet (){
            <div className="planType">
              <p className="planName">Growth Plan</p>
              <p className="planDesc">Pause or cancel anytime.</p>
-             <p className="price">$9,499.99/m</p>
+             <p className="price">$4,499.99/m</p>
            </div>
       
            <a href="" className="callButton">

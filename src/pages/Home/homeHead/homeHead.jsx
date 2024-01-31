@@ -25,11 +25,12 @@ function HomeHead (){
           <p  ref={myRef1} className={`header ${visible1 ? "scrollAnimation" : ""}`}>FyTechnology</p>
   
           <p ref={myRef2} className={`prg ${visible2 ? "scrollAnimation" : ""}`}>We use the latest technologies to create innovative and user-friendly solutions that meet the needs of our clients</p>
-          
+  
+          <div className="textBlock">
+            <p ref={myRef3} className={`prgRight ${visible3 ? "scrollAnimation2" : ""}`}>Digital products creatives & Impressive</p>
+          </div>
         </div>
-       <div className="textBlock">
-         <p ref={myRef3} className={`prgRight ${visible3 ? "scrollAnimation2" : ""}`}>Digital products creatives & Impressive</p>
-       </div>
+       
      </div>
   )
 }
