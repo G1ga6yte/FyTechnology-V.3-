@@ -31,7 +31,6 @@ function Home() {
   
   
   window.addEventListener('scroll', function (){
-    console.log(this.scrollY);
     if (this.scrollY <= 1300){
       let right = -20 + ((20/1300) * (this.scrollY))
       let top = ((70/1300)*(this.scrollY))

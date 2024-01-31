@@ -16,7 +16,6 @@ import img6 from "./images/6.png";
 import img7 from "./images/7.png";
 
 
-
 function WorkBlock() {
   const {ref: myRef1, inView: visible1} = useInView({
     "threshold"  : 0,
@@ -112,23 +111,27 @@ function WorkBlock() {
   return (
      <div className="WorkBlock">
        <div className="headBlock">
-         <p ref={myRef1} className={`header ${visible1 ? "scrollAnimation" : ""}`}>We're making auto repair transparent
-           for drivers</p>
+         <p ref={myRef1} className={`header ${visible1 ? "scrollAnimation" : ""}`}>Driving Innovation: Carfy - Your
+           All-in-One Automotive Companion</p>
          <div ref={myRef2} className={`prg ${visible2 ? "scrollAnimation" : ""}`}>
-           For several years we’ve been helping Punto Pago explore new digital marketing niches. During this time they
-           have worked their way from being a utility bills payment service to launching a superapp as well as a whole
-           Punto Pago ecosystem with bank cards, loans, payments and a marketplace.
+           In our relentless pursuit of transforming the automotive service landscape, our dedicated team of four
+           professionals has meticulously crafted Carfy—an advanced application poised to redefine the industry. Beyond
+           being just an app, Carfy represents a sophisticated solution designed to streamline processes for both
+           clients and automotive service providers.
          </div>
        </div>
        
        <img ref={myRef3} className={`fullImage ${visible3 ? "scrollAnimation" : ""}`} src={img1} alt=""/>
        
        <div className="FirstBlock">
-         <p ref={myRef4} className={`miniHeader ${visible4 ? "scrollAnimation" : ""}`}>Customers' goal / challenge</p>
-         <p ref={myRef5} className={`prg ${visible5 ? "scrollAnimation" : ""}`}>The Customer is developing a complex
-           product in the e-finance domain that allows users to keep all necessary banking functionality in one app. The
-           Futuro Team had to redone and significantly improve the fundamental web part with the new functionality,
-           develop a mobile application for prepaid card programs, and then integrate them together.</p>
+         <p ref={myRef4} className={`miniHeader ${visible4 ? "scrollAnimation" : ""}`}>A Holistic Suite of Automotive
+           Solutions:</p>
+         <p ref={myRef5} className={`prg ${visible5 ? "scrollAnimation" : ""}`}>Carfy offers a seamless experience,
+           providing users with the ability to effortlessly book car service appointments, access comprehensive car
+           histories for informed decision-making, make secure online payments for vignettes, and utilize a
+           state-of-the-art car insurance calculator for personalized coverage options. Additionally, users can find
+           immediate assistance on the road, stay informed through a curated blog, and enjoy the convenience of both a
+           mobile app and a web version.</p>
          
          
          <div className="imgTechStack">
@@ -151,12 +154,14 @@ function WorkBlock() {
        
        
        <div className="secondBlockText">
-         <p ref={myRef11} className={`miniHeader ${visible11 ? "scrollAnimation" : ""}`}>Product develop and Objectives</p>
+         <p ref={myRef11} className={`miniHeader ${visible11 ? "scrollAnimation" : ""}`}>Efficient Garage Management and
+           Marketplace Integration:</p>
          <p ref={myRef12} className={`prg ${visible12 ? "scrollAnimation" : ""}`}>Our initial task was a full rebranding
-           and creating a mobile app with an average load of
-           500k users per day. Punto Pago required a new strategy as they were moving towards being a multifunctional
-           app. Users needed to be able to check their account status and make a payment at any time. The mobile app
-           made it possible identifying the existing clients as well as attracting new ones.</p>
+           Carfy's virtual garage management feature empowers users to effortlessly add and manage vehicles, while
+           automotive service businesses can leverage a dynamic web page with a robust dashboard. This enables efficient
+           appointment management, service tracking, and seamless client engagement. The inclusion of a marketplace with
+           detailed car listings further enriches the user experience, offering a one-stop destination for automotive
+           needs.</p>
        </div>
        
        
@@ -175,12 +180,15 @@ function WorkBlock() {
        </div>
        
        <div className="secondBlockText">
-         <p ref={myRef17} className={`miniHeader ${visible17 ? "scrollAnimation" : ""}`}>Multi-service platform and
-           fintech app</p>
-         <p ref={myRef18} className={`prg ${visible18 ? "scrollAnimation" : ""}`}>Punto Pago provides multiple services,
-           including payments, spendings control and fast
-           delivery marketplace. We have explored the best scaling options considering growth and focused on not just
-           consumer numbers, but transaction numbers.</p>
+         <p ref={myRef17} className={`miniHeader ${visible17 ? "scrollAnimation" : ""}`}>From Concept to a
+           Multi-functional Reality:</p>
+         <p ref={myRef18} className={`prg ${visible18 ? "scrollAnimation" : ""}`}>Our journey began with a simple yet
+           powerful concept: to simplify processes for both clients and automotive service providers. After a year of
+           unwavering dedication, we proudly introduce Carfy—an application that not only meets but exceeds
+           expectations. Carfy stands out in the EU market as a multifunctional powerhouse, offering a unique blend of
+           services with no direct competition.</p>
+         <p ref={myRef18} className={`prg ${visible18 ? "scrollAnimation" : ""}`}>Explore the future of automotive services with Carfy—a name synonymous with innovation, efficiency, and a commitment to making every journey a seamless experience.</p>
+       
        </div>
        
        <img ref={myRef19} className={`img90 ${visible19 ? "scrollAnimation" : ""}`} src={img6} alt=""/>
