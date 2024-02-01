@@ -8,6 +8,15 @@
   cursor: pointer;
   margin-bottom: 20px;
   overflow: hidden;
+  @include screen($wide-l){
+    width: 32%;
+  }
+  @include screen($wide-s){
+    width: 49%;
+  }
+  @include screen($tablet){
+    width: 100%;
+  }
 
   .CardDiv{
     width: 100%;
@@ -46,6 +55,10 @@
         color: white;
         font-family: 'PlexMono-Medium', sans-serif;
         margin-bottom: 24px;
+        @include screen($tablet){
+          font-size: 20px;
+        }
+
       }
       .contentPrg{
         font-size: 15px;
@@ -53,6 +66,9 @@
         color: white;
         margin-bottom: 8px;
         white-space: nowrap;
+        @include screen($tablet){
+          font-size: 12px;
+        }
       }
       .FindOutMore{
         display: flex;

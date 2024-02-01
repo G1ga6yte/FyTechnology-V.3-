@@ -19,7 +19,7 @@ function Footer (){
   const Linkedin = "LinkedIn".split('')
   
   const FyTrading = "FyTrading".split('')
-  
+  const SaasSolution = "Saas solution".split('')
   
   
   const {ref: myRef1, inView: visible1} = useInView({
@@ -132,7 +132,7 @@ function Footer (){
                   </div>
                 </div>
               </Link>
-              <Link  onClick={()=>window.scrollTo(0, 0)} ref={myRef5} to="/services" className={`Link G-alignItems-center ${visible5 ? "scrollAnimation2" : ""}`}>
+              <Link  onClick={()=>window.scrollTo(0, 0)} ref={myRef5} to="/service" className={`Link G-alignItems-center ${visible5 ? "scrollAnimation2" : ""}`}>
                 <div className="textBlock">
                   <div className="textLine G-alignItems-center">
                     {Services.map((el)=>{
@@ -179,7 +179,7 @@ function Footer (){
 
             </div>
             <div className="linksLine">
-              <a  ref={myRef4} href="" className={`Link G-alignItems-center ${visible4 ? "scrollAnimation2" : ""}`}>
+              <a  ref={myRef4} target={"_blank"} href="https://www.instagram.com/fytechnology/" className={`Link G-alignItems-center ${visible4 ? "scrollAnimation2" : ""}`}>
                 <div className="textBlock">
                   <div className="textLine G-alignItems-center">
                     {Instagram.map((el)=>{
@@ -284,6 +284,30 @@ function Footer (){
              </div>
              <div className="textLine G-alignItems-center">
                {FyTrading.map((el)=>{
+                 if (el !== ' '){
+                   return(<div className="letter">{el}</div>)
+                 } else {
+                   return (<div className="space"></div>)
+                 }
+               })}
+             </div>
+           </div>
+           <img className="imgArrowTop" src={arrowRightTop} alt=""/>
+         </Link>
+  
+         <Link style={{marginBottom: `50px`}}  onClick={()=>window.scrollTo(0, 0)} ref={myRef8} to="/" className={`Link G-alignItems-center ${visible8 ? "scrollAnimation2" : ""}`}>
+           <div className="textBlock">
+             <div className="textLine G-alignItems-center">
+               {SaasSolution.map((el)=>{
+                 if (el !== ' '){
+                   return(<div className="letter">{el}</div>)
+                 } else {
+                   return (<div className="space"></div>)
+                 }
+               })}
+             </div>
+             <div className="textLine G-alignItems-center">
+               {SaasSolution.map((el)=>{
                  if (el !== ' '){
                    return(<div className="letter">{el}</div>)
                  } else {

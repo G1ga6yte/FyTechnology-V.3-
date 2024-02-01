@@ -1,5 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
+import {useNavigate} from 'react-router-dom';
 
 import img1 from "./project1Img/Screenshot 2024-01-20 203710.png"
 import img2 from "./project1Img/Screenshot 2024-01-20 203824.png"
@@ -8,6 +9,10 @@ import img4 from "./project1Img/Screenshot 2024-01-20 203753.png"
 import {motion, useMotionValue, useSpring, useTransform} from "framer-motion";
 import {useInView} from "react-intersection-observer";
 function Project1 (props){
+  const navigate = useNavigate();
+  const goProject = (link) => {
+    navigate(link);
+  };
   const {ref: myRef, inView:visible} = useInView({
     "threshold": 0,
     "triggerOnce": true
@@ -73,6 +78,10 @@ function Project1 (props){
   return(
        <motion.div onMouseMove={handleMouseMove}
                    onMouseLeave={handleMouseLeave}
+                   onClick={()=>{
+                     goProject("/carfy")
+                     window.scrollTo(0, 0)
+                   }}
                    style={{
                      rotateY,
                      rotateX,

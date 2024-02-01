@@ -1,0 +1,141 @@
+@import "../../source/styles/mixin.scss";
+
+.WorkMain{
+  padding: 200px 10px 100px;
+  position: relative;
+
+  .imgTop{
+    position: absolute;
+    top: 150px;
+    left: 2%;
+    z-index: -1;
+    @include screen($tablet){
+      width: 20%;
+    }
+  }
+  .imgMiddle{
+    position: absolute;
+    right: 2%;
+    top: 250px;
+    z-index: -1;
+    @include screen($wide-m){
+      top: 0;
+      right: 0;
+      rotate: -45deg;
+    }
+    @include screen($tablet){
+      width: 40%;
+      top: 100px;
+    }
+
+  }
+
+  .contentBlock{
+    max-width: 1440px;
+    margin: 10px auto;
+    padding: 0 10px;
+    @include screen($wide-m){
+      text-align: center;
+    }
+
+    .header{
+      font-size: 104px;
+      margin-bottom: 24px;
+      font-family: 'PlexMono-Medium', sans-serif;
+      color: black;
+      @include screen($tablet-l){
+        font-size: 80px;
+      }
+      @include screen($tablet){
+        font-size: 64px;
+      }
+      @include screen($tablet-m){
+        font-size: 32px;
+      }
+    }
+    .prg{
+      font-size: 28px;
+      font-family: 'PlexMono-Regular', sans-serif;
+      color: black;
+      line-height: 36px;
+      max-width: 1300px;
+      margin-bottom: 80px;
+      @include screen($tablet-l){
+        font-size: 24px;
+      }
+      @include screen($tablet){
+        font-size: 20px;
+      }
+    }
+
+    .mainBlock{
+      display: flex;
+      @include screen($tablet-m){
+        flex-direction: column;
+      }
+      .leftLine{
+        width: 25%;
+        @include screen($wide){
+          width: 30%;
+        }
+        @include screen($tablet-m){
+          width: 100%;
+        }
+        .roles{
+          font-size: 28px;
+          font-family: 'PlexMono-Regular', sans-serif;
+          margin-bottom: 50px;
+        }
+        .imgBottom{
+          margin-left: -50px;
+          z-index: -1;
+          position: relative;
+          @include screen($tablet-m){
+            width: 60%;
+            margin: 0 auto;
+          }
+        }
+      }
+      .rightLine{
+        .prgLink{
+          font-size: 16px;
+          font-family: 'PlexMono-Regular', sans-serif;
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
+          @include screen($tablet-m){
+            margin-top: 50px;
+            width: 100%;
+            justify-content: center;
+            font-size: 14px;
+            text-align: center;
+            line-height: 1.6;
+          }
+          span{
+            margin-left: 10px;
+            display: flex;
+            align-items: center;
+            padding: 4px 6px;
+            border-radius: 4px;
+            color: white;
+            cursor: pointer;
+            background-color: #FFA06B;
+            position: relative;
+            .copiedText{
+              position: absolute;
+              bottom: -25px;
+              left: 50%;
+              background-color: transparent;
+              color: black;
+              width: max-content;
+              font-size: 14px;
+            }
+            img{
+              margin-left: 6px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

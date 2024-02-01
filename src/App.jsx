@@ -14,6 +14,7 @@ import Lenis from "@studio-freight/lenis";
 import Services from "./pages/services/services";
 import Cursor from "./source/cursor/cursor";
 import LoadingComponent from "./pages/loadingComponent/loadingComponent";
+import WorkMain from "./pages/workMain/workMain";
 // import { View, Animated, Easing, StyleSheet, TouchableOpacity, Text } from "react-native"
 // import { ReactLenis, useLenis } from '@studio-freight/react-lenis'
 // import {gsap} from "gsap";
@@ -49,9 +50,10 @@ function App() {
                <Route path="/home" element={<Home/>}/> // Home
                <Route path="/aboutUs" element={<AboutUs/>}/> // About Us
                <Route path="/projects" element={<Projects/>}/>/ Projects
-               <Route path="/work" element={<WorkBlock/>}/> // Work Block
+               <Route path="/carfy" element={<WorkBlock/>}/> // project Carfy
                <Route path="/contact" element={<ContactUs/>}/> // Contact Us
                <Route path="/service" element={<Services/>} />
+               <Route path="/work" element={<WorkMain/>}/> // work Main
              </Routes>
              <Footer/>
          </div>
