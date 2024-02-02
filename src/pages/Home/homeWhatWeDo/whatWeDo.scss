@@ -59,7 +59,7 @@
     position: relative;
     transition: 0.2s ease-in-out all;
     text-decoration: none;
-    z-index: 10;
+    z-index: 5;
     @include screen($wide-l){
       width: 32%;
     }

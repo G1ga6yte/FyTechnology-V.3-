@@ -65,7 +65,6 @@
         font-family: 'PlexMono-Regular', sans-serif;
         color: white;
         margin-bottom: 8px;
-        white-space: nowrap;
         @include screen($tablet){
           font-size: 12px;
         }

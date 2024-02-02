@@ -8,6 +8,9 @@ import {useInView} from "react-intersection-observer";
 
 import firstImg from "./Untitled@5-1920x1137 4.png"
 import secondImg from "./Untitled@4-1920x1137 1.png"
+const SplineView1 = React.lazy(() => import('./SplineView1'));
+const SplineView2 = React.lazy(() => import('./SplineView2'));
+
 function WhatPayingFor() {
   const LeaveRequest = "Leave a request".split('')
   const {ref: myRef, inView: visibleEl} = useInView({
@@ -54,7 +57,9 @@ function WhatPayingFor() {
              You've described <span>a sprint-based approach</span> to project management , where a team <span>focuses on a specific task</span> for a set period of time. This method allows for <span>concentrated effort</span> and clear milestones. Splitting a large project into smaller, manageable tasks can enhance productivity and accountability.
            </p>
            <div className="SplineBlock">
-              <Spline scene="https://prod.spline.design/vdCC4xR3VaynuWBn/scene.splinecode"/>
+             <React.Suspense fallback={<div>Loading...</div>}>
+              <SplineView1/>
+             </React.Suspense>
            </div>
            <img className="tabletImg" src={firstImg} alt=""/>
   
@@ -91,7 +96,9 @@ function WhatPayingFor() {
          
          <div className="EachBlock">
            <div className="SplineBlock">
-             <Spline scene="https://prod.spline.design/8KKj74xENKTtAomC/scene.splinecode"/>
+             <React.Suspense fallback={<div>Loading...</div>}>
+               <SplineView2/>
+             </React.Suspense>
            </div>
            <p ref={myRef5} className={`miniHeader ${visibleEl5 ? "scrollAnimation2" : ""}`}>For hours</p>
            <p ref={myRef6} className={`prg ${visibleEl6 ? "scrollAnimation2" : ""}`}>

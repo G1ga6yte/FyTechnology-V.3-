@@ -321,8 +321,9 @@ function Footer (){
 
          <p className="policyBottom">Copyright © 2021 Fytechnology LTD . All Rights Reserved.</p>
         <div className="linksToPolicy">
-          <a href="">Terms of Use</a>
-          <a href="">Privacy Policy</a>
+          <Link onClick={()=>window.scrollTo(0, 0)} to="/privacy&terms">Terms of Use</Link>
+          <Link onClick={()=>window.scrollTo(0, 0)} to="/privacy&terms">Privacy Policy</Link>
+          
         </div>
          
        </div>

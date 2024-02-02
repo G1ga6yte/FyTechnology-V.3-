@@ -48,11 +48,10 @@ function WorkMain (){
           <p ref={myRef2} className={`prg ${visible2 ? "scrollAnimation" : ""}`}>We're seeking rocket-fueled minds who shatter glass ceilings and leave the competition in their dust. If you're an idea machine with the drive of a bulldozer, we've got the launchpad for your dreams.</p>
           <div className="mainBlock">
             <div className="leftLine">
-              <p ref={myRef3} className={`roles ${visible3 ? "scrollAnimation" : ""}`}>Nothing</p>
               <img className="imgBottom" src={imgBottom} alt=""/>
             </div>
             <div className="rightLine">
-              <p ref={myRef4} onClick={copyToClipboard} className={`prgLink ${visible4 ? "scrollAnimation2" : ""}`}>Send your resume to <span>{Mail} <img src={copyIcon} alt=""/> <span style={{display: `${copied ? "block" : "none"}`}} className="copiedText">Copied !</span></span></p>
+              <p ref={myRef4}  className={`prgLink ${visible4 ? "scrollAnimation2" : ""}`}>Sorry,for right now we dont have open position, but you can always send us ur cv<span onClick={copyToClipboard}>{Mail} <img src={copyIcon} alt=""/> <span style={{display: `${copied ? "block" : "none"}`}} className="copiedText">Copied !</span></span></p>
             </div>
           </div>
         </div>

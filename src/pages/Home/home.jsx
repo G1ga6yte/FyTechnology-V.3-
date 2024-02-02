@@ -2,6 +2,8 @@ import React, {useState} from "react";
 import "./home.scss";
 import HomeHead from "./homeHead/homeHead";
 import Spline from "@splinetool/react-spline";
+import fetureImg from "./2d9491c4dfb145b17b3b0a124d05023e.png"
+import {useInView} from "react-intersection-observer";
 import WhatWeDo from "./homeWhatWeDo/whatWeDo";
 import FeaturedWork from "./FeaturedWork/featuredWork";
 import WhatPayingFor from "./whatPayingFor/whatPayingFor";
@@ -12,9 +14,9 @@ import LastVideoScene from "./lastVideoScene/lastVideoScene";
 import PricingTablet from "./PricingTablet/PricingTablet";
 import FeaturedWorkTablet from "./FeaturedWorkTablet/featuredWorkTablet";
 import Lenis from "@studio-freight/lenis";
+const SplineView = React.lazy(() => import('./SplineView'));
 
-import fetureImg from "./2d9491c4dfb145b17b3b0a124d05023e.png"
-import {useInView} from "react-intersection-observer";
+
 function Home() {
   const {ref: myRef1, inView: visible1} = useInView({
     "threshold": 0,
@@ -91,13 +93,16 @@ function Home() {
          </div>
        </div>
        
-       <div ref={myRef1} style={{
-         right: `${ballRight}%`,
-         top  : `${ballTop}%`,
-         scale: `${ballScale}`
-       }} className={`spline ${visible1 ? "scrollAnimation2" : ""}`}>
-         <Spline className="Ball" scene="https://prod.spline.design/gQOkQ2BEvut7DqqV/scene.splinecode"/>
-       </div>
+       {/*<div ref={myRef1} style={{*/}
+       {/*  right: `${ballRight}%`,*/}
+       {/*  top  : `${ballTop}%`,*/}
+       {/*  scale: `${ballScale}`*/}
+       {/*}} className={`spline ${visible1 ? "scrollAnimation2" : ""}`}>*/}
+       {/*  <Spline className="Ball" scene="https://prod.spline.design/gQOkQ2BEvut7DqqV/scene.splinecode"/>*/}
+       {/*</div>*/}
+       <React.Suspense fallback={<div>Loading...</div>}>
+         <SplineView myRef1={myRef1} ballRight={ballRight} ballTop={ballTop} ballScale={ballScale} visible1={visible1} />
+       </React.Suspense>
        
        
        <div style={{bottom: `${iconBottom}px`, right: `${iconRight}%`,}} className="featureImg">
