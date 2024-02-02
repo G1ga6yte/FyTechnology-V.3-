@@ -14,6 +14,25 @@
     padding: 0 10px;
   }
 
+  .CardCont{
+    @include screen($wide-l){
+      &:nth-child(6){
+        display: none !important;
+      }
+      &:nth-child(7){
+        display: none !important;
+      }
+    }
+    @include screen($wide-s){
+      &:nth-child(4){
+        display: none !important;
+      }
+      &:nth-child(5){
+        display: none !important;
+      }
+    }
+  }
+
   .header {
     width: 100%;
     position: relative;
@@ -40,6 +59,13 @@
     position: relative;
     transition: 0.2s ease-in-out all;
     text-decoration: none;
+    z-index: 10;
+    @include screen($wide-l){
+      width: 32%;
+    }
+    @include screen($wide-s){
+      width: 49%;
+    }
     &:hover{
       cursor: pointer;
       transition: 0.2s ease-in-out all;

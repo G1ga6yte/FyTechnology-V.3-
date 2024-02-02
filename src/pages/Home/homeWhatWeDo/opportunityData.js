@@ -76,7 +76,6 @@ export const OpportunityData = [
       "Artificial intelligence and machine learning",
       "Internet of Things (IoT)",
       "Cyber security",
-      "Blockchain technology",
       "Cloud computing",
       "DevOps",
       "Agile development",
@@ -102,6 +101,7 @@ export const OpportunityData = [
     "UI/UX for native mobile apps",
     "UI/UX for enterprise software",
     "UI/UX for web design",
+    "Design and branding"
     // "Accessibility consulting",
     // "UI/UX for wearables",
     // "UI/UX for interactive installations",
@@ -115,16 +115,16 @@ export const OpportunityData = [
     ]
   },
   {
-    name: "Common IT design services include",
+    name: "Essential IT Solutions",
     img: commonItDesignServicesInclude,
     content: [
-    "Network design and deployment",
-    "Server and storage design and deployment",
-    "Virtualization design and deployment",
-    "Cloud computing design and deployment",
-    "Information security design and implementation",
-    "IT architecture design and documentation",
-    "IT compliance and regulatory design",
+    "Network Setup",
+    "Server & Storage Setup",
+    "Virtualization Deployment",
+    "Cloud Solutions",
+    "Security Implementation",
+    "IT Architecture",
+    "Compliance Design",
     // "IT project management"
     ],
     skills: [
@@ -258,12 +258,13 @@ export const OpportunityData = [
     ]
   },
   {
-    name: "Web 3",
+    name: "Web 3.0",
     img: web3,
     content: [
-  "Web 3 strategy and consulting",
-  "Web 3 development",
-  "Web 3 security"
+  "Web 3.0 strategy and consulting",
+  "Web 3.0 development",
+  "Web 3.0 security",
+  "Blockchain technology"
     ],
     skills: [
       "Decentralization",

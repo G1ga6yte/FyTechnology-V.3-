@@ -48,7 +48,7 @@ function ContactUs (){
     {name: "$10K-20K", val: false},
     {name: "$20K-50K", val: false},
     {name: "$50K-100K", val: false},
-    {name: "$100K", val: false},
+    {name: "Over $100K", val: false},
   ])
   
   const [deadLine, setDeadLine] = useState("")

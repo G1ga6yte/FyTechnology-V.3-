@@ -30,6 +30,14 @@ function WhatWeDo (){
   })
   
   
+  const [winWidth, setWinWidth] = useState("big")
+  useEffect(()=>{
+    if (window.innerWidth <= 1096){
+      setWinWidth("small")
+    } else if (window.innerWidth <= 1440){
+      setWinWidth("middle")
+    }
+  })
   
   
   
@@ -41,10 +49,10 @@ function WhatWeDo (){
        <EachCard arr={OpportunityData[0]}/>
        <EachCard arr={OpportunityData[1]}/>
        <EachCard arr={OpportunityData[2]}/>
-       <EachCard arr={OpportunityData[3]}/>
-       <EachCard arr={OpportunityData[4]}/>
-       <EachCard arr={OpportunityData[5]}/>
-       <EachCard arr={OpportunityData[6]}/>
+       <EachCard style={{display: `${winWidth === "big" ? "block" : winWidth === "middle" ? "block" : "none"}`}} arr={OpportunityData[3]}/>
+       <EachCard style={{display: `${winWidth === "big" ? "block" : winWidth === "middle" ? "block" : "none"}`}} arr={OpportunityData[4]}/>
+       <EachCard style={{display: `${winWidth === "big" ? "block" : "none"}`}} arr={OpportunityData[5]}/>
+       <EachCard style={{display: `${winWidth === "big" ? "block" : "none"}`}} arr={OpportunityData[6]}/>
        <Link onClick={()=>window.scrollTo(0, 0)} to="/service" className="showMoreBtn">
           <p className="namePrg">More services</p>
          <svg className="count" xmlns="http://www.w3.org/2000/svg" width="171" height="112" viewBox="0 0 171 112" fill="none">

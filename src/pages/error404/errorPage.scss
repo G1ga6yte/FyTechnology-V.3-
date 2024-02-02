@@ -1,0 +1,168 @@
+@import "../../source/styles/mixin.scss";
+
+.ErrorPage{
+    width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: #EDEDED;
+
+  img{
+    position: absolute;
+    &:nth-child(1){
+      left: 0;
+      top: 0;
+      width: 10%;
+      z-index: 1;
+      @include screen($tablet-l){
+        width: 20%;
+      }
+    }
+    &:nth-child(2){
+      left: 50%;
+      top: 10vh;
+      width: 10%;
+      z-index: 1;
+      @include screen($tablet-l){
+        width: 20%;
+      }
+
+    }
+    &:nth-child(3){
+      right: 0;
+      top: 0;
+      width: 25%;
+      z-index: 1;
+      @include screen($tablet-l){
+        width: 40%;
+      }
+
+    }
+    &:nth-child(4){
+      left: 0;
+      top: 0;
+      width: 80%;
+    }
+    &:nth-child(5){
+      right: 0;
+      top: 35vh;
+      width: 15%;
+      @include screen($tablet-l){
+        width: 25%;
+      }
+
+    }
+    &:nth-child(6){
+      left: 0;
+      bottom: 0;
+      width: 20%;
+      @include screen($tablet-l){
+        width: 30%;
+      }
+
+    }
+    &:nth-child(7){
+      left: 30%;
+      bottom: 0;
+      width: 15%;
+      @include screen($tablet-l){
+        width: 25%;
+      }
+
+    }
+    &:nth-child(8){
+      right: 0;
+      bottom: 0;
+      width: 10%;
+      @include screen($tablet-l){
+        width: 20%;
+      }
+
+    }
+    &:nth-child(9){
+      right: 10%;
+      bottom: 0;
+      width: 40%;
+      z-index: 2;
+      @include screen($tablet-l){
+        width: 60%;
+      }
+
+    }
+  }
+
+
+
+
+  .TextBlock{
+    max-width: 400px;
+    margin-left: 20%;
+    margin-top: 20vh;
+    position: relative;
+    z-index: 3;
+    padding: 0 10px;
+    @include screen($tablet){
+      margin: 15vh auto;
+    }
+    .head{
+      font-size: 124px;
+      font-family: 'Darker-Grot', sans-serif;
+      font-weight: 700;
+      line-height: 120px;
+      @include screen($tablet-m){
+        font-size: 80px;
+      }
+    }
+    .error{
+      font-size: 72px;
+      font-family: 'Darker-Grot', sans-serif;
+      font-weight: 600;
+      margin: 2vh 0;
+      @include screen($tablet-m){
+        font-size: 64px;
+      }
+
+    }
+    .prg{
+      font-size: 36px;
+      font-family: 'Darker-Grot', sans-serif;
+      font-weight: 400;
+      @include screen($tablet-m){
+        font-size: 24px;
+      }
+
+    }
+
+    .linkToHome{
+      background: linear-gradient(180deg, #2D2D2D 0%, rgba(45, 45, 45, 0.5) 99.99%, rgba(210, 210, 210, 0) 100%);
+      text-decoration: none;
+      font-family: 'Darker-Grot', sans-serif;
+      color: white;
+      padding: 30px 50px;
+      outline: none;
+      border: none;
+      text-align: center;
+      display: block;
+      font-size: 28px;
+      width: max-content;
+      cursor: pointer;
+      transition: 0.5s ease-in-out all;
+      margin-left: 100px;
+      margin-top: 50px;
+      box-shadow: 0px 0px 0px 0px rgba(37, 14, 37, 0.10), 0px 4px 8px 0px rgba(37, 14, 37, 0.10), 0px 14px 14px 0px rgba(37, 14, 37, 0.09), 0px 32px 19px 0px rgba(37, 14, 37, 0.05), 0px 56px 23px 0px rgba(37, 14, 37, 0.01), 0px 88px 25px 0px rgba(37, 14, 37, 0.00);
+      @include screen($tablet-m){
+        padding: 20px 40px;
+        font-size: 24px;
+        margin-left: 50px;
+      }
+
+
+
+      &:hover{
+        transition: 0.5s ease-in-out all;
+        background: linear-gradient(180deg, #2D2D2D 0%, rgba(45, 45, 45, 0.3) 99.99%, rgba(210, 210, 210, 0.01) 100%);
+
+      }
+    }
+
+  }
+}

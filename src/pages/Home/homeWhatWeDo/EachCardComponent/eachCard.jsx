@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import ReactCardFlip from "react-card-flip";
 import Arrow from "../../../navigation/images/arrow-narrow-right.svg";
 import {Link} from "react-router-dom";
@@ -26,6 +26,13 @@ function EachCard (props){
   })
   let Arr = props.arr
   let getStarted = "Get started".split('')
+  
+  // const [display1, setDisplay] = useState(null)
+  // useEffect(()=>{
+  //   if (props.style){
+  //     setDisplay(props.style.display)
+  //   }
+  // })
   
   return(
      <div onMouseOver={()=>setFlip(true)} onMouseLeave={()=>setFlip(false)} className="CardCont">
