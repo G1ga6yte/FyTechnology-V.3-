@@ -12,3 +12,7 @@
   display: none;
 }
 
+img{
+  draggable: false;
+  pointer-events: none;
+}
