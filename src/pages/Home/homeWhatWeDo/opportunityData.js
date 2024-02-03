@@ -90,7 +90,7 @@ export const OpportunityData = [
     ]
   },
   {
-    name: "Additional services",
+    name: "Design and Branding",
     img: additionalServices,
     content: [
     "Content strategy",

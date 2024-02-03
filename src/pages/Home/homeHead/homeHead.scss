@@ -2,10 +2,8 @@
 
 .HomeHead{
   width: 100%;
-  padding: 0 10px;
   position: relative;
   z-index: 3;
-  margin: 180px auto;
   pointer-events: none;
   @include screen($wide-l){
     margin: 150px auto;
@@ -18,6 +16,9 @@
   }
 
   .header{
+    pointer-events: none;
+    position: relative;
+    z-index: 3;
     font-size: 164px;
     font-family: 'Darker-Grot', sans-serif;
     font-weight: 300;
@@ -46,10 +47,14 @@
   }
   
   .headerBlock{
-    position: relative;
-    margin-left: 200px;
+    margin: 180px auto;
+    position: absolute;
+    top: 0;
+    z-index: 3;
+    padding-left: 200px;
   }
   .prg{
+    z-index: 3;
     margin-top: 24px;
     font-size: 28px;
     font-family: 'Darker-Grot', sans-serif;
@@ -74,6 +79,8 @@
   }
 
   .textBlock{
+    position: relative;
+    z-index: 3;
     border-left: 1px solid #C7C7C7;
     padding: 45px 60px;
     height: min-content;

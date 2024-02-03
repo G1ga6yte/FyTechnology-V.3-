@@ -2,6 +2,7 @@ import React from "react";
 import "./homeHead.scss"
 import {useInView} from "react-intersection-observer";
 import Lenis from "@studio-freight/lenis";
+import BckComp from "../../backgroundComponentHome/bckComp";
 
 function HomeHead (){
   const {ref: myRef1, inView: visible1} = useInView({
@@ -20,6 +21,7 @@ function HomeHead (){
   
   return(
      <div className="HomeHead">
+       <BckComp/>
         <div className="headerBlock">
           <p ref={myRef1}  className={`header ${visible1 ? "scrollAnimation2" : ""}`}>The</p>
           <p  ref={myRef1} className={`header ${visible1 ? "scrollAnimation" : ""}`}>FyTechnology</p>

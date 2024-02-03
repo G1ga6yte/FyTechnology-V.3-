@@ -14,6 +14,7 @@ import LastVideoScene from "./lastVideoScene/lastVideoScene";
 import PricingTablet from "./PricingTablet/PricingTablet";
 import FeaturedWorkTablet from "./FeaturedWorkTablet/featuredWorkTablet";
 import Lenis from "@studio-freight/lenis";
+import BckComp from "../backgroundComponentHome/bckComp";
 const SplineView = React.lazy(() => import('./SplineView'));
 
 
@@ -78,20 +79,21 @@ function Home() {
   return (
      <div className="Home">
        
-       <div className="bckLines">
-         <div className="lineBckBlock">
-           <div className="line"></div>
-           <div className="lightingBlock"></div>
-         </div>
-         <div className="lineBckBlock">
-           <div className="line"></div>
-           <div className="lightingBlock"></div>
-         </div>
-         <div className="lineBckBlock">
-           <div className="line"></div>
-           <div className="lightingBlock"></div>
-         </div>
-       </div>
+       {/*<div className="bckLines">*/}
+       {/*  <div className="lineBckBlock">*/}
+       {/*    <div className="line"></div>*/}
+       {/*    <div className="lightingBlock"></div>*/}
+       {/*  </div>*/}
+       {/*  <div className="lineBckBlock">*/}
+       {/*    <div className="line"></div>*/}
+       {/*    <div className="lightingBlock"></div>*/}
+       {/*  </div>*/}
+       {/*  <div className="lineBckBlock">*/}
+       {/*    <div className="line"></div>*/}
+       {/*    <div className="lightingBlock"></div>*/}
+       {/*  </div>*/}
+       {/*</div>*/}
+       
        
        {/*<div ref={myRef1} style={{*/}
        {/*  right: `${ballRight}%`,*/}
@@ -100,9 +102,9 @@ function Home() {
        {/*}} className={`spline ${visible1 ? "scrollAnimation2" : ""}`}>*/}
        {/*  <Spline className="Ball" scene="https://prod.spline.design/gQOkQ2BEvut7DqqV/scene.splinecode"/>*/}
        {/*</div>*/}
-       <React.Suspense fallback={<div>Loading...</div>}>
-         <SplineView myRef1={myRef1} ballRight={ballRight} ballTop={ballTop} ballScale={ballScale} visible1={visible1} />
-       </React.Suspense>
+       {/*<React.Suspense fallback={<div>Loading...</div>}>*/}
+       {/*  <SplineView myRef1={myRef1} ballRight={ballRight} ballTop={ballTop} ballScale={ballScale} visible1={visible1} />*/}
+       {/*</React.Suspense>*/}
        
        
        <div style={{bottom: `${iconBottom}px`, right: `${iconRight}%`,}} className="featureImg">

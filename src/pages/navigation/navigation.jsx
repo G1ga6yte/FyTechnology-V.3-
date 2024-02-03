@@ -48,12 +48,12 @@ function Navigation (){
      <div style={{display: `${Call("/contact") ? "none" : "flex"}`}} className="Navigation G-flex-between">
         <Link onClick={()=>{window.scrollTo(0, 0)}} className="logoLink" to="/"><img src={whiteLogo} alt=""/></Link>
         <div className="buttonsBlock G-alignItems-center">
-            <div  className="menuBtn">
-              <div onClick={()=>{setMenuBar(false)}} style={{display: `${menuBar ? "block" : "none"}`}} className="clickBackDrop"></div>
-              <img onClick={()=> setMenuBar(prev => !prev)} className="barImg" style={{display: `${menuBar ? "none" : "block"}`}} src={MenuOpen} alt=""/>
-              <img onClick={()=> setMenuBar(prev => !prev)} className="barImg" style={{display: `${menuBar ? "block" : "none"}`}} src={MenuClose} alt=""/>
+            <div onClick={()=>{setMenuBar(prev => !prev)}} className="menuBtn">
+              <div style={{display: `${menuBar ? "block" : "none"}`}} className="clickBackDrop"></div>
+              <img  className="barImg" style={{display: `${menuBar ? "none" : "block"}`}} src={MenuOpen} alt=""/>
+              <img  className="barImg" style={{display: `${menuBar ? "block" : "none"}`}} src={MenuClose} alt=""/>
               
-              <div style={{display: `${menuBar ? "block" : "none"}`}} className="menu G-flex-column">
+              <div onClick={()=>{setMenuBar(prev => !prev)}} style={{display: `${menuBar ? "block" : "none"}`}} className="menu G-flex-column">
   
   
                 <Link  onClick={()=>{

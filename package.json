@@ -3,6 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@pmndrs/assets": "1.6.0",
+    "@react-three/drei": "9.86.0",
+    "@react-three/fiber": "8.14.3",
+    "@react-three/postprocessing": "2.15.1",
+    "@react-three/rapier": "1.1.1",
+    "leva": "0.9.33",
+    "maath": "0.10.4",
     "@splinetool/react-spline": "^2.2.6",
     "@studio-freight/lenis": "^1.0.34",
     "@studio-freight/react-lenis": "^0.0.43",
@@ -20,7 +27,9 @@
     "react-scripts": "5.0.1",
     "react-slick": "^0.29.0",
     "sass": "^1.69.7",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "three": "0.156.1",
+    "uuid": "9.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -45,5 +54,7 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "keywords": [],
+  "description": "Trying out drei's new cloud component."
 }

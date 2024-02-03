@@ -3,8 +3,12 @@ import "./cursor.scss"
 
 function Cursor (){
   const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [cursor, setCursor] = useState(true)
   
   useEffect(() => {
+    if (window.innerWidth <= 992){
+      setCursor(false)
+    }
     const updatePosition = (e) => {
       setPosition({ x: e.clientX, y: e.clientY });
     };
@@ -17,7 +21,7 @@ function Cursor (){
   }, []);
   
   return (
-     <div className="circle-cursor" style={{ left: `${position.x}px`, top: `${position.y}px` }} />
+     <div className="circle-cursor" style={{ left: `${position.x}px`, top: `${position.y}px`, display: `${cursor ? "block" : "none"}` }} />
   );
 }
 
