@@ -31,8 +31,12 @@ function HomeHead (){
           <div className="textBlock">
             <p ref={myRef3} className={`prgRight ${visible3 ? "scrollAnimation2" : ""}`}>Digital products creatives & Impressive</p>
           </div>
+          
         </div>
        
+       <div className="bck">
+       
+       </div>
      </div>
   )
 }

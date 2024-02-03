@@ -19,10 +19,7 @@ const SplineView = React.lazy(() => import('./SplineView'));
 
 
 function Home() {
-  const {ref: myRef1, inView: visible1} = useInView({
-    "threshold": 0,
-    "triggerOnce": true
-  })
+  const {ref: myRef1, inView: visible1} = useInView()
   const [ballRight, setBallRight] = useState(-20);
   const [ballTop, setBallTop] = useState(0);
   const [ballScale, setBallScale] = useState(1)

@@ -57,9 +57,9 @@ function WhatPayingFor() {
              You've described <span>a sprint-based approach</span> to project management , where a team <span>focuses on a specific task</span> for a set period of time. This method allows for <span>concentrated effort</span> and clear milestones. Splitting a large project into smaller, manageable tasks can enhance productivity and accountability.
            </p>
            <div className="SplineBlock">
-             <React.Suspense fallback={<div>Loading...</div>}>
-              <SplineView1/>
-             </React.Suspense>
+             {/*<React.Suspense fallback={<div>Loading...</div>}>*/}
+             {/* <SplineView1/>*/}
+             {/*</React.Suspense>*/}
            </div>
            <img className="tabletImg" src={firstImg} alt=""/>
   
@@ -96,9 +96,9 @@ function WhatPayingFor() {
          
          <div className="EachBlock">
            <div className="SplineBlock">
-             <React.Suspense fallback={<div>Loading...</div>}>
-               <SplineView2/>
-             </React.Suspense>
+             {/*<React.Suspense fallback={<div>Loading...</div>}>*/}
+             {/*  <SplineView2/>*/}
+             {/*</React.Suspense>*/}
            </div>
            <p ref={myRef5} className={`miniHeader ${visibleEl5 ? "scrollAnimation2" : ""}`}>For hours</p>
            <p ref={myRef6} className={`prg ${visibleEl6 ? "scrollAnimation2" : ""}`}>
