@@ -54,8 +54,12 @@ function EachCard (props){
           </div>
          <div style={{backgroundImage: `url("${bck1}")`}} className="BackCardSide">
            <p className={`CardHeader ${props.mouseOver === false ? props.width === 30 ? "smallPrg" : "" : ""}`}>{header}</p>
-           
-           
+  
+           {props.arr.content.map((el, index)=>{
+             return(
+                <p key={index} className="prgLine">{el}</p>
+             )
+           })}
          </div>
        </ReactCardFlip>
      </div>

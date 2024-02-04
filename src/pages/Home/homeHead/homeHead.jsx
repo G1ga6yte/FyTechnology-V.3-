@@ -15,7 +15,6 @@ function HomeHead (){
      <div className="HomeHead">
        <BckComp/>
        
-       {/*<img className="BubbleImg bubbleAnim" src={Bubbles} alt=""/>*/}
   
        <div className="headerBlock">
           <p ref={myRef1}  className={`header ${visible1 ? "scrollAnimation2" : ""}`}>The</p>

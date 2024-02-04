@@ -5,6 +5,7 @@
   transition: 0.5s ease-in-out all !important;
   overflow: hidden;
   margin-top: 56px;
+  cursor: pointer;
   .CardDiv{
     width: 100%;
     height: 450px;
@@ -41,6 +42,7 @@
       background-repeat: no-repeat;
       height: 450px;
       border-radius: 75px;
+      flex-direction: column;
 
       .CardHeader{
         position: absolute;
@@ -53,6 +55,18 @@
         text-align: center;
         color: transparent; /* Set text color to transparent */
         text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+      }
+
+      .prgLine{
+        align-items: start;
+        width: 100%;
+        padding-left: 60px;
+        color: white;
+        position: relative;
+        z-index: 2;
+        font-family: 'IFBosch', sans-serif;
+        font-size: 28px;
+        line-height: 40px;
       }
 
     }

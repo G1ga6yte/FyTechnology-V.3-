@@ -3,7 +3,7 @@
 .HomeHead{
   width: 100%;
   position: relative;
-  z-index: 3;
+  z-index: 5;
   pointer-events: none;
   @include screen($wide-l){
     margin: 150px auto;
@@ -15,15 +15,7 @@
     margin: 100px auto;
   }
 
-  .BubbleImg{
-    pointer-events: none;
-    position: absolute;
-    height: 100vh;
-    top: 0;
-    left: -30%;
-    z-index: 5;
-    opacity: 0.3;
-  }
+
 
   .bck{
     position: absolute;

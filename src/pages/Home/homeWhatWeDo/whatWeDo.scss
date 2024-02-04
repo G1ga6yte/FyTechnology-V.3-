@@ -5,10 +5,30 @@
   position: relative;
   margin: 0 auto;
   flex-wrap: wrap;
-  z-index: 6;
+  z-index: 4;
   //max-width: 1570px;
 
+  .BubbleImg1{
+    pointer-events: none;
+    position: absolute;
+    height: 100vh;
+    top: 0;
+    right: -50%;
+    rotate: -140deg;
+    z-index: -1;
+    opacity: 0.6;
+  }
 
+  .BubbleImg2{
+    pointer-events: none;
+    position: absolute;
+    height: 100vh;
+    bottom: 0;
+    left: -40%;
+    rotate: -270deg;
+    z-index: -1;
+    opacity: 0.6;
+  }
 
   .headerBlock{
     text-align: center;
@@ -49,10 +69,55 @@
 
   .Cards{
     max-width: 1570px;
-    margin: 0 auto;
     position: relative;
     z-index: 5;
-    margin-top: 56px;
+    margin: 56px auto 0;
+
+    .bck2{
+      height: 450px;
+      width: 28%;
+      border-radius: 75px;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      margin-top: 56px;
+      transition: 0.5s ease-in-out all;
+      cursor: pointer;
+      &:hover{
+        border-radius: 100px;
+      }
+    }
+
+    .linkToService{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 75px;
+      margin-top: 56px;
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      text-decoration: none;
+      padding: 40px 0;
+      transition: 0.5s ease-in-out all !important;
+
+      &:hover{
+        border-radius: 100px !important;
+        svg{
+          rotate: 360deg;
+        }
+      }
+      p{
+        font-family: 'IFBosch', sans-serif;
+        color: white;
+        font-size: 96px;
+        line-height: 100px;
+      }
+      svg{
+        transition: 0.3s ease-in-out all;
+        margin-top: 20px;
+      }
+    }
+
 
     .CardCont{
       &:nth-child(2){
