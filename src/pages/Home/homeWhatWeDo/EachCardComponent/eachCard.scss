@@ -43,6 +43,10 @@
       border-radius: 75px;
 
       .CardHeader{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
         font-weight: 900 !important;
         font-size: 80px;
         font-family: 'IFBosch', sans-serif;
