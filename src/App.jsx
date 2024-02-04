@@ -29,19 +29,18 @@ function App() {
   
   
   const lenis = new Lenis()
-  
   lenis.on('scroll', (e) => {
   })
-  
   function raf(time) {
     lenis.raf(time)
     requestAnimationFrame(raf)
   }
-  
   requestAnimationFrame(raf)
   
   const location = useLocation();
   const [showNavigation, setShowNavigation] = useState()
+  
+  
   useEffect(()=>{
     switch (location.pathname){
       case '/' :
@@ -85,8 +84,8 @@ function App() {
      
      <div style={{height: appSettings.height, overflow: appSettings.overflow}} className="App">
   
-       {/*{showNavigation && <VideoPlay/>}*/}
-       <LoadingComponent/>
+       {showNavigation && <LoadingComponent/>}
+       
   
        <div style={{position: "relative", zIndex: 1000}} className="MainRoutes">
          {showNavigation && <Navigation />}

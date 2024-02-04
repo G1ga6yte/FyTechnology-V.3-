@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import {useCartContext} from "../../pages/Home/homeHead/CartContext";
+import {useCartContext} from "../../CartContext";
 
 function VideoPlay (){
   const [percent, setPercent] = useState(1)

@@ -42,7 +42,7 @@
 
 .scrollAnimation{
   animation-name: scrollAnim;
-  animation-duration: 1.5s;
+  animation-duration: 1s;
 }
 
 @keyframes scrollAnim {
@@ -59,7 +59,7 @@
 
 .scrollAnimation2{
   animation-name: scrollAnim2;
-  animation-duration: 1.5s;
+  animation-duration: 1s;
 }
 
 @keyframes scrollAnim2 {
@@ -75,3 +75,36 @@
 
 //   cursor: url(../cursorH.svg), auto;
 
+.bubbleAnim{
+  animation: bubbles 5s linear infinite;
+}
+
+@keyframes bubbles {
+  0%{
+    transform: translate(0);
+  }
+  12.5%{
+    transform: translate(5px, 2.5px);
+  }
+  25%{
+    transform: translate(10px, 5px);
+  }
+  37.5%{
+    transform: translate(5px, 7.5px);
+  }
+  50%{
+    transform: translate(0px, 10px);
+  }
+  62.5%{
+    transform: translate(-5px, 7.5px);
+  }
+  75%{
+    transform: translate(-10px, 5px);
+  }
+  87.5%{
+    transform: translate(-5px, 2.5px);
+  }
+  100%{
+    transform: translate(0);
+  }
+}

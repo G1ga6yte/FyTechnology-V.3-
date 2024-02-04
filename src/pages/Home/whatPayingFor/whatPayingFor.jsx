@@ -8,8 +8,8 @@ import {useInView} from "react-intersection-observer";
 
 import firstImg from "./Untitled@5-1920x1137 4.png"
 import secondImg from "./Untitled@4-1920x1137 1.png"
-const SplineView1 = React.lazy(() => import('./SplineView1'));
-const SplineView2 = React.lazy(() => import('./SplineView2'));
+// const SplineView1 = React.lazy(() => import('./SplineView1'));
+// const SplineView2 = React.lazy(() => import('./SplineView2'));
 
 function WhatPayingFor() {
   const LeaveRequest = "Leave a request".split('')

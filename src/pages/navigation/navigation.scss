@@ -5,7 +5,7 @@
   position: fixed;
   z-index: 10;
   top: 30px;
-  padding: 0 40px;
+  padding: 0 100px;
   @include screen($tablet-l){
     top: 0;
     width: 96%;
@@ -41,7 +41,7 @@
       justify-content: center;
       align-items: center;
       border-radius: 20px;
-      border: 1px solid #000;
+      border: 1px solid;
       margin-right: 10px;
       cursor: pointer;
       position: fixed;
@@ -56,7 +56,8 @@
 
       .barImg{
         transition: 0.2s ease-in-out;
-        padding: 13px;
+        margin: 13px;
+        width: 24px;
         &:hover{
 
             scale: 1.2;
@@ -72,8 +73,8 @@
         width: max-content;
         bottom: 0;
         right: 120%;
-        background-color: rgba(255, 255, 255, 0.6);
-        backdrop-filter: blur(10px);
+        background-color: transparent;
+        backdrop-filter: blur(20px);
 
         @include screen($tablet-m){
           bottom: 120%;
@@ -106,7 +107,8 @@
               }
             }
             .arrowBlock{
-              img{
+              svg{
+                width: 100%;
                 transition: 1s ease-in-out;
                 transform: translateX(-100%);
               }
@@ -128,9 +130,15 @@
             transition: 1s ease-in-out;
             display: flex;
             margin-left: 30px;
-            img{
-              transition: 1s ease-in-out;
+            .arrow{
+              width: 100%;
+              svg{
+                width: 24px !important;
+                height: 24px !important;
+                transition: 1s ease-in-out;
+              }
             }
+
           }
 
           .hoverLineBlock{
@@ -147,7 +155,6 @@
         }
 
         .letter{
-          color: black !important;
           @include screen($mobile-m){
             font-size: 20px;
           }
@@ -193,7 +200,7 @@
 
         .letter{
           font-size: 24px;
-          font-family: 'PlexMono-Medium', sans-serif;
+          font-family: 'IFBosch', sans-serif;
           color: white;
           line-height: 35px;
           @include screen($mobile-m){
@@ -222,6 +229,7 @@
       padding: 8px 16px;
       border-radius: 20px;
       background-color: black;
+      border: 0.5px;
       cursor: pointer;
       transition: 0.5s ease-in-out;
       @include screen($mobile-m){

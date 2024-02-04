@@ -77,7 +77,7 @@ function Footer (){
        </div>
        
        <div className="LinksBlock2">
-         <Link  onClick={()=>window.scrollTo(0, 0)} ref={myRef3} to="/contactUs" className={`contactUsBtn G-alignItems-center ${visible3 ? "scrollAnimation2" : ""}`}>
+         <Link  onClick={()=>window.scrollTo(0, 0)} ref={myRef3} to="/contact" className={`contactUsBtn G-alignItems-center ${visible3 ? "scrollAnimation2" : ""}`}>
            <div className="textBlock">
              <div className="textLine G-alignItems-center">
                {ContactUs.map((el)=>{
@@ -201,7 +201,7 @@ function Footer (){
                   </div>
                 </div>
               </a>
-              <a ref={myRef5} href="" className={`Link G-alignItems-center ${visible5 ? "scrollAnimation2" : ""}`}>
+              <a ref={myRef5} href="twitter" className={`Link G-alignItems-center ${visible5 ? "scrollAnimation2" : ""}`}>
                 <div className="textBlock">
                   <div className="textLine G-alignItems-center">
                     {Twitter.map((el)=>{
@@ -223,7 +223,7 @@ function Footer (){
                   </div>
                 </div>
               </a>
-              <a ref={myRef6} href="" className={`Link G-alignItems-center ${visible6 ? "scrollAnimation2" : ""}`}>
+              <a ref={myRef6} href="/behance" className={`Link G-alignItems-center ${visible6 ? "scrollAnimation2" : ""}`}>
                 <div className="textBlock">
                   <div className="textLine G-alignItems-center">
                     {Behance.map((el)=>{
@@ -245,7 +245,7 @@ function Footer (){
                   </div>
                 </div>
               </a>
-              <a ref={myRef7} href="" className={`Link G-alignItems-center ${visible7 ? "scrollAnimation2" : ""}`}>
+              <a ref={myRef7} href="/linkedin" className={`Link G-alignItems-center ${visible7 ? "scrollAnimation2" : ""}`}>
                 <div className="textBlock">
                   <div className="textLine G-alignItems-center">
                     {Linkedin.map((el)=>{
@@ -271,7 +271,7 @@ function Footer (){
             </div>
          </div>
   
-         <Link  onClick={()=>window.scrollTo(0, 0)} ref={myRef8} to="/" className={`Link G-alignItems-center ${visible8 ? "scrollAnimation2" : ""}`}>
+         <Link  onClick={()=>window.scrollTo(0, 0)} ref={myRef8} to="/fyTrading" className={`Link G-alignItems-center ${visible8 ? "scrollAnimation2" : ""}`}>
            <div className="textBlock">
              <div className="textLine G-alignItems-center">
                {FyTrading.map((el)=>{
@@ -295,7 +295,7 @@ function Footer (){
            <img className="imgArrowTop" src={arrowRightTop} alt=""/>
          </Link>
   
-         <Link style={{marginBottom: `50px`}}  onClick={()=>window.scrollTo(0, 0)} ref={myRef8} to="/" className={`Link G-alignItems-center ${visible8 ? "scrollAnimation2" : ""}`}>
+         <Link style={{marginBottom: `50px`}}  onClick={()=>window.scrollTo(0, 0)} ref={myRef8} to="/sassSolution" className={`Link G-alignItems-center ${visible8 ? "scrollAnimation2" : ""}`}>
            <div className="textBlock">
              <div className="textLine G-alignItems-center">
                {SaasSolution.map((el)=>{

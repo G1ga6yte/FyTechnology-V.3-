@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import {CartProvider} from "./pages/Home/homeHead/CartContext";
+import {CartProvider} from "./CartContext";
 import './index.css';
 import "./source/styles/font/font1.scss"
 import "./source/styles/mixin.scss"

@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import "./fyTechAnimation.scss";
 
 import fyTechLogo from "./Union.svg";
+import fyTech2 from "./Union2.png"
 
 function FyTechAnimation() {
   const [logoFix, setLogoFix] = useState("relative");
@@ -113,7 +114,7 @@ function FyTechAnimation() {
     
     <div style={{position: `${logoFix}`, bottom: `${logoBottom}%`, left: `${mainLeft}%`, scale: `${mainScale}`}} className="logoBlock">
     <div style={{display: displayImg, transform: ` rotate(${logoRotate}deg)`}} className="fyTechBlock">
-      <img src={fyTechLogo} style={{transform: `scale(${logoScale})`, display: displayImg}} className="fyTechLogo" alt=""/>
+      <img src={fyTech2} style={{transform: `scale(${logoScale})`, display: displayImg}} className="fyTechLogo" alt=""/>
     </div>
       <div style={{transform: `translateX(${firstNameTransform}%)`}} className="firstName">
         <p style={{transform: `translateY(-${firstNameLine}%)`, opacity: firstNameLineOpc}}
