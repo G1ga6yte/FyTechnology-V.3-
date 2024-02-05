@@ -24,6 +24,7 @@ function Navigation() {
   
   const [contactBtn, setContactBtn] = useState(true);
   const [menuBarColor, setMenuBarColor] = useState(true);
+  const [logoColor, setLogoColor] = useState(false)
   
   window.addEventListener("scroll", function () {
     if (this.scrollY >= 800) {
@@ -41,31 +42,42 @@ function Navigation() {
 
   });
   
+  function handleMouseOver (){
+   setLogoColor(true)
+  }
+  function handleMouseLeave (){
+    setLogoColor(false)
+  }
   
   return (
      <div style={{display: `${Call("/contact") ? "none" : "flex"}`}} className="Navigation G-flex-between">
-       <Link style={{display: `${Call("/") ? "block" : Call("/home") ? "block" : "none"}`}} onClick={() => {
+       <Link
+         onMouseOver={handleMouseOver}
+         onMouseLeave={handleMouseLeave}
+         onClick={() => {
          window.scrollTo(0, 0);
        }} className="logoNew" to="/">
-         <svg xmlns="http://www.w3.org/2000/svg" width="106" height="57" viewBox="0 0 106 57" fill="none">
+         <svg  xmlns="http://www.w3.org/2000/svg" width="106" height="57" viewBox="0 0 106 57" fill="none">
            <path
               d="M49.4537 35.8815L54.1868 21.1267H20.3717C15.3896 21.1267 10.9738 24.3598 9.44182 29.1341L7.06774 36.5341L7.06767 36.5343L5.51011 41.3973L5.51001 41.3977L0.684657 56.5H16.1538L21.0765 41.093L21.0767 41.0926L22.6354 36.2289L22.7467 35.8815H23.1116H49.4537Z"
-              stroke="white"/>
+              stroke={`${Call("/") ? contactBtn ? "white" : "black" : Call("/home") ? contactBtn ? "white" : "black" : "black"}`}
+              fill={`${Call("/") ? logoColor ? contactBtn ? "white" : "black" : "transparent" : Call("/home") ? logoColor ? contactBtn ? "white" : "black" : "transparent" : logoColor ? "black" : 'white'}`}/>
            <path
               d="M78.6604 33.038L78.6604 33.0381C76.9988 38.225 72.1984 41.7452 66.7762 41.7452H27.3726L22.6583 56.5H69.5281C79.7173 56.5 88.7451 49.8848 91.8689 40.1233L104.546 0.50927H89.0756L78.6604 33.038Z"
-              stroke="white"/>
+              stroke={`${Call("/") ? contactBtn ? "white" : "black" : Call("/home") ? contactBtn ? "white" : "black" : "black"}`}
+              fill={`${Call("/") ? logoColor ? contactBtn ? "white" : "black" : "transparent" : Call("/home") ? logoColor ? contactBtn ? "white" : "black" : "transparent" : logoColor ? "black" : 'white'}`}/>
            <path
               d="M55.9556 35.8896H62.9054C67.8876 35.8896 72.3044 32.6565 73.8353 27.8824L76.2079 20.483L76.2084 20.4811L77.7466 15.6203L77.7472 15.6185L82.5917 0.516354H67.2625L62.3398 15.9234L62.3397 15.9238L60.7811 20.786L60.781 20.7864L55.9556 35.8896Z"
-              stroke="white"/>
+              stroke={`${Call("/") ? contactBtn ? "white" : "black" : Call("/home") ? contactBtn ? "white" : "black" : "black"}`}
+              fill={`${Call("/") ? logoColor ? contactBtn ? "white" : "black" : "transparent" : Call("/home") ? logoColor ? contactBtn ? "white" : "black" : "transparent" : logoColor ? "black" : 'white'}`}/>
            <path
               d="M13.8711 15.2549H56.0477L60.7808 0.500044H26.9657C21.9836 0.500044 17.5678 3.73318 16.0358 8.5074C16.0358 8.5074 16.0358 8.50741 16.0358 8.50742L13.8711 15.2549Z"
-              stroke="white"/>
+              stroke={`${Call("/") ? contactBtn ? "white" : "black" : Call("/home") ? contactBtn ? "white" : "black" : "black"}`}
+              fill={`${Call("/") ? logoColor ? contactBtn ? "white" : "black" : "transparent" : Call("/home") ? logoColor ? contactBtn ? "white" : "black" : "transparent" : logoColor ? "black" : 'white'}`}/>
          </svg>
        </Link>
        
-       <Link style={{display: `${Call("/") ? "none" : Call("/home") ? "none" : "block"}`}} onClick={() => {
-         window.scrollTo(0, 0);
-       }} className="logoLink" to="/"><img src={FytechLogo} alt=""/></Link>
+       
        
        <div className="buttonsBlock G-alignItems-center">
          <div style={{

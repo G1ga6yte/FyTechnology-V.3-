@@ -1,214 +1,110 @@
 @import "../../../source/styles/mixin.scss";
 
-.WhatPayingFor{
-  width: 90%;
-  margin: 0 auto;
+.WhatPayingFor {
+  width: 100%;
+  margin-top: 150px;
   position: relative;
-  z-index: 3;
-  @include screen($wide-l){
-    width: 100%;
+
+  .BubbleImg1{
+    position: absolute;
+    height: 100vh;
+    z-index: 1;
+    top: -30%;
+    left: -40%;
+    rotate: 45deg;
+    opacity: 0.6;
   }
-  @include screen($tablet){
-    margin-top: 50px;
+  .BubbleImg2{
+    position: absolute;
+    height: 100vh;
+    z-index: 1;
+    top: 30%;
+    right: -50%;
+    rotate: 130deg;
+    opacity: 0.6;
   }
 
-  .header{
-    font-size: 80px;
-    font-family: 'PlexMono-Regular', sans-serif;
-    color: black;
-    margin-bottom: 24px;
-    @include screen($tablet-l){
-      font-size: 64px;
-    }
-    @include screen($tablet){
-      font-size: 32px;
-    }
-  }
-
-  .MainCont{
-    border-radius: 16px;
-    border: 1px solid #EAEAEA;
-    background: #FAFAFA;
-    padding: 48px;
+  .headerBlock {
+    position: relative;
+    z-index: 2;
+    border-top: 1px solid #C7C7C7;
+    border-bottom: 1px solid #C7C7C7;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+
+    .header {
+      font-size: 120px;
+      font-weight: 400;
+      color: black;
+      font-family: 'IFBosch', sans-serif;
+      border-right: 1px solid #C7C7C7;
+      padding: 0 0 20px;
+      white-space: nowrap;
+      width: min-content;
+    }
+  }
+
+  .cards{
+    position: relative;
+    z-index: 2;
+    margin: 100px auto 0;
+    max-width: 1500px;
+    padding: 0 10px;
     overflow: hidden;
-    @include screen($tablet-l){
-      flex-direction: column;
-    }
-    @include screen($tablet){
-      padding: 24px;
-    }
 
-
-    .EachBlock{
+    .cardCont{
       width: 48%;
-      position: relative;
-      @include screen($tablet-l){
-        width: 100%;
-      }
-
-      &:nth-child(1){
-        border-right: 1px solid #EAEAEA;
-        padding-right: 20px;
-        @include screen($tablet-l){
-          padding: 0;
-          border: none;
-        }
-      }
-
-      .miniHeader{
-        font-size: 32px;
-        font-family: 'PlexMono-Medium', sans-serif;
-        color: black;
-        margin-bottom: 20px;
-        @include screen($tablet){
-          font-size: 28px;
-        }
-      }
-      .prg{
-        font-size: 20px;
-        line-height: 30px;
-        color: black;
-        font-family: 'PlexMono-Regular', sans-serif;
-        max-width: 500px;
-        @include screen($tablet){
-          font-size: 16px;
-        }
-        span{
-          background-color:#FFA06B;
-          color: white;
-          padding: 2px 5px;
-          border-radius: 5px;
-          display: inline-block;
-        }
-      }
-
-      .tabletImg{
-        width: 100%;
-        margin: 20px auto;
-        display: none;
-        @include screen($tablet-l){
-          display: block;
-        }
-      }
-
-      .SplineBlock{
-        width: 600px;
-        height: 500px;
-        scale: 0.8;
-        margin: -50px 0 -50px -100px;
-        @include screen($wide-l){
-          margin: -20px -80px;
-          scale: 0.7;
-        }
-        @include screen($tablet-l){
-          display: none;
-        }
-
-        div{
-
-        }
-        canvas{
-
-        }
-      }
-    }
-
-
-
-    .FindOutMore{
-      display: flex;
-      text-decoration: none;
-      padding: 8px 16px;
-      border-radius: 20px;
-      background-color: white;
-      border: 1px solid black;
+      border-radius: 75px;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      padding: 20px 5% 40px;
       cursor: pointer;
-      position: absolute;
-      bottom: 0;
-      right: 15px;
-      @include screen($mobile-m){
-        padding: 6px 10px;
-        border-radius: 16px;
-      }
-      @include screen($tablet-l){
-        position: relative;
-        width: 100%;
-        justify-content: center;
-        bottom: 0;
-        margin: 20px 0;
-      }
-
-
+      transition: 0.5s ease-in-out all;
 
       &:hover{
-        .letter{
-          &:nth-child(3n+1){
-            transition: 0.4s ease-in-out all;
-            transform: translateY(-100%);
-          }
-          &:nth-child(3n+2){
-            transition: 0.2s ease-in-out all;
-            transform: translateY(-100%);
-          }
-          &:nth-child(3n+3){
-            transition: 0.6s ease-in-out all;
-            transform: translateY(-100%);
-          }
-        }
-        .arrowBlock{
-          img{
-            transition: 1s ease-in-out;
-            transform: translateX(-100%);
-          }
-        }
-
-
+        scale: 1.01;
+        border-radius: 100px;
       }
+
+      .CardHeader{
+        font-size: 96px;
+        color: white;
+        font-family: 'IFBosch', sans-serif;
+        text-align: center;
+        margin-bottom: 50px;
+      }
+      .prg{
+        font-size: 40px;
+        color: black;
+        font-family: 'IFBosch', sans-serif;
+        span{
+          color: white;
+        }
+      }
+    }
+
+    .underTextCont{
+      width: 100%;
+      display: flex;
+      justify-content: end;
+      margin-top: 15px;
       .textBlock{
-        height: 35px;
-        overflow: hidden;
-
-        .textLine{
-
-
-          .letter{
-            font-size: 24px;
-            font-family: 'PlexMono-Medium', sans-serif;
-            color: black;
-            line-height: 35px;
-            @include screen($tablet){
-              font-size: 20px;
-            }
-
-
-            &:nth-child(3n+1){
-              transition: 0.4s ease-in-out all;
-            }
-            &:nth-child(3n+2){
-              transition: 0.2s ease-in-out all;
-            }
-            &:nth-child(3n+3){
-              transition: 0.6s ease-in-out all;
-            }
-          }
-          .space{
-            width: 15px;
-          }
-        }
-      }
-      .middleLine{
-        margin: 0 8px;
-        background-color: #383838;
-        width: 2px;
-        height: 35px;
-      }
-      .arrowBlock{
         display: flex;
-        width: 24px;
-        height: 24px;
-        overflow: hidden;
+        flex-direction: column;
+        align-items: center;
+        width: min-content;
+        .text{
+          font-size: 32px;
+          font-family: 'IFBosch', sans-serif;
+          font-weight: 400;
+          white-space: nowrap;
+          line-height: 80px;
+        }
+        .underLine{
+          width: 100%;
+          height: 1px;
+          background-color: black;
+        }
       }
     }
   }

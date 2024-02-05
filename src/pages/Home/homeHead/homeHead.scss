@@ -2,18 +2,11 @@
 
 .HomeHead{
   width: 100%;
+  height: 100vh;
   position: relative;
   z-index: 5;
   pointer-events: none;
-  @include screen($wide-l){
-    margin: 150px auto;
-  }
-  @include screen($tablet-l){
-    margin: 130px auto;
-  }
-  @include screen($wide-s){
-    margin: 100px auto;
-  }
+
 
 
 

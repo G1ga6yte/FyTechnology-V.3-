@@ -4,17 +4,14 @@
   width: 100%;
   position: relative;
   z-index: 3;
-  background-color: white;
   padding-top: 50px;
-  @include screen($tablet-l){
-    display: none;
-  }
+  margin-top: 150px;
 
   .header{
-    font-size: 80px;
-    font-family: 'PlexMono-Regular', sans-serif;
+    font-size: 148px;
+    font-family: 'IFBosch', sans-serif;
     color: black;
-    margin: 0 0 50px 100px;
+    margin: 0 0 50px 10%;
   }
 
   .Blocks{

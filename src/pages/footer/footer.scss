@@ -2,13 +2,14 @@
 
 .Footer{
   padding: 300px 100px 20px;
-  background-color: white;
   width: 100%;
   z-index: 3;
   position: relative;
   display: flex;
+  flex-wrap: wrap;
+  border-radius: 70px 70px 0 0;
+  background-color: #E2DFD6;
   justify-content: space-between;
-  margin-top: -20px;
   @include screen($wide){
     flex-direction: column;
   }
@@ -20,7 +21,6 @@
     width: 45%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 
     @include screen($wide-l){
       width: 55%;
@@ -33,7 +33,7 @@
     .linkFyTech{
       text-decoration: none;
       display: block;
-      margin-bottom: 60px;
+      margin-bottom: 20px;
       @include screen($tablet-m){
         width: 80%;
         img{
@@ -44,10 +44,8 @@
 
     .prg{
       font-size: 80px;
-      font-family: 'PlexMono-Medium', sans-serif;
+      font-family: 'IFBosch', sans-serif;
       color: black;
-      line-height: 104px;
-      margin-bottom: 90px;
       @include screen($tablet){
         font-size: 56px;
         line-height: 72px;
@@ -80,6 +78,12 @@
       width: 100%;
     }
 
+    .linksBlock{
+      display: flex;
+      justify-content: space-between;
+      width: 400px;
+      margin: 50px 0;
+    }
 
     .textBlock{
       height: 35px;
@@ -90,9 +94,9 @@
 
         .letter{
           font-size: 24px;
-          font-family: 'PlexMono-Medium', sans-serif;
-          color: white;
-          line-height: 35px;
+          font-family: 'IFBosch', sans-serif;
+          color: black;
+          line-height: 32px;
           @include screen($mobile-m){
             font-size: 20px;
           }
@@ -118,7 +122,8 @@
       text-decoration: none;
       padding: 8px 16px;
       border-radius: 20px;
-      background-color: black;
+      background-color: transparent;
+      border: 0.5px solid black;
       cursor: pointer;
       width: min-content;
       @include screen($mobile-m){
@@ -160,7 +165,7 @@
 
       .middleLine{
         margin: 0 8px;
-        background-color: #383838;
+        background-color: black;
         width: 2px;
         height: 35px;
       }
@@ -177,7 +182,6 @@
       text-decoration: none;
       padding: 8px 16px;
       border-radius: 20px;
-      background-color: white;
       cursor: pointer;
       width: min-content;
       @include screen($mobile-m){
@@ -193,8 +197,8 @@
 
 
           .letter{
-            font-size: 24px;
-            font-family: 'PlexMono-Regular', sans-serif;
+            font-size: 32px;
+            font-family: 'IFBosch', sans-serif;
             color: black;
             line-height: 35px;
             @include screen($mobile-m){
@@ -264,42 +268,32 @@
       }
     }
 
-    .linksBlock{
-      width: 60%;
-      display: flex;
-      justify-content: space-between;
-      @include screen($wide){
-        width: 100%;
-      }
+  }
 
-    }
-    .policyBottom{
-      text-align: center;
-      color: #C2C2C2;
+  .policyCont{
+    display: flex;
+    width: 90%;
+    margin: 30px auto;
+    align-items: center;
+    justify-content: space-between;
+    .copyright{
+      font-family: "PlexMono-Medium", sans-serif;
+      color: #999;
       font-size: 16px;
-      font-family: 'PlexMono-Medium', sans-serif;
-      margin: 20px auto;
-      display: none;
-      @include screen($wide){
-        display: block;
-      }
     }
+
     .linksToPolicy{
+      width: min-content;
       display: flex;
-      @include screen($wide){
-        width: 100%;
-        justify-content: center;
-      }
-
-      a{
-        text-decoration: none;
-        color: #C2C2C2;
-        font-family: 'PlexMono-Medium', sans-serif;
+      align-items: center;
+      .LinkToPrivacy{
+        font-family: "PlexMono-Medium", sans-serif;
+        color: #999;
         font-size: 16px;
-        margin-left: 40px;
+        white-space: nowrap;
+        margin: 0 20px;
       }
     }
-
   }
 
 }

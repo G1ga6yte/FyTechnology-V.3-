@@ -13,10 +13,7 @@ import partner8 from "./8.svg"
 import {useInView} from "react-intersection-observer";
 
 function PartnerSlide () {
-  const {ref: myRef, inView: visibleEl} = useInView({
-    "threshold": 0,
-    "triggerOnce": true
-  })
+  const {ref: myRef, inView: visibleEl} = useInView()
   
   const [slidesToShow, setSlidesToShow] = useState(5)
   
@@ -26,6 +23,9 @@ function PartnerSlide () {
     }
     if (window.innerWidth <=1200){
       setSlidesToShow(3)
+    }
+    if (window.innerWidth <= 880){
+      setSlidesToShow(2)
     }
   }, [])
   
@@ -43,7 +43,7 @@ function PartnerSlide () {
   
   return(
      <div className="PartnerSlide">
-        <p ref={myRef} className={`header ${visibleEl ? "scrollAnimation" : ""}`}>They trusted us</p>
+        <p ref={myRef} className={`header ${visibleEl ? "scrollAnimation" : ""}`}>They Trust Us</p>
        
        <Slider {...settings}>
   
@@ -57,28 +57,7 @@ function PartnerSlide () {
          <img src={partner8} alt=""/>
          
        </Slider>
-       <div className="Blocks">
-         <div className="block"></div>
-         <div className="block"></div>
-         <div className="block"></div>
-         <div className="block"></div>
-         <div className="block"></div>
-         <div className="block"></div>
-         <div className="block"></div>
-         <div className="block"></div>
-         <div className="block"></div>
-         <div className="block"></div>
-         <div className="block"></div>
-         <div className="block"></div>
-         <div className="block"></div>
-         <div className="block"></div>
-         <div className="block"></div>
-         <div className="block"></div>
-         <div className="block"></div>
-         <div className="block"></div>
-         <div className="block"></div>
-         <div className="block"></div>
-       </div>
+       
      </div>
   )
 }

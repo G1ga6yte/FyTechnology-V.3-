@@ -61,6 +61,13 @@ function WhatWeDo (){
              <path d="M40.5552 87.3432L91.041 45.1895" stroke="white" strokeWidth="8" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
            </svg>
          </Link>
+         
+         <div className="underText">
+           <div className="textBlock">
+             <p ref={myRef3} className={`text ${visibleEl3 ? "scrollAnimation" : ""}`}>Our skill set</p>
+             <div className="underLine"></div>
+           </div>
+         </div>
 
        </div>
   

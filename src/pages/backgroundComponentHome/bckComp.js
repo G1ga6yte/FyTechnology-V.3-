@@ -10,7 +10,7 @@ const context = createContext()
 export default function BckComp() {
   const shake = useRef()
   return (
-     <Canvas>
+     <Canvas className="canvas1">
        <ambientLight intensity={Math.PI / 2} />
        <PerspectiveCamera makeDefault position={[0, -4, 18]} fov={90} onUpdate={(self) => self.lookAt(0, 0, 0)}>
          <spotLight position={[0, 40, 2]} angle={0.5} decay={1} distance={45} penumbra={1} intensity={2000} />

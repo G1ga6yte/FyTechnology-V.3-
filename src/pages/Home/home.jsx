@@ -15,19 +15,6 @@ import Bubbles from "./bubbles.png"
 
 function Home() {
   
-  
-  const throttle = (func, delay) => {
-    let timeout;
-    return (...args) => {
-      if (!timeout) {
-        timeout = setTimeout(() => {
-          func(...args);
-          timeout = null;
-        }, delay);
-      }
-    };
-  };
-  
   return (
      <div className="Home">
   
@@ -35,14 +22,14 @@ function Home() {
        
        <HomeHead/>
        <WhatWeDo/>
-       <FeaturedWorkTablet/>
-       {/*<FeaturedWork/>*/}
+       {/*<FeaturedWorkTablet/>*/}
+       <FeaturedWork/>
        <WhatPayingFor/>
-       <Pricing/>
-       <PricingTablet/>
+       {/*<Pricing/>*/}
+       {/*<PricingTablet/>*/}
        <PartnerSlide/>
-       <FyTechAnimation/>
-       <LastVideoScene/>
+       {/*<FyTechAnimation/>*/}
+       {/*<LastVideoScene/>*/}
      </div>
   );
 }

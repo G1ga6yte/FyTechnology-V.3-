@@ -1,12 +1,14 @@
 {
   "name": "fytech",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "main": "src/index.js",
   "dependencies": {
     "@pmndrs/assets": "1.6.0",
-    "@react-three/drei": "9.86.0",
-    "@react-three/fiber": "8.14.3",
-    "@react-three/postprocessing": "2.15.1",
+    "@pmndrs/branding": "0.0.8",
+    "@react-three/drei": "9.96.0",
+    "@react-three/fiber": "8.15.12",
+    "@react-three/postprocessing": "2.15.11",
+    "@types/three": "0.158.3",
     "@react-three/rapier": "1.1.1",
     "@splinetool/react-spline": "^2.2.6",
     "@studio-freight/lenis": "^1.0.34",
@@ -17,7 +19,8 @@
     "framer-motion": "^10.18.0",
     "gsap": "^3.12.5",
     "leva": "0.9.33",
-    "maath": "0.10.4",
+    "maath": "0.10.7",
+    "random-words": "2.0.0",
     "react": "^18.2.0",
     "react-card-flip": "^1.2.2",
     "react-dom": "^18.2.0",
@@ -27,14 +30,14 @@
     "react-scripts": "5.0.1",
     "react-slick": "^0.29.0",
     "sass": "^1.69.7",
-    "three": "0.156.1",
+    "three": "0.159.0",
     "uuid": "9.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -43,18 +46,12 @@
       "react-app/jest"
     ]
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
+  "browserslist": [
+    ">1%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
   "keywords": [],
   "description": "Trying out drei's new cloud component."
 }
