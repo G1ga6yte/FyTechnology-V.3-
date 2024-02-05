@@ -20,9 +20,9 @@ function FeaturedWork (){
           </div>
         </div>
        
-       {/*<div className="animBlock">*/}
-       {/*  <CanvasBlock/>*/}
-       {/*</div>*/}
+       <div className="animBlock">
+         <CanvasBlock/>
+       </div>
        
        
        

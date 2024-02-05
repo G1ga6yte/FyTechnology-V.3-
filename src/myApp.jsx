@@ -22,19 +22,37 @@ function MyApp() {
     height  : 'auto',
     overflow: 'visible'
   })
+  // const [scrollHide, setScrollHide] = useState(0)
   
-  let lenis = new Lenis({
-    duration: 2.5,
-    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
-  })
+  // let lenis = new Lenis({
+  //   duration: 2.5,
+  //   easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
+  // })
   
-  function raf(time) {
-        lenis.raf(time)
-      requestAnimationFrame(raf)
-    }
+
+  // function raf(time) {
+  //       lenis.raf(time)
+  //   if(scrollHide >= 3000 && scrollHide <=4200){
+  //     return
+  //   }
+  //   requestAnimationFrame(raf)
+  //   }
+  //
+  //
+  // requestAnimationFrame(raf)
   
-  requestAnimationFrame(raf)
   
+  // useEffect(() => {
+  //   const onScroll = () => {
+  //     setScrollHide(window.scrollY)
+  //   }
+  //
+  //   window.addEventListener("scroll", onScroll)
+  //
+  //   return () => {
+  //     window.removeEventListener("scroll", onScroll)
+  //   }
+  // }, [])
   
   
   // let animationEnabled = true;
@@ -113,7 +131,7 @@ function MyApp() {
       {showNavigation && <LoadingComponent />}
       
       
-      <div style={{ position: 'relative', zIndex: 1000 }} className='MainRoutes'>
+      <div style={{ position: 'relative', zIndex: 1000 }}  className='MainRoutes'>
         {showNavigation && <Navigation />}
         <Routes>
           

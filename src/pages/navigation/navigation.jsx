@@ -46,6 +46,11 @@ function Navigation() {
   
   return (
     <div style={{ display: `${Call('/contact') ? 'none' : 'flex'}` }} className='Navigation G-flex-between'>
+      <span style={{
+        position: "absolute",
+        left: 0,
+        right: 0
+      }}>{window.innerWidth}</span>
       <Link
         onMouseOver={handleMouseOver}
         onMouseLeave={handleMouseLeave}

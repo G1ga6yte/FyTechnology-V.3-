@@ -1,4 +1,14 @@
 @import "./variables.scss";
+@mixin screen ($wide-lll) {
+  @media(max-width: $wide-lll) {
+    @content
+  }
+};
+@mixin screen ($wide-ll) {
+  @media(max-width: $wide-ll) {
+    @content
+  }
+};
 @mixin screen ($wide-l) {
   @media(max-width: $wide-l) {
     @content
