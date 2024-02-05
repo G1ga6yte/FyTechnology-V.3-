@@ -17,6 +17,9 @@ function Cursor (){
     }, [])
     
     
+    
+  
+  useEffect(()=>{
     const updatePosition = (e) => {
       setPosition({ x: e.clientX, y: e.clientY });
       if (e.clientY + window.scrollY >= 2800 && e.clientY + window.scrollY <= 3700){
@@ -24,7 +27,7 @@ function Cursor (){
       } else {
         setCursorFuture(false)
       }
-      
+    
       if (cursorFuture){
         if (futurePointer === "left"){
           setCursorText("Slide left")
@@ -36,12 +39,18 @@ function Cursor (){
       } else {
         setCursorText("")
       }
-      
-      
+    
+    
     };
-    
     window.addEventListener('mousemove', updatePosition);
-    
+  
+    return()=>{
+      window.addEventListener('mousemove', updatePosition);
+  
+    }
+  })
+  
+  
     
   
   

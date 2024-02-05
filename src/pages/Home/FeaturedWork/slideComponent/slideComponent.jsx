@@ -18,17 +18,25 @@ function SlideComponent() {
   const {futurePointer, setFuturePointer} = useCartContext()
   
   const [elem, setElem] = useState("")
-  document.addEventListener("mousemove", parallax);
-  function parallax(e) {
-    let _w = window.innerWidth/2;
-    let _h = window.innerHeight/2;
-    let _mouseX = e.clientX;
-    let _mouseY = e.clientY;
-    let wPosition = `${(_mouseX-_w)/15}px`
-    let hPosition = `${(_mouseY-_h)/15}px`
-    let x = `translate(${wPosition}, ${hPosition})`;
-    setElem(x)
-  }
+  
+  useEffect(()=>{
+    function parallax(e) {
+      let _w = window.innerWidth/2;
+      let _h = window.innerHeight/2;
+      let _mouseX = e.clientX;
+      let _mouseY = e.clientY;
+      let wPosition = `${(_mouseX-_w)/15}px`
+      let hPosition = `${(_mouseY-_h)/15}px`
+      let x = `translate(${wPosition}, ${hPosition})`;
+      setElem(x)
+    }
+    document.addEventListener("mousemove", parallax);
+  
+    return () => {
+      document.addEventListener("mousemove", parallax);
+  
+    }
+  }, [])
   
   
   return (
