@@ -10,8 +10,7 @@ function AboutUs () {
      <div className="aboutUs">
         <AboutUsHead/>
        <AboutUsValues/>
-       <AboutUsAccomplishment/>
-       <AboutUsLast/>
+       
      </div>
   )
 }

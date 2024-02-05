@@ -3,85 +3,163 @@
 .aboutUsHead{
   width: 100%;
   margin: 0 auto;
-  background-color: #F2F1F2;
-  padding: 150px 100px 200px;
   position: relative;
-  @include screen(1600px){
-    align-items: center;
-  }
-  @include screen($wide){
-    padding: 150px 10px;
-  }
-  @include screen($tablet-l){
-    flex-direction: column-reverse;
-  }
 
-  .textBlock{
-    width: 60%;
-    @include screen($tablet-l){
-      width: 100%;
-    }
+  .headerBlock{
+    position: relative;
+    z-index: 2;
+    margin-top: 150px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     .header{
-      margin-top: 80px;
-      font-size: 80px;
-      font-family: 'PlexMono-Medium', sans-serif;
-      margin-bottom: 24px;
-      @include screen($tablet-l){
-        font-size: 64px;
-      }
-      @include screen($tablet){
-        font-size: 40px;
-      }
+      font-size: 96px;
+      font-family: 'IFBosch', sans-serif;
+      color: black;
+      text-align: center;
+      line-height: 120px;
     }
-    .prg{
-      max-width: 900px;
-      font-size: 28px;
-      font-family: 'PlexMono-Regular', sans-serif;
-      line-height: 36px;
-      margin-bottom: 30px;
-      @include screen($tablet){
-        font-size: 22px;
-        line-height: 26px;
-      }
+    .borderBlock{
+      width: 65%;
+      position: absolute;
+      left: -1px;
+      top: 0;
+      height: 100%;
+      border: 1px solid #C7C7C7;
     }
-    .skills{
-      .skill{
-        margin-bottom: 10px;
-        padding: 8px;
-        border-radius: 12px;
-        border: 1px solid #000;
-        font-size: 20px;
-        font-family: 'PlexMono-Regular', sans-serif;
-        margin-right: 15px;
-        @include screen($tablet){
-          font-size: 16px;
+  }
+
+  .CardBlock{
+    position: relative;
+    z-index: 2;
+    padding: 0 10px;
+    max-width: 1700px;
+    margin: 100px auto 0;
+
+    .TextCard{
+      width: 55%;
+      display: flex;
+      flex-wrap: wrap;
+      .headCard{
+        width: 100%;
+        border-radius: 75px;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        transition: 0.5s ease-in-out all;
+        padding: 15px 35px 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+        background-position: center;
+        cursor: pointer;
+        &:hover{
+          background-size: 110% 110%;
+          border-radius: 100px;
+        }
+
+        .CardHeader{
+          font-size: 96px;
+          font-family: 'IFBosch', sans-serif;
+          color: white;
+        }
+        .prg{
+          font-size: 28px;
+          font-family: "IFBosch", sans-serif;
+          color: white;
+          margin: 30px 0 70px;
+        }
+        .descBlock{
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          .desc{
+            margin-right: 50px;
+            font-size: 20px;
+            font-family: 'IFBosch', sans-serif;
+            color: white;
+          }
+        }
+
+      }
+
+      .textBlock1{
+        width: 45%;
+        padding-right: 60px;
+        border-right: 1px solid #C7C7C7;
+        padding-top: 25px;
+        .textHeader{
+          font-size: 48px;
+          font-family: 'IFBosch', sans-serif;
+          color: black;
+        }
+        .textPrg{
+          margin-top: 10px;
+          font-size: 28px;
+          font-family: 'IFBosch', sans-serif;
+          color: #7E7E7E;
         }
       }
+
+      .textBlock2{
+        width: 55%;
+        padding-left: 60px;
+        padding-top: 25px;
+        .textHeader{
+          font-size: 48px;
+          font-family: 'IFBosch', sans-serif;
+          color: black;
+        }
+        .textPrg{
+          width: 80%;
+          margin-top: 10px;
+          font-size: 28px;
+          font-family: 'IFBosch', sans-serif;
+          color: #7E7E7E;
+        }
+      }
+
     }
+
+    .imgCard{
+      width: 43%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      border-radius: 75px;
+      transition: 0.5s ease-in-out all !important;
+      cursor: pointer;
+      &:hover{
+        border-radius: 100px;
+        scale: 1.02;
+      }
+    }
+
+
   }
 
-  .BallBlock{
-    overflow: hidden;
-    width: 40%;
-    margin: -50px 100px 0 0;
-    @include screen(1600px){
-      margin: 0;
-    }
-    @include screen($tablet-l){
-      width: 60%;
-    }
-    @include screen($tablet){
-      width: 80%;
-    }
-
-
-    .videoLoading{
-      width: 100%;
-      scale: 1.1;
-    }
+  .water1{
+    position: absolute;
+    z-index: 3;
+    left: 0;
+    top: 20%;
+    opacity: 0.8;
   }
-
-
+  .water2{
+    position: absolute;
+    z-index: 3;
+    left: 40%;
+    top: 30%;
+    opacity: 0.8;
+  }
+  .water3{
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    bottom: -70%;
+    opacity: 0.8;
+  }
 
 }
