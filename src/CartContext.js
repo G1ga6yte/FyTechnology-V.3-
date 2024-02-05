@@ -26,9 +26,12 @@ export const CartProvider = ({children}) => {
     setWidth38(38)
   }
   
+  const [futurePointer, setFuturePointer] = useState("")
+  
   return (<CartContext.Provider value={{
     Call, loading, setLoading, activeData, setActiveData,
-    width38, setWidth38, width18, setWidth18, handleMouseOver,handleMouseLeave
+    width38, setWidth38, width18, setWidth18, handleMouseOver,handleMouseLeave,
+    futurePointer, setFuturePointer
   }}>
     {children}
   </CartContext.Provider>);

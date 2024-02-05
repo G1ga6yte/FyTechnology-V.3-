@@ -2,6 +2,7 @@ import React from "react";
 import "./featuredWork.scss"
 import { useInView } from 'react-intersection-observer'
 import CanvasBlock from '../../../canvasComponent/CanvasBlock'
+import SlideComponent from './slideComponent/slideComponent'
 
 function FeaturedWork (){
   const {ref: myRef1, inView: visible1} = useInView()
@@ -20,8 +21,8 @@ function FeaturedWork (){
           </div>
         </div>
        
-       <div className="animBlock">
-         <CanvasBlock/>
+       <div className="slider">
+         <SlideComponent/>
        </div>
        
        

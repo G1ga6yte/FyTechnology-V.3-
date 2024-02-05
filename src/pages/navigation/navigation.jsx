@@ -49,8 +49,13 @@ function Navigation() {
       <span style={{
         position: "absolute",
         left: 0,
-        right: 0
+        top: 0
       }}>{window.innerWidth}</span>
+      <span style={{
+        position: "absolute",
+        left: 0,
+        top: `20px`
+      }}>{window.innerHeight}</span>
       <Link
         onMouseOver={handleMouseOver}
         onMouseLeave={handleMouseLeave}

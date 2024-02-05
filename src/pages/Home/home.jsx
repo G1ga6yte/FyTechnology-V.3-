@@ -17,13 +17,9 @@ function Home() {
        
        <HomeHead/>
        <WhatWeDo/>
-       {/*<FeaturedWorkTablet/>*/}
        <FeaturedWork/>
        <WhatPayingFor/>
-       {/*<Pricing/>*/}
-       {/*<PricingTablet/>*/}
        <PartnerSlide/>
-       {/*<FyTechAnimation/>*/}
      </div>
   );
 }

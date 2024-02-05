@@ -58,6 +58,7 @@ function PartnerSlide () {
          
        </Slider>
        
+      
      </div>
   )
 }

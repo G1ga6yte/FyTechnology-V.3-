@@ -5,10 +5,10 @@
   "dependencies": {
     "@pmndrs/assets": "1.6.0",
     "@pmndrs/branding": "0.0.8",
+    "@react-spring/three": "9.7.2",
     "@react-three/drei": "9.96.0",
     "@react-three/fiber": "8.15.12",
     "@react-three/postprocessing": "2.15.11",
-    "@types/three": "0.158.3",
     "@react-three/rapier": "1.1.1",
     "@splinetool/react-spline": "^2.2.6",
     "@studio-freight/lenis": "^1.0.34",
@@ -16,6 +16,7 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "@types/three": "0.158.3",
     "framer-motion": "^10.18.0",
     "gsap": "^3.12.5",
     "leva": "0.9.33",
@@ -30,7 +31,7 @@
     "react-scripts": "5.0.1",
     "react-slick": "^0.29.0",
     "sass": "^1.69.7",
-    "three": "0.159.0",
+    "three": "^0.159.0",
     "uuid": "9.0.1",
     "web-vitals": "^2.1.4"
   },

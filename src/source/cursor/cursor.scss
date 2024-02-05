@@ -11,4 +11,37 @@
   transform: translate(-50%, -50%);
   transition: transform 0.2s ease-in-out;
   z-index:9999;
+  content: '';
+  justify-content: center;
+  align-items: center;
+}
+.futureScroll{
+  padding: 10px;
+  width: 100px;
+  height: 100px;
+  background-color: gray;
+  animation: animCursor 2s linear infinite;
+  color: white;
+  font-family: 'IFBosch', sans-serif;
+  font-size: 24px;
+  text-align: center;
+}
+
+
+@keyframes animCursor {
+  0%{
+    border-radius: 12.5% 50% 37.5% 25%;
+  }
+  25%{
+    border-radius: 25% 12.5% 50% 37.5%;
+  }
+  50%{
+    border-radius: 37.5% 25% 12.5% 50%;
+  }
+  75%{
+    border-radius: 50% 37.5% 25% 12.5%;
+  }
+  100%{
+    border-radius: 12.5% 50% 37.5% 25%;
+  }
 }

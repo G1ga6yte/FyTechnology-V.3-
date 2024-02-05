@@ -15,6 +15,7 @@ import LoadingComponent from './pages/loadingComponent/loadingComponent'
 import WorkMain from './pages/workMain/workMain'
 import ErrorPage from './pages/error404/errorPage'
 import PrivacyPolicy from './pages/privacyPolicy/privacyPolicy'
+import Cursor from './source/cursor/cursor'
 
 
 function MyApp() {
@@ -24,22 +25,16 @@ function MyApp() {
   })
   // const [scrollHide, setScrollHide] = useState(0)
   
-  // let lenis = new Lenis({
-  //   duration: 2.5,
-  //   easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
-  // })
-  
-
-  // function raf(time) {
-  //       lenis.raf(time)
-  //   if(scrollHide >= 3000 && scrollHide <=4200){
-  //     return
-  //   }
-  //   requestAnimationFrame(raf)
-  //   }
-  //
-  //
-  // requestAnimationFrame(raf)
+  let lenis = new Lenis({
+    duration: 2.5,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
+  })
+  function raf(time) {
+        lenis.raf(time)
+    console.log(window.scrollY)
+    requestAnimationFrame(raf)
+  }
+  requestAnimationFrame(raf)
   
   
   // useEffect(() => {
@@ -151,7 +146,7 @@ function MyApp() {
         {showNavigation && <Footer />}
       </div>
       
-      {/*<Cursor/>*/}
+      <Cursor/>
     
     </div>
   
