@@ -2,6 +2,7 @@ import React, { useState, useEffect} from 'react';
 import './style.scss';
 import { useCartContext } from '../../../../CartContext'
 
+import bck1 from "../../../../img4_.png"
 function SlideComponent() {
   const [ang, setAng] = useState(0);
   
@@ -54,7 +55,7 @@ function SlideComponent() {
       <div className="holder">
         <div className="spinner" style={{ '--ang': `${ang}deg` }}>
           {Array.from({ length: 16 }, (_, index) => (
-            <div key={index} className={`panel panel-${index + 1}`}></div>
+            <div style={{backgroundImage: `url("${bck1}")`}} key={index} className={`panel panel-${index + 1}`}></div>
           ))}
           <div className="fade"></div>
         </div>
