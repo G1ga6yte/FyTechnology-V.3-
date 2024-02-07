@@ -34,9 +34,9 @@
       left: 0;
     }
 
-    @include screen($wide-lll){
-      height: 810px;
-    }
+    //@include screen($wide-lll){
+    //  height: 810px;
+    //}
     @include screen($wide-ll){
       height: 756px;
     }
