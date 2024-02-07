@@ -6,15 +6,12 @@
   z-index: 100;
   top: 30px;
   padding: 0 100px;
-  @include screen($tablet-l){
-    top: 0;
-    width: 96%;
-    left: 2%;
-  }
-  @include screen($tablet-m){
-    padding: 15px 20px;
-    width: 100%;
-    left: 0;
+ @include screen($wide-ll){
+   top: 10px;
+   padding: 0 80px;
+ }
+  @include screen($wide-l){
+    padding: 0 60px;
   }
 
   .logoNew{
@@ -22,13 +19,17 @@
       path{
         transition: 0.3s ease-in-out all !important;
       }
-    }
-    @include screen($mobile-m){
-      img{
+      @include screen($wide-ll){
+        width: 90px;
+      }
+      @include screen($wide){
         width: 80px;
-        transition: 0.5s ease-in-out;
+      }
+      @include screen($desktop) {
+        width: 60px;
       }
     }
+
   }
 
   .buttonsBlock{
@@ -37,7 +38,7 @@
       position: fixed;
       top: 0;
       left: 0;
-      width: 100vh;
+      width: 100vw;
       height: 100vh;
     }
 
@@ -52,34 +53,46 @@
       position: fixed;
       right: 5vh;
       bottom: 5vh;
-
-      @include screen($tablet-m){
-        position: fixed;
-        right: 5%;
-        bottom: -500px;
+      @include screen($desktop){
+        border-radius: 16px;
       }
+
+
 
       .barImg{
         transition: 0.2s ease-in-out;
         margin: 13px;
         width: 24px;
+        @include screen($desktop){
+          margin: 8px;
+          width: 20px;
+          height: 20px;
+        }
         &:hover{
-
             scale: 1.2;
-
         }
       }
 
-      .menu{
+      .NavMenu{
         padding: 30px 40px;
         position: absolute;
         border-radius: 20px;
         border: 1px solid #000;
         width: max-content;
         bottom: 0;
-        right: 120%;
         background-color: transparent;
         backdrop-filter: blur(20px);
+        right: 120%;
+        @include screen($wide-ll){
+          padding: 20px 30px;
+        }
+        @include screen($wide-l){
+          padding: 15px 25px;
+        }
+        @include screen($wide){
+          padding: 10px 20px;
+        }
+
 
         @include screen($tablet-m){
           bottom: 120%;
@@ -135,12 +148,21 @@
             transition: 1s ease-in-out;
             display: flex;
             margin-left: 30px;
+            @include screen($wide){
+              width: 20px;
+              height: 20px;
+              margin-left: 10px;
+            }
             .arrow{
               width: 100%;
               svg{
                 width: 24px !important;
                 height: 24px !important;
                 transition: 1s ease-in-out;
+                @include screen($wide){
+                  width: 20px !important;
+                  height: 20px !important;
+                }
               }
             }
 
@@ -160,9 +182,7 @@
         }
 
         .letter{
-          @include screen($mobile-m){
-            font-size: 20px;
-          }
+
 
           &:nth-child(3n+1){
             transition: 0.6s ease-in-out all;
@@ -183,6 +203,14 @@
           .linkSite{
             margin: 6px 10px;
             transition: 0.3s ease-in-out;
+            @include screen($wide){
+              margin: 0 10px;
+            }
+            svg{
+              @include screen($wide){
+                height: 30px;
+              }
+            }
             &:hover{
               transition: 0.3s ease-in-out;
               scale: 1.1;
@@ -199,6 +227,18 @@
     .textBlock{
       height: 35px;
       overflow: hidden;
+      @include screen($wide-ll){
+        height: 32px;
+      }
+      @include screen($wide-l){
+        height: 28px;
+      }
+      @include screen($wide){
+        height: 26px;
+      }
+      @include screen($desktop){
+        height: 22px;
+      }
 
       .textLine{
 
@@ -208,8 +248,22 @@
           font-family: 'IFBosch', sans-serif;
           color: white;
           line-height: 35px;
-          @include screen($mobile-m){
+          @include screen($wide-ll){
+            font-size: 22px;
+            line-height: 32px;
+          }
+          @include screen($wide-l){
             font-size: 20px;
+            line-height: 28px;
+
+          }
+          @include screen($wide){
+            font-size: 18px;
+            line-height: 26px;
+          }
+          @include screen($desktop){
+            font-size: 16px;
+            line-height: 22px;
           }
 
           &:nth-child(3n+1){
@@ -224,6 +278,9 @@
         }
         .space{
           width: 15px;
+          @include screen($wide){
+            width: 12px;
+          }
         }
       }
     }
@@ -237,9 +294,12 @@
       border: 0.5px;
       cursor: pointer;
       transition: 0.5s ease-in-out;
-      @include screen($mobile-m){
-        padding: 6px 10px;
-        border-radius: 16px;
+      @include screen($wide-ll){
+        padding: 5px 14px;
+        border-radius: 15px;
+      }
+      @include screen($desktop){
+        padding: 4px 12px;
       }
 
 
@@ -273,12 +333,22 @@
         background-color: #383838;
         width: 1px;
         height: 30px;
+        @include screen($wide){
+          height: 25px;
+        }
       }
       .arrowBlock{
         display: flex;
         width: 24px;
         height: 24px;
         overflow: hidden;
+        svg{
+          width: 20px;
+        }
+        @include screen($wide){
+          width: 20px;
+          height: 20px;
+        }
       }
     }
   }

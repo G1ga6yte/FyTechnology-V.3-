@@ -5,6 +5,81 @@
   width: 100% !important;
   overflow: hidden;
   background-color: #E5E4E0;
+
+  .section{
+    width: 100%;
+    position: relative;
+  }
+  .index1{
+    z-index: 1;
+  }
+  .index2{
+    z-index: 2;
+  }
+  .index3{
+    z-index: 3;
+  }
+  .index4{
+    z-index: 4;
+  }
+  .index5{
+    z-index: 5;
+  }
+
+  .section1{
+    height: 945px;
+    .HomeHead{
+      position: fixed;
+      bottom: 0;
+      left: 0;
+    }
+
+    @include screen($wide-lll){
+      height: 810px;
+    }
+    @include screen($wide-ll){
+      height: 756px;
+    }
+    @include screen($wide-l){
+      height: 700px;
+    }
+    @include screen($wide-s){
+      height: 600px;
+    }
+  }
+  .section2 {
+      height: 1500px;
+    .WhatWeDo{
+      position: fixed;
+      bottom: 0;
+      left: 0;
+    }
+  }
+  .section3{
+    height: 950px;
+    .FeaturedWork{
+      position: fixed;
+      bottom: 0;
+      left: 0;
+    }
+  }
+  .section4{
+    height: 1380px;
+    .WhatPayingFor{
+      position: fixed;
+      bottom: 0;
+      left: 0;
+    }
+  }
+  .section5{
+    height: 1320px;
+    .PartnerSlide{
+      position: fixed;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
 }
 
 @keyframes fromRight {

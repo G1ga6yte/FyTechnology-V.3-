@@ -89,6 +89,8 @@ function Navigation() {
         }} onClick={() => {
           setMenuBar(prev => !prev)
         }} className='menuBtn'>
+          
+          
           <div style={{ display: `${menuBar ? 'block' : 'none'}` }} className='clickBackDrop'></div>
           
           <svg className='barImg' style={{ display: `${menuBar ? 'none' : 'block'}` }} width='24' height='24'
@@ -126,7 +128,7 @@ function Navigation() {
           }} style={{
             display    : `${menuBar ? 'block' : 'none'}`,
             borderColor: `${Call('/') ? menuBarColor ? 'white' : 'black' : Call('/home') ? menuBarColor ? 'white' : 'black' : 'black'}`
-          }} className='menu G-flex-column'>
+          }} className='NavMenu G-flex-column'>
             
             
             <Link onClick={() => {

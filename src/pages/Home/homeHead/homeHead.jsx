@@ -27,17 +27,22 @@ function HomeHead (){
               <p ref={myRef3} className={`prgRight ${visible3 ? "scrollAnimation2" : ""}`}>Digital products creatives & Impressive</p>
             </div>
           </div>
+  
+         <div className="scrollText">
+           <span>SCROLL</span>
+           <div className="arrowDown">
+             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="99" viewBox="0 0 24 99" fill="none">
+               <path d="M10.9393 98.0607C11.5251 98.6464 12.4749 98.6464 13.0607 98.0607L22.6066 88.5147C23.1924 87.9289 23.1924 86.9792 22.6066 86.3934C22.0208 85.8076 21.0711 85.8076 20.4853 86.3934L12 94.8787L3.51472 86.3934C2.92893 85.8076 1.97919 85.8076 1.3934 86.3934C0.807611 86.9792 0.807611 87.9289 1.3934 88.5147L10.9393 98.0607ZM10.5 0L10.5 97H13.5L13.5 0L10.5 0Z" fill="white"/>
+             </svg>
+           </div>
+  
+         </div>
           
         </div>
        
        <div className="bck">
         <div className="bckIn">
-          <div className="scrollText">
-            <span>SCROLL</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="99" viewBox="0 0 24 99" fill="none">
-              <path d="M10.9393 98.0607C11.5251 98.6464 12.4749 98.6464 13.0607 98.0607L22.6066 88.5147C23.1924 87.9289 23.1924 86.9792 22.6066 86.3934C22.0208 85.8076 21.0711 85.8076 20.4853 86.3934L12 94.8787L3.51472 86.3934C2.92893 85.8076 1.97919 85.8076 1.3934 86.3934C0.807611 86.9792 0.807611 87.9289 1.3934 88.5147L10.9393 98.0607ZM10.5 0L10.5 97H13.5L13.5 0L10.5 0Z" fill="white"/>
-            </svg>
-          </div>
+        
         </div>
        </div>
      </div>

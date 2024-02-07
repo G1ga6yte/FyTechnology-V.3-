@@ -5,6 +5,7 @@ import arrowRightTop from './arrow-narrow-up-right.svg'
 import fuTech from './g20.svg'
 import Arrow from '../navigation/images/arrow-narrow-right.svg'
 import { useInView } from 'react-intersection-observer'
+import { useCartContext } from '../../CartContext'
 
 function Footer() {
   const ContactUs = 'Contact us'.split('')
@@ -25,7 +26,7 @@ function Footer() {
   const { ref: myRef2, inView: visible2 } = useInView()
   const { ref: myRef3, inView: visible3 } = useInView()
   const { ref: myRef4, inView: visible4 } = useInView()
-  const { ref: myRef5, inView: visible5 } = useInView()
+  const { ref: myRef9, inView: visible9 } = useInView()
   const { ref: myRef6, inView: visible6 } = useInView()
   const { ref: myRef7, inView: visible7 } = useInView()
   const { ref: myRef8, inView: visible8 } = useInView()
@@ -35,9 +36,10 @@ function Footer() {
     return el === locat.pathname
   }
   
+  const {myRef5} = useCartContext()
   
   return (
-    <div style={{ display: `${Call('/contact') ? 'none' : 'flex'}` }} className='Footer'>
+    <div ref={myRef5} style={{ display: `${Call('/contact') ? 'none' : 'flex'}` }} className='Footer'>
       
       <div className='LinksBlock'>
         <Link onClick={() => window.scrollTo(0, 0)} ref={myRef1}
@@ -109,8 +111,8 @@ function Footer() {
                 </div>
               </div>
             </Link>
-            <Link onClick={() => window.scrollTo(0, 0)} ref={myRef5} to='/service'
-                  className={`Link G-alignItems-center ${visible5 ? 'scrollAnimation2' : ''}`}>
+            <Link onClick={() => window.scrollTo(0, 0)} ref={myRef9} to='/service'
+                  className={`Link G-alignItems-center ${visible9 ? 'scrollAnimation2' : ''}`}>
               <div className='textBlock'>
                 <div className='textLine G-alignItems-center'>
                   {Services.map((el) => {
@@ -181,7 +183,7 @@ function Footer() {
                 </div>
               </div>
             </a>
-            <a ref={myRef5} href='twitter' className={`Link G-alignItems-center ${visible5 ? 'scrollAnimation2' : ''}`}>
+            <a ref={myRef9} href='twitter' className={`Link G-alignItems-center ${visible9 ? 'scrollAnimation2' : ''}`}>
               <div className='textBlock'>
                 <div className='textLine G-alignItems-center'>
                   {Twitter.map((el) => {

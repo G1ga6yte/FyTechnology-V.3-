@@ -1,50 +1,56 @@
 @import "../../../source/styles/mixin.scss";
 
-.FeaturedWork{
+.FeaturedWork {
   width: 100%;
   position: relative;
   z-index: 7;
-  margin-top: 250px;
+  background-color: #E5E4E0;
+  height: 950px;
+  overflow:  hidden;
 
-  .animBlock{
+  .animBlock {
     width: 70%;
     overflow: hidden;
     margin: 0 auto;
   }
 
-  .slider{
+  .slider {
     width: 100%;
-    height: 100vh;
+    height: 80vh;
     overflow: hidden;
   }
 
-  .headerBlock{
+  .headerBlock {
     display: flex;
     justify-content: center;
     border-top: 1px solid #C7C7C7;
     border-bottom: 1px solid #C7C7C7;
 
-    .headerCont{
+    .headerCont {
       padding: 25px 64px 25px 0;
       border-right: 1px solid #C7C7C7;
-      .FutureWork{
+
+      .FutureWork {
         font-size: 148px;
         font-family: 'IFBosch', sans-serif;
         line-height: 106px;
         font-weight: 400;
       }
     }
-    .underHeader{
+
+    .underHeader {
       padding: 20px 20px;
       width: min-content;
-      .prg{
+
+      .prg {
         line-height: 70px;
         font-size: 32px;
         color: black;
         white-space: nowrap;
         font-family: 'IFBosch', sans-serif;
       }
-      .underLine{
+
+      .underLine {
         width: 100%;
         height: 1px;
         background-color: black;
@@ -52,9 +58,6 @@
     }
   }
 }
-
-
-
 
 
 //svg {

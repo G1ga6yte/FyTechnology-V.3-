@@ -5,9 +5,10 @@ import { useCartContext } from '../../CartContext'
 function Cursor (){
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [cursor, setCursor] = useState(true)
-  const [cursorFuture, setCursorFuture] = useState(false)
   const [cursorText, setCursorText] = useState("")
-  const {futurePointer, setFuturePointer} = useCartContext()
+  
+  
+  const {futurePointer, setFuturePointer, cursorFuture, setCursorFuture} = useCartContext()
   
  
     useEffect(()=>{
@@ -22,11 +23,6 @@ function Cursor (){
   useEffect(()=>{
     const updatePosition = (e) => {
       setPosition({ x: e.clientX, y: e.clientY });
-      if (e.clientY + window.scrollY >= 2800 && e.clientY + window.scrollY <= 3700){
-        setCursorFuture(true)
-      } else {
-        setCursorFuture(false)
-      }
     
       if (cursorFuture){
         if (futurePointer === "left"){

@@ -3,10 +3,13 @@ import "./featuredWork.scss"
 import { useInView } from 'react-intersection-observer'
 import CanvasBlock from '../../../canvasComponent/CanvasBlock'
 import SlideComponent from './slideComponent/slideComponent'
+import { useCartContext } from '../../../CartContext'
 
 function FeaturedWork (){
   const {ref: myRef1, inView: visible1} = useInView()
   const {ref: myRef2, inView: visible2} = useInView()
+  
+  const {cursorFuture, setCursorFuture} = useCartContext()
   
   
   return(
@@ -21,7 +24,7 @@ function FeaturedWork (){
           </div>
         </div>
        
-       <div className="slider">
+       <div onMouseMove={()=>setCursorFuture(true)} onMouseLeave={()=>setCursorFuture(false)} className="slider">
          <SlideComponent/>
        </div>
        

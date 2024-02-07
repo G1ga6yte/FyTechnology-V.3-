@@ -11,6 +11,7 @@ import partner6 from "./6.svg"
 import partner7 from "./7.svg"
 import partner8 from "./8.svg"
 import {useInView} from "react-intersection-observer";
+import IntroCanvas from '../../introCanvas/introCanvas'
 
 function PartnerSlide () {
   const {ref: myRef, inView: visibleEl} = useInView()
@@ -58,6 +59,9 @@ function PartnerSlide () {
          
        </Slider>
        
+       <div className="introCont">
+         <IntroCanvas/>
+       </div>
       
      </div>
   )

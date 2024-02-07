@@ -37,46 +37,6 @@ function MyApp() {
   requestAnimationFrame(raf)
   
   
-  // useEffect(() => {
-  //   const onScroll = () => {
-  //     setScrollHide(window.scrollY)
-  //   }
-  //
-  //   window.addEventListener("scroll", onScroll)
-  //
-  //   return () => {
-  //     window.removeEventListener("scroll", onScroll)
-  //   }
-  // }, [])
-  
-  
-  // let animationEnabled = true;
-  //
-  // function raf(time) {
-  //   if (animationEnabled) {
-  //     lenis.raf(time)
-  //   }
-  //   requestAnimationFrame(raf)
-  // }
-  //
-  // requestAnimationFrame(raf)
-  //
-  // window.addEventListener('scroll', function() {
-  //   const scrollY = window.scrollY;
-  //
-  //   if (scrollY >= 3000 && scrollY < 4000) {
-  //     // Disable animation when scrollY is between 3000px and 4000px
-  //     animationEnabled = false;
-  //   } else {
-  //     // Enable animation when scrollY is greater than or equal to 4000px
-  //     animationEnabled = true;
-  //   }
-  // });
-    
-  
-  
-  
-  
   const location = useLocation()
   const [showNavigation, setShowNavigation] = useState()
   
@@ -123,7 +83,7 @@ function MyApp() {
     
     <div style={{ height: appSettings.height, overflow: appSettings.overflow }} className='App'>
       
-      {showNavigation && <LoadingComponent />}
+      {/*{showNavigation && <LoadingComponent />}*/}
       
       
       <div style={{ position: 'relative', zIndex: 1000 }}  className='MainRoutes'>

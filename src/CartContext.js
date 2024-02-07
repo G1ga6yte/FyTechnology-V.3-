@@ -1,6 +1,7 @@
 import React, {createContext, useContext, useState} from "react";
 import {useLocation} from "react-router-dom";
 import {OpportunityData} from "./pages/Home/homeWhatWeDo/opportunityData";
+import { useInView } from 'react-intersection-observer'
 const CartContext = createContext();
 
 
@@ -27,11 +28,15 @@ export const CartProvider = ({children}) => {
   }
   
   const [futurePointer, setFuturePointer] = useState("")
+  const [cursorFuture, setCursorFuture] = useState(false)
+  const {ref: myRef5, inView: visible5} = useInView();
+  
   
   return (<CartContext.Provider value={{
     Call, loading, setLoading, activeData, setActiveData,
     width38, setWidth38, width18, setWidth18, handleMouseOver,handleMouseLeave,
-    futurePointer, setFuturePointer
+    futurePointer, setFuturePointer,cursorFuture, setCursorFuture,
+    myRef5, visible5
   }}>
     {children}
   </CartContext.Provider>);

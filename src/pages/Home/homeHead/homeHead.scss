@@ -2,11 +2,24 @@
 
 .HomeHead{
   width: 100%;
-  height: 920px;
+  height: 945px;
   overflow: hidden;
   position: relative;
   z-index: 5;
   pointer-events: none;
+  @include screen($wide-lll){
+    height: 810px;
+  }
+  @include screen($wide-ll){
+    height: 756px;
+  }
+  @include screen($wide-l){
+    height: 700px;
+  }
+  @include screen($wide-s){
+    height: 600px;
+  }
+
 
 
 
@@ -18,25 +31,48 @@
     pointer-events: none;
     top: 0;
     width: 100%;
-    height: 95vh;
+    height: 905px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+    @include screen($wide-lll){
+      height: 770px;
+    }
+    @include screen($wide-ll){
+      height: 720px;
+    }
+    @include screen($wide){
+      height: 680px;
+    }
+    @include screen($wide-s){
+      height: 580px;
+    }
+
     .bckIn{
       pointer-events: none;
-      height: 100vh;
+      height:100%;
       margin-left: 80px;
       border-left: 1px solid rgba(255, 255, 255, 0.6);
       display: flex;
       align-items: end;
       padding-left: 30%;
       padding-bottom: 10vh;
-      .scrollText{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        font-family: 'IFBosch', sans-serif;
-        font-size: 20px;
-        color: white;
+      @include screen($wide-lll){
+        height: 100%;
+        margin-left: 70px;
+        padding-bottom: 5vh;
       }
+      @include screen($wide-ll){
+        margin-left: 60px;
+        padding-bottom: 4vh;
+      }
+      @include screen($wide-l){
+        margin-left: 50px;
+      }
+      @include screen($wide){
+        margin-left: 45px;
+      }
+
+
+
     }
   }
 
@@ -53,20 +89,34 @@
     line-height: 120px;
     &:nth-child(2){
       margin-bottom: 50px;
+      @include screen($wide){
+        margin-bottom: 30px;
+      }
+      @include screen($desktop){
+        margin-bottom: 20px;
+      }
+    }
+    @include screen($wide-lll){
+      font-size: 150px;
+    }
+    @include screen($wide-ll){
+      font-size: 140px;
+      line-height: 110px;
     }
     @include screen($wide-l){
-      font-size: 90px;
+      font-size: 130px;
+      line-height: 100px;
+    }
+    @include screen($wide){
+      font-size: 100px;
+      line-height: 80px;
     }
     @include screen($desktop){
       font-size: 80px;
-      white-space: unset;
+      line-height: 65px;
     }
-    @include screen($tablet-l){
-      font-size: 64px;
-    }
-    @include screen($tablet){
-      font-size: 40px;
-    }
+
+
 
   }
   
@@ -77,6 +127,60 @@
     top: 0;
     z-index: 3;
     padding-left: 200px;
+    @include screen($wide-lll){
+      margin: 150px auto;
+    }
+    @include screen($wide-ll){
+      margin: 125px auto;
+      padding-left: 150px;
+    }
+    @include screen($wide){
+      margin: 100px auto;
+      padding-left: 120px;
+    }
+    @include screen($desktop){
+      margin: 80px auto;
+      padding-left: 100px;
+    }
+
+
+    .scrollText{
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: 'IFBosch', sans-serif;
+      font-size: 20px;
+      color: white;
+      height: 125px;
+      margin-top: -20px;
+      @include screen($wide-lll){
+        font-size: 18px;
+      }
+      @include screen($desktop){
+        font-size: 16px;
+        height: 80px;
+      }
+      .arrowDown{
+        animation: arrowAnim 4s linear infinite;
+        width: 24px;
+        position: relative;
+        overflow: hidden;
+        svg{
+          width: 100%;
+          left: 0;
+          position: absolute;
+          top: 0;
+          @include screen($wide-l){
+            height: 80px;
+          }
+          @include screen($desktop){
+            height: 60px;
+          }
+        }
+      }
+    }
+
   }
   .prg{
     z-index: 3;
@@ -87,15 +191,19 @@
     max-width: 630px;
     line-height: 30px;
     letter-spacing: 0 !important;
-
-    @include screen($wide-l){
+    @include screen($wide-lll){
       font-size: 26px;
     }
-    @include screen($tablet-l){
-      max-width: 80%;
+    @include screen($wide-ll){
+      font-size: 24px;
     }
-    @include screen($tablet){
-      max-width: 100%;
+    @include screen($wide){
+      font-size: 20px;
+      max-width: 500px;
+    }
+    @include screen($desktop){
+      font-size: 18px;
+      max-width: 450px;
     }
   }
 
@@ -109,7 +217,15 @@
     border-left: 1px solid white;
     padding: 0 0 30px 30px;
     height: min-content;
-    margin-right: 50px;
+    @include screen($wide-ll){
+      padding: 0 0 25px 25px;
+    }
+    @include screen($wide){
+      padding: 0 0 20px 20px;
+    }
+    @include screen($desktop){
+      padding: 0 0 15px 15px;
+    }
     .prgRight{
       font-size: 40px;
       width: 305px;
@@ -119,6 +235,24 @@
       font-weight: 500;
       border-bottom: 1px solid white;
       padding: 0 30px 30px 30px;
+      @include screen($wide-lll){
+        font-size: 36px;
+      }
+      @include screen($wide-ll){
+        font-size: 32px;
+        padding: 0 25px 25px 25px;
+        line-height: 36px;
+      }
+      @include screen($wide){
+        font-size: 28px;
+        padding: 0 20px 20px 20px;
+        line-height: 32px;
+      }
+      @include screen($desktop){
+        font-size: 24px;
+        padding: 0 15px 15px 15px;
+        width: 250px;
+      }
     }
   }
 }
@@ -161,3 +295,15 @@
 
 
 
+@keyframes arrowAnim {
+  0%{
+    height: 1px;
+  }
+  80%{
+    height: 110px;
+  }
+  100%{
+    height: 110px;
+  }
+
+}
