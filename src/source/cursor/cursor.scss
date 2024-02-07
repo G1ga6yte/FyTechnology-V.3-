@@ -1,4 +1,4 @@
-
+@import "../../source/styles/mixin.scss";
 .circle-cursor{
 
   width: 20px;
@@ -14,6 +14,9 @@
   content: '';
   justify-content: center;
   align-items: center;
+  @include screen($tablet-l){
+    display: none;
+  }
 }
 .futureScroll{
   padding: 10px;
@@ -25,6 +28,9 @@
   font-family: 'IFBosch', sans-serif;
   font-size: 24px;
   text-align: center;
+  @include screen($tablet-l){
+    display: none;
+  }
 }
 
 

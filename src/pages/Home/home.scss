@@ -17,10 +17,10 @@
     z-index: 2;
   }
   .index3{
-    z-index: 3;
+    z-index: 2;
   }
   .index4{
-    z-index: 4;
+    z-index: 2;
   }
   .index5{
     z-index: 5;
@@ -30,25 +30,16 @@
     height: 100vh;
     .HomeHead{
       position: fixed;
-      bottom: 0;
+      top: 0;
       left: 0;
     }
-
-    //@include screen($wide-lll){
-    //  height: 810px;
-    //}
-    @include screen($wide-ll){
-      height: 756px;
-    }
-    @include screen($wide-l){
-      height: 700px;
-    }
-    @include screen($wide-s){
+    @include screen($tablet-l){
       height: 600px;
     }
+
   }
   .section2 {
-      height: 1600px;
+      height: 1500px;
     .WhatWeDo{
       position: fixed;
       bottom: 0;
@@ -56,7 +47,7 @@
     }
   }
   .section3{
-    height: 1050px;
+    height: 950px;
     .FeaturedWork{
       position: fixed;
       bottom: 0;
@@ -65,6 +56,27 @@
   }
   .section4{
     height: 1330px;
+    @include screen($wide-ll){
+      height: 1200px;
+    }
+    @include screen($wide){
+      height: 1000px;
+    }
+    @include screen($tablet-l){
+      height: 900px;
+    }
+    @include screen($tablet-w){
+      height: 1050px;
+    }
+    @include screen($tablet-w){
+      height: 1150px;
+    }
+    @include screen($tablet-w){
+      height: 1250px;
+    }
+    @include screen($mobile-l){
+      height: 1150px;
+    }
     .WhatPayingFor{
       position: fixed;
       bottom: 0;
@@ -73,6 +85,9 @@
   }
   .section5{
     height: 110vh;
+    @include screen($tablet-l){
+      height: 0;
+    }
     .PartnerSlide{
       position: fixed;
       bottom: 0;

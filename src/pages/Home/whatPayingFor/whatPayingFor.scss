@@ -7,6 +7,27 @@
   background-color: #E5E4E0;
   overflow: hidden;
   height: 1330px;
+  @include screen($wide-ll){
+    height: 1200px;
+  }
+  @include screen($wide){
+    height: 1000px;
+  }
+  @include screen($tablet-l){
+    height: 900px;
+  }
+  @include screen($tablet-w){
+    height: 1050px;
+  }
+  @include screen($tablet-w){
+    height: 1150px;
+  }
+  @include screen($tablet-w){
+    height: 1250px;
+  }
+  @include screen($mobile-l){
+    height: 1150px;
+  }
 
   .BubbleImg1{
     position: absolute;
@@ -16,6 +37,9 @@
     left: -40%;
     rotate: 45deg;
     opacity: 0.6;
+    @include screen($tablet-w){
+      display: none;
+    }
   }
   .BubbleImg2{
     position: absolute;
@@ -25,6 +49,9 @@
     right: -50%;
     rotate: 130deg;
     opacity: 0.6;
+    @include screen($tablet-w){
+      display: none;
+    }
   }
 
   .headerBlock {
@@ -44,6 +71,29 @@
       padding: 0 0 20px;
       white-space: nowrap;
       width: min-content;
+      @include screen($wide-ll){
+        font-size: 100px;
+      }
+      @include screen($wide){
+        font-size: 72px;
+      }
+      @include screen($tablet-l){
+        font-size: 64px;
+      }
+      @include screen($tablet-w){
+        font-size: 50px;
+      }
+      @include screen($tablet){
+        font-size: 52px;
+        white-space: normal;
+        width: auto;
+        text-align: center;
+        border: none;
+      }
+      @include screen($mobile-l){
+        font-size: 40px;
+      }
+
     }
   }
 
@@ -54,6 +104,16 @@
     max-width: 1500px;
     padding: 0 10px;
     overflow: hidden;
+    @include screen($wide-ll){
+      max-width: 1300px;
+    }
+    @include screen($wide){
+      max-width: 1000px;
+    }
+    @include screen($tablet){
+      flex-direction: column;
+      margin: 0 auto;
+    }
 
     .cardCont{
       width: 48%;
@@ -63,10 +123,31 @@
       padding: 20px 5% 40px;
       cursor: pointer;
       transition: 0.5s ease-in-out all;
+      @include screen($wide-ll){
+        padding: 20px 4% 35px;
+      }
+      @include screen($wide){
+        padding: 15px 3% 25px;
+        border-radius: 50px;
+      }
+      @include screen($tablet-l){
+        padding: 10px 3% 20px;
+        border-radius: 40px;
+      }
+      @include screen($tablet){
+        width: 100%;
+        margin-top: 50px;
+      }
 
       &:hover{
         scale: 1.01;
         border-radius: 100px;
+        @include screen($wide){
+          border-radius: 75px;
+        }
+        @include screen($tablet){
+          border-radius: 50px;
+        }
       }
 
       .CardHeader{
@@ -75,11 +156,38 @@
         font-family: 'IFBosch', sans-serif;
         text-align: center;
         margin-bottom: 50px;
+        @include screen($wide-ll){
+          font-size: 80px;
+        }
+        @include screen($wide){
+          font-size: 64px;
+        }
+        @include screen($tablet-l){
+          font-size: 52px;
+        }
+        @include screen($mobile-l){
+          font-size: 48px;
+          margin-bottom: 30px;
+        }
+
       }
       .prg{
         font-size: 40px;
         color: black;
         font-family: 'IFBosch', sans-serif;
+        @include screen($wide-ll){
+          font-size: 36px;
+        }
+        @include screen($wide){
+          font-size: 28px;
+        }
+        @include screen($tablet-l){
+          font-size: 24px;
+        }
+        @include screen($mobile-l){
+          font-size: 20px;
+        }
+
         span{
           color: white;
         }
@@ -91,6 +199,9 @@
       display: flex;
       justify-content: end;
       margin-top: 15px;
+      @include screen($wide-ll){
+        margin-right: 50px;
+      }
       .textBlock{
         display: flex;
         flex-direction: column;
@@ -102,6 +213,15 @@
           font-weight: 400;
           white-space: nowrap;
           line-height: 80px;
+          @include screen($tablet-l){
+            font-size: 28px;
+          }
+          @include screen($tablet){
+            font-size: 24px;
+          }
+          @include screen($mobile-l){
+            font-size: 20px;
+          }
         }
         .underLine{
           width: 100%;

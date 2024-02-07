@@ -38,7 +38,7 @@ function WhatWeDo (){
 
          
          <div style={{backgroundImage: `url("${bck2}")`}} className="bck2"></div>
-         <EachCard mouseOver={null} arr={OpportunityData[15]} width={width38}/>
+         <EachCard mouseOver={null} arr={OpportunityData[15]} width={38}/>
          <div style={{backgroundImage: `url("${bck2}")`}} className="bck2" ></div>
          
          

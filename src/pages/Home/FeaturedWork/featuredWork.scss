@@ -1,12 +1,9 @@
 @import "../../../source/styles/mixin.scss";
-
 .FeaturedWork {
   width: 100%;
   position: relative;
   z-index: 7;
   background-color: #E5E4E0;
-  height: 1050px;
-  overflow:  hidden;
 
   .animBlock {
     width: 70%;
@@ -14,10 +11,78 @@
     margin: 0 auto;
   }
 
+  .SliderBlock {
+    width: 100%;
+    padding: 50px 0;
+    position: relative;
+    display: none;
+    @include screen($tablet-l){
+      display: block;
+    }
+
+
+    .Blocks {
+      width: 100%;
+      display: flex;
+
+      .block {
+        width: 5%;
+        height: 40px;
+        border: 1px solid #EAEAEA;
+      }
+    }
+    .img1{
+      width: 100% !important;
+      height: 350px  !important;
+      padding: 10px !important;
+      border-radius: 20px;
+      @include screen($tablet-w){
+        height: 250px !important;
+      }
+      @include screen($tablet){
+        height: 220px !important;
+      }
+      @include screen($tablet-m){
+        height: 180px !important;
+        padding: 5px !important;
+      }
+      @include screen($mobile-l){
+        height: 250px !important;
+      }
+      @include screen($mobile-m){
+        height: 220px !important;
+      }
+
+    }
+    .slick-arrow{
+      display: none !important;
+    }
+
+    .slick-slider {
+      margin-bottom: 50px;
+      position: relative !important;
+
+
+
+      .slick-track {
+        display: flex;
+
+
+      }
+
+    }
+  }
+
   .slider {
     width: 100%;
     height: 80vh;
     overflow: hidden;
+    @include screen($wide-ll){
+      height: 60vh;
+    }
+    @include screen($tablet-l){
+      display: none;
+    }
   }
 
   .headerBlock {
@@ -25,22 +90,73 @@
     justify-content: center;
     border-top: 1px solid #C7C7C7;
     border-bottom: 1px solid #C7C7C7;
+    @include screen($mobile-l){
+      flex-direction: column;
+    }
 
     .headerCont {
       padding: 25px 64px 25px 0;
       border-right: 1px solid #C7C7C7;
+      @include screen($wide){
+        padding: 20px 50px 20px 0;
+      }
+      @include screen($desktop){
+        padding: 15px 40px 15px 0;
+      }
+      @include screen($tablet-w){
+        padding: 10px 20px;
+      }
+      @include screen($mobile-l){
+        border-right: none;
+        border-bottom: 1px solid #C7C7C7;
+      }
+
+
+
 
       .FutureWork {
         font-size: 148px;
         font-family: 'IFBosch', sans-serif;
         line-height: 106px;
         font-weight: 400;
+        @include screen($wide-l){
+          font-size: 120px;
+        }
+        @include screen($wide){
+          font-size: 96px;
+        }
+        @include screen($desktop){
+          font-size: 80px;
+          line-height: 90px;
+        }
+        @include screen($tablet-w){
+          font-size: 60px;
+        }
+        @include screen($tablet){
+          font-size: 48px;
+          line-height: 60px;
+        }
+        @include screen($tablet-m){
+          font-size: 30px;
+        }
+        @include screen($mobile-l){
+          font-size: 44px;
+        }
+
       }
     }
 
     .underHeader {
       padding: 20px 20px;
       width: min-content;
+      @include screen($tablet-w){
+        padding: 20px 15px;
+      }
+      @include screen($tablet-m){
+        padding: 15px 10px;
+      }
+
+
 
       .prg {
         line-height: 70px;
@@ -48,6 +164,24 @@
         color: black;
         white-space: nowrap;
         font-family: 'IFBosch', sans-serif;
+        @include screen($wide-l){
+          font-size: 28px;
+          line-height: 50px;
+        }
+        @include screen($tablet-w){
+          font-size: 20px;
+        }
+        @include screen($tablet-m){
+          font-size: 18px;
+          line-height: 35px;
+        }
+        @include screen($mobile-l){
+          font-size: 26px;
+        }
+
+
+
+
       }
 
       .underLine {

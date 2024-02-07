@@ -1,26 +1,31 @@
 @import "../../source/styles/mixin.scss";
 
-.Footer{
+.Footer {
   width: 100%;
   z-index: 10;
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  border-radius: 70px 70px 0 0;
-  background-color: #E2DFD6;
+  background-color: #C7C7C7;
+  padding-top: 100px;
   justify-content: space-between;
-  @include screen($wide){
+  @include screen($tablet-l){
     flex-direction: column;
   }
-  @include screen($tablet-w){
-    padding: 150px 10px 20px;
+  @include screen($mobile-l){
+    padding: 100px 5px 0;
   }
 
 
 
-  .sliderBlock{
+
+
+
+  .sliderBlock {
     width: 100%;
-    .header{
+    padding: 50px 0;
+
+    .header {
       font-size: 148px;
       font-family: 'IFBosch', sans-serif;
       color: black;
@@ -28,25 +33,28 @@
     }
 
 
-
-    .Blocks{
+    .Blocks {
       width: 100%;
       display: flex;
-      .block{
+
+      .block {
         width: 5%;
         height: 40px;
         border: 1px solid #EAEAEA;
       }
     }
 
-    .slick-slider{
+    .slick-slider {
       margin-bottom: 50px;
-      button{
+
+      button {
         display: none !important;
       }
-      .slick-track{
+
+      .slick-track {
         display: flex;
-        img{
+
+        img {
           height: 100px;
         }
       }
@@ -54,179 +62,335 @@
     }
   }
 
-  .talkWithUs{
-    margin: 0 auto;
-  }
 
-  .LinksBlock{
-    padding-left: 50px;
+  .LinksBlock {
+    width: 65%;
+    padding-left: 100px;
     display: flex;
     flex-direction: column;
-
     @include screen($wide-l){
-      width: 55%;
+      padding-left: 50px;
     }
     @include screen($wide){
+      padding-left: 10px;
+    }
+    @include screen($tablet-l){
       width: 100%;
+      flex-direction: unset;
+      flex-wrap: wrap;
+    }
+    @include screen($mobile-l){
+      padding-left: 0;
     }
 
 
-    .linkFyTech{
+
+
+
+    .linkFyTech {
       text-decoration: none;
       display: block;
       margin-bottom: 20px;
-      @include screen($tablet-m){
+      @include screen($tablet-m) {
         width: 80%;
-        img{
+        img {
           width: 100%;
         }
       }
     }
 
-    .prg{
-      font-size: 80px;
+    .prg {
+      white-space: nowrap;
+      width: min-content;
+      font-size: 96px;
       font-family: 'IFBosch', sans-serif;
       color: black;
-      @include screen($tablet){
-        font-size: 56px;
-        line-height: 72px;
+      line-height: 106px;
+
+      @include screen($wide-lll){
+        font-size: 90px;
+      }
+      @include screen($wide-ll){
+        font-size: 72px;
+        line-height: 84px;
+      }
+      @include screen($wide){
+        font-size: 60px;
+      }
+      @include screen($tablet-l){
+        font-size: 54px;
+        &:nth-child(2){
+          margin-right: 20px;
+        }
+        &:nth-child(3){
+          white-space: normal;
+          width: max-content;
+        }
       }
       @include screen($tablet-m){
+        font-size: 40px;
+        line-height: 60px;
+      }
+      @include screen($mobile-l){
         font-size: 32px;
-        line-height: 54px;
       }
+
     }
-
-    .copyrightText{
-      font-size: 16px;
-      color: #C2C2C2;
-      font-family: 'PlexMono-Medium', sans-serif;
-      @include screen($wide){
-        display: none;
-      }
-    }
-
-
-  }
-
-  .talkWithUs{
-    position: absolute;
-    bottom: 200px;
-    left: 50%;
-    transform: translateX(-50%);
+    .prg3{
       display: flex;
-    height: min-content;
-      text-decoration: none;
-      padding: 25px 35px;
-      border-radius: 50px;
-      background-color: transparent;
-      border: 0.5px solid black;
-      cursor: pointer;
-      width: min-content;
-
-
-      &:hover{
-        .letter{
-          &:nth-child(3n+1){
-            transition: 0.4s ease-in-out all;
-            transform: translateY(-100%);
-          }
-          &:nth-child(3n+2){
-            transition: 0.2s ease-in-out all;
-            transform: translateY(-100%);
-          }
-          &:nth-child(3n+3){
-            transition: 0.6s ease-in-out all;
-            transform: translateY(-100%);
-          }
-        }
-
+      align-items: center;
+      @include screen($tablet-m){
+        justify-content: space-between;
+        width: 100%;
+      }
+      @include screen($mobile-l){
+        flex-direction: column;
+        align-items: unset;
       }
 
-    .textBlock{
-      height: 75px;
-      overflow: hidden;
 
-      .textLine{
+      .talkWithUs {
+        margin-left: 150px;
+        display: flex;
+        height: min-content;
+        text-decoration: none;
+        padding: 25px 35px;
+        border-radius: 50px;
+        background-color: transparent;
+        border: 0.5px solid black;
+        cursor: pointer;
+        width: min-content;
+        @include screen($wide-lll){
+          margin-left: 100px;
+        }
+        @include screen($wide-ll){
+          padding: 20px 30px;
+          border-radius: 40px;
+        }
+        @include screen($wide-l){
+          margin-left: 50px;
+        }
+        @include screen($wide){
+          padding: 15px 20px;
+        }
+        @include screen($tablet-l){
+          padding: 10px 15px;
+        }
+        @include screen($tablet-m){
+          margin: 0;
+        }
+        @include screen($mobile-l){
+          margin: 0 auto;
+          padding: 8px 12px;
+        }
 
 
-        .letter{
-          font-size: 64px;
-          font-family: 'IFBosch', sans-serif;
-          color: black;
-          line-height: 80px;
 
 
-          &:nth-child(3n+1){
-            transition: 0.4s ease-in-out all;
+
+
+        &:hover {
+          .letter {
+            &:nth-child(3n+1) {
+              transition: 0.4s ease-in-out all;
+              transform: translateY(-100%);
+            }
+
+            &:nth-child(3n+2) {
+              transition: 0.2s ease-in-out all;
+              transform: translateY(-100%);
+            }
+
+            &:nth-child(3n+3) {
+              transition: 0.6s ease-in-out all;
+              transform: translateY(-100%);
+            }
           }
-          &:nth-child(3n+2){
-            transition: 0.2s ease-in-out all;
+
+        }
+
+        .textBlock {
+          height: 75px;
+          overflow: hidden;
+          @include screen($wide-ll){
+            height: 60px;
           }
-          &:nth-child(3n+3){
-            transition: 0.6s ease-in-out all;
+          @include screen($wide){
+            height: 50px;
+          }
+          @include screen($tablet-l){
+            height: 40px;
+          }
+          @include screen($mobile-l){
+            height: 32px;
+          }
+
+
+
+
+          .textLine {
+
+
+            .letter {
+              font-size: 64px;
+              font-family: 'IFBosch', sans-serif;
+              color: black;
+              line-height: 80px;
+              @include screen($wide-ll){
+                font-size: 48px;
+                line-height: 60px;
+              }
+              @include screen($wide){
+                font-size: 40px;
+                line-height: 54px;
+              }
+              @include screen($tablet-l){
+                line-height: 42px;
+                font-size: 32px;
+              }
+              @include screen($mobile-l){
+                line-height: 35px;
+                font-size: 24px;
+              }
+
+
+
+
+
+              &:nth-child(3n+1) {
+                transition: 0.4s ease-in-out all;
+              }
+
+              &:nth-child(3n+2) {
+                transition: 0.2s ease-in-out all;
+              }
+
+              &:nth-child(3n+3) {
+                transition: 0.6s ease-in-out all;
+              }
+            }
+
+            .space {
+              width: 15px;
+            }
           }
         }
-        .space{
-          width: 15px;
-        }
+
+
       }
     }
 
-
   }
 
-  .LinksBlock2{
-    width: 45%;
-    padding-right: 50px;
+
+
+  .LinksBlock2 {
+    width: 35%;
+    padding-right: 100px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: end;
+    @include screen($wide-l){
+      padding-right: 50px;
+    }
     @include screen($wide){
+      padding-right: 10px;
+    }
+    @include screen($tablet-l){
       width: 100%;
+      margin-top: 30px;
+    }
+    @include screen($mobile-l){
+      padding-right: 0;
     }
 
-    .linksBlock{
+
+
+
+    .globalLinks{
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+      @include screen($tablet-l){
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        .Link{
+          margin: 0 !important;
+        }
+      }
+
+    }
+
+
+    .linksBlock {
       display: flex;
       justify-content: space-between;
-      width: 400px;
+      width: 450px;
       margin: 50px 0;
+      @include screen($wide-l){
+        width: 350px;
+      }
+      @include screen($tablet-l){
+        width: 100%;
+        margin: 30px 0;
+      }
+
     }
 
-    .textBlock{
+    .textBlock {
       height: 35px;
       overflow: hidden;
+      @include screen($wide){
+        height: 28px;
+      }
+      @include screen($mobile-l){
+        height: 26px;
+      }
 
-      .textLine{
 
 
-        .letter{
+      .textLine {
+
+
+        .letter {
           font-size: 24px;
           font-family: 'IFBosch', sans-serif;
           color: black;
           line-height: 32px;
-          @include screen($mobile-m){
+          @include screen($wide){
             font-size: 20px;
+            line-height: 28px;
+          }
+          @include screen($mobile-l){
+            font-size: 16px;
+            line-height: 26px;
           }
 
-          &:nth-child(3n+1){
+
+
+          &:nth-child(3n+1) {
             transition: 0.4s ease-in-out all;
           }
-          &:nth-child(3n+2){
+
+          &:nth-child(3n+2) {
             transition: 0.2s ease-in-out all;
           }
-          &:nth-child(3n+3){
+
+          &:nth-child(3n+3) {
             transition: 0.6s ease-in-out all;
           }
         }
-        .space{
+
+        .space {
           width: 15px;
         }
       }
     }
 
-    .contactUsBtn{
+    .contactUsBtn {
       display: flex;
       text-decoration: none;
       padding: 8px 16px;
@@ -235,35 +399,35 @@
       border: 0.5px solid black;
       cursor: pointer;
       width: min-content;
-      @include screen($mobile-m){
-        padding: 6px 10px;
-        border-radius: 16px;
+      @include screen($wide-l){
+        padding: 6px 12px;
       }
-      @include screen($wide){
-        width: 100%;
-        justify-content: center;
-        margin-bottom: 20px;
+      @include screen($mobile-l){
+        margin: 0 auto;
       }
 
 
 
-      &:hover{
-        .letter{
-          &:nth-child(3n+1){
+      &:hover {
+        .letter {
+          &:nth-child(3n+1) {
             transition: 0.4s ease-in-out all;
             transform: translateY(-100%);
           }
-          &:nth-child(3n+2){
+
+          &:nth-child(3n+2) {
             transition: 0.2s ease-in-out all;
             transform: translateY(-100%);
           }
-          &:nth-child(3n+3){
+
+          &:nth-child(3n+3) {
             transition: 0.6s ease-in-out all;
             transform: translateY(-100%);
           }
         }
-        .arrowBlock{
-          img{
+
+        .arrowBlock {
+          img {
             transition: 1s ease-in-out;
             transform: translateX(-100%);
           }
@@ -272,89 +436,128 @@
 
       }
 
-      .middleLine{
+      .middleLine {
         margin: 0 8px;
         background-color: black;
         width: 2px;
         height: 35px;
+        @include screen($wide){
+          height: 25px;
+        }
+
       }
-      .arrowBlock{
+
+      .arrowBlock {
         display: flex;
         width: 24px;
         height: 24px;
         overflow: hidden;
+        @include screen($wide){
+          width: 20px;
+          height: 20px;
+          img{
+            width: 20px;
+          }
+        }
+
       }
     }
 
-    .Link{
+    .Link {
       display: flex;
       text-decoration: none;
       padding: 8px 16px;
       border-radius: 20px;
       cursor: pointer;
       width: min-content;
-      @include screen($mobile-m){
-        padding: 6px 10px;
-        border-radius: 16px;
+      @include screen($wide-l){
+        padding: 6px 12px;
+      }
+      @include screen($mobile-l){
+        padding: 6px 2px;
       }
 
-      .textBlock{
+
+
+      .textBlock {
         height: 35px;
         overflow: hidden;
+        @include screen($wide-l){
+          height: 30px;
+        }
+        @include screen($mobile-l){
+          height: 26px;
+        }
 
-        .textLine{
 
 
-          .letter{
+        .textLine {
+
+
+          .letter {
             font-size: 32px;
             font-family: 'IFBosch', sans-serif;
             color: black;
             line-height: 35px;
-            @include screen($mobile-m){
+            @include screen($wide-l){
+              font-size: 26px;
+              line-height: 30px;
+            }
+            @include screen($mobile-l){
               font-size: 20px;
+              line-height: 26px;
             }
 
-            &:nth-child(3n+1){
+
+
+            &:nth-child(3n+1) {
               transition: 0.4s ease-in-out all;
             }
-            &:nth-child(3n+2){
+
+            &:nth-child(3n+2) {
               transition: 0.2s ease-in-out all;
             }
-            &:nth-child(3n+3){
+
+            &:nth-child(3n+3) {
               transition: 0.6s ease-in-out all;
             }
           }
-          .space{
+
+          .space {
             width: 15px;
           }
         }
       }
 
-      .imgArrowTop{
+      .imgArrowTop {
       }
 
-      &:hover{
+      &:hover {
 
-        .imgArrowTop{
+        .imgArrowTop {
           transform: rotateX(360deg);
           transition: 0.5s ease-in-out;
         }
-        .letter{
-          &:nth-child(3n+1){
+
+        .letter {
+          &:nth-child(3n+1) {
             transition: 0.4s ease-in-out all;
             transform: translateY(-100%);
           }
-          &:nth-child(3n+2){
+
+          &:nth-child(3n+2) {
             transition: 0.2s ease-in-out all;
             transform: translateY(-100%);
           }
-          &:nth-child(3n+3){
+
+          &:nth-child(3n+3) {
             transition: 0.6s ease-in-out all;
             transform: translateY(-100%);
           }
         }
-        .arrowBlock{
-          img{
+
+        .arrowBlock {
+          img {
             transition: 1s ease-in-out;
             transform: translateX(-100%);
           }
@@ -363,13 +566,14 @@
 
       }
 
-      .middleLine{
+      .middleLine {
         margin: 0 8px;
         background-color: #383838;
         width: 2px;
         height: 35px;
       }
-      .arrowBlock{
+
+      .arrowBlock {
         display: flex;
         width: 24px;
         height: 24px;
@@ -379,28 +583,46 @@
 
   }
 
-  .policyCont{
+  .policyCont {
     display: flex;
     width: 90%;
     margin: 30px auto;
     align-items: center;
     justify-content: space-between;
-    .copyright{
+    @include screen($tablet){
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .copyright {
       font-family: "PlexMono-Medium", sans-serif;
       color: #999;
       font-size: 16px;
+      @include screen($tablet-l){
+        font-size: 14px;
+      }
+      @include screen($tablet){
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
     }
 
-    .linksToPolicy{
+    .linksToPolicy {
       width: min-content;
       display: flex;
       align-items: center;
-      .LinkToPrivacy{
+
+      .LinkToPrivacy {
         font-family: "PlexMono-Medium", sans-serif;
         color: #999;
         font-size: 16px;
         white-space: nowrap;
         margin: 0 20px;
+        @include screen($tablet-l){
+          font-size: 14px;
+        }
+
       }
     }
   }

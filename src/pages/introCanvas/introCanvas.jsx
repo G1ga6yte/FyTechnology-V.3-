@@ -6,9 +6,11 @@ import "./introCanvas.css"
 
 
 export default function IntroCanvas() {
+  
+  
   return (
     <Canvas concurrent gl={{ alpha: false }} pixelRatio={[1, 1.5]} camera={{ position: [0, 3, 100], fov: 15 }}>
-      <color attach="background" args={['#E5E4E0']} />
+      <color attach="background" args={['black']} />
       <fog attach="fog" args={['black', 15, 20]} />
       <Suspense fallback={null}>
         <group position={[0, -1, 0]}>
@@ -33,10 +35,17 @@ function Carla(props) {
 function VideoText(props) {
   const [video] = useState(() => Object.assign(document.createElement('video'), { src: '/drei.mp4', crossOrigin: 'Anonymous', loop: true, muted: true }))
   useEffect(() => void video.play(), [video])
-  const fontPath = './DarkerGrotesque-VariableFont_wght.ttf';
-  
+  const [fontSize, setFz] = useState(1.5)
+  useEffect(()=>{
+    if (window.innerWidth <= 1540){
+      setFz(1.3)
+    }
+    if (window.innerWidth <=1256){
+      setFz(1.0)
+    }
+  }, [])
   return (
-    <Text font={fontPath} fontSize={1.2} letterSpacing={-0.06} {...props}>
+    <Text  fontSize={fontSize} letterSpacing={-0.07} {...props}>
       Fy Technology
       <meshBasicMaterial toneMapped={false}>
         <videoTexture attach="map" args={[video]} encoding={THREE.sRGBEncoding} />
@@ -48,7 +57,7 @@ function VideoText(props) {
 function Ground() {
   const [floor, normal] = useTexture(['/SurfaceImperfections003_1K_var1.jpg', '/SurfaceImperfections003_1K_Normal.jpg'])
   return (
-    <Reflector blur={[400, 100]} resolution={512} args={[10, 15]} mirror={0.5} mixBlur={6} mixStrength={1.5} rotation={[-Math.PI / 2, 0, Math.PI / 2]}>
+    <Reflector blur={[400, 100]} resolution={512} args={[10, 10]} mirror={0.5} mixBlur={6} mixStrength={1.5} rotation={[-Math.PI / 2, 0, Math.PI / 2]}>
       {(Material, props) => <Material color="#a0a0a0" metalness={0.4} roughnessMap={floor} normalMap={normal} normalScale={[2, 2]} {...props} />}
     </Reflector>
   )

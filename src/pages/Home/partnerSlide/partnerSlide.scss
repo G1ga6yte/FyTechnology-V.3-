@@ -5,8 +5,12 @@
   position: relative;
   z-index: 3;
   overflow: hidden;
-  background-color: #E5E4E0;
+  background-color: #111111;
   height: 110vh;
+  border-radius: 75px 75px 0 0;
+  @include screen($tablet-l){
+    display: none;
+  }
 
 
   .introCont{

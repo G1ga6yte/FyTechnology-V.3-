@@ -1,3 +1,4 @@
+@import "../../source/styles/mixin.scss";
 //.canvas1{
 //  position: absolute;
 //  top: 0;
@@ -5,3 +6,9 @@
 //  width: 100%;
 //  height: 100vh;
 //}
+
+.canvas1{
+  @include screen($desktop){
+    pointer-events: none !important;
+  }
+}

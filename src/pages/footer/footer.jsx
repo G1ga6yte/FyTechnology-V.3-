@@ -1,4 +1,4 @@
-import React,{ useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import './footer.scss'
 import arrowRightTop from './arrow-narrow-up-right.svg'
@@ -47,49 +47,54 @@ function Footer() {
     return el === locat.pathname
   }
   
-  const {myRef5} = useCartContext()
-  const {ref: myRef, inView: visibleEl} = useInView()
+  const { myRef5 } = useCartContext()
+  const { ref: myRef, inView: visibleEl } = useInView()
   
   const [slidesToShow, setSlidesToShow] = useState(5)
   
-  useEffect(()=>{
-    if (window.innerWidth <= 1600){
+  useEffect(() => {
+    if (window.innerWidth <= 1600) {
       setSlidesToShow(4)
     }
-    if (window.innerWidth <=1200){
+    if (window.innerWidth <= 1200) {
       setSlidesToShow(3)
     }
-    if (window.innerWidth <= 880){
+    if (window.innerWidth <= 880) {
       setSlidesToShow(2)
     }
   }, [])
   const settings = {
-    dots: false,
-    infinite: true,
-    speed: 2000,
-    slidesToShow: slidesToShow,
+    dots          : false,
+    infinite      : true,
+    speed         : 2000,
+    slidesToShow  : slidesToShow,
     slidesToScroll: 1,
-    autoplay: true,
-    easing: "linear",
-    autoplaySpeed: 0
-  };
+    autoplay      : true,
+    easing        : 'linear',
+    autoplaySpeed : 0
+  }
   return (
-    <div ref={myRef5} style={{ display: `${Call('/contact') ? 'none' : 'flex'}` }} className='Footer'>
+    <div ref={myRef5} style={{
+      display: `${Call('/contact') ? 'none' : 'flex'}`
       
-      <div className="sliderBlock">
-        <p ref={myRef} className={`header ${visibleEl ? "scrollAnimation" : ""}`}>They Trust Us</p>
-  
+    }} className='Footer'>
+      
+      <div
+        style={{ display: `${window.innerWidth <= 992 ? 'none' : Call('/') ? 'block' : Call('/home') ? 'block' : 'none'}` }}
+        className='sliderBlock'>
+        <p ref={myRef} className={`header ${visibleEl ? 'scrollAnimation' : ''}`}>They Trust Us</p>
+        
         <Slider {...settings}>
-    
-          <img src={partner1} alt=""/>
-          <img src={partner2} alt=""/>
-          <img src={partner3} alt=""/>
-          <img src={partner4} alt=""/>
-          <img src={partner5} alt=""/>
-          <img src={partner6} alt=""/>
-          <img src={partner7} alt=""/>
-          <img src={partner8} alt=""/>
-  
+          
+          <img src={partner1} alt='' />
+          <img src={partner2} alt='' />
+          <img src={partner3} alt='' />
+          <img src={partner4} alt='' />
+          <img src={partner5} alt='' />
+          <img src={partner6} alt='' />
+          <img src={partner7} alt='' />
+          <img src={partner8} alt='' />
+        
         </Slider>
       </div>
       
@@ -101,32 +106,35 @@ function Footer() {
         
         <p ref={myRef2} className={`prg ${visible2 ? 'scrollAnimation' : ''}`}>How about we do a</p>
         <p ref={myRef3} className={`prg ${visible3 ? 'scrollAnimation' : ''}`}>thing or two</p>
-        <p ref={myRef4} className={`prg ${visible4 ? 'scrollAnimation' : ''}`}>together?</p>
+        <div ref={myRef4} className="prg prg3">
+          <p className={`${visible4 ? 'scrollAnimation' : ''}`}>together?</p>
+          <Link to='/contact' className='talkWithUs contactUsBtn'>
+            <div className='textBlock'>
+              <div className='textLine G-alignItems-center'>
+                {talkWithUs.map((el) => {
+                  if (el !== ' ') {
+                    return (<div className='letter'>{el}</div>)
+                  } else {
+                    return (<div className='space'></div>)
+                  }
+                })}
+              </div>
+              <div className='textLine G-alignItems-center'>
+                {talkWithUs.map((el) => {
+                  if (el !== ' ') {
+                    return (<div className='letter'>{el}</div>)
+                  } else {
+                    return (<div className='space'></div>)
+                  }
+                })}
+              </div>
+            </div>
+          </Link>
+
+        </div>
       
       </div>
       
-      <Link to="/contact" className="talkWithUs contactUsBtn">
-        <div className='textBlock'>
-          <div className='textLine G-alignItems-center'>
-            {talkWithUs.map((el) => {
-              if (el !== ' ') {
-                return (<div className='letter'>{el}</div>)
-              } else {
-                return (<div className='space'></div>)
-              }
-            })}
-          </div>
-          <div className='textLine G-alignItems-center'>
-            {talkWithUs.map((el) => {
-              if (el !== ' ') {
-                return (<div className='letter'>{el}</div>)
-              } else {
-                return (<div className='space'></div>)
-              }
-            })}
-          </div>
-        </div>
-      </Link>
       
       <div className='LinksBlock2'>
         <Link onClick={() => window.scrollTo(0, 0)} ref={myRef3} to='/contact'
@@ -258,7 +266,7 @@ function Footer() {
                 </div>
               </div>
             </a>
-            <a ref={myRef9} href='twitter' className={`Link G-alignItems-center ${visible9 ? 'scrollAnimation2' : ''}`}>
+            <a ref={myRef9} href='/twitter' className={`Link G-alignItems-center ${visible9 ? 'scrollAnimation2' : ''}`}>
               <div className='textBlock'>
                 <div className='textLine G-alignItems-center'>
                   {Twitter.map((el) => {
@@ -330,56 +338,58 @@ function Footer() {
           </div>
         </div>
         
-        <Link onClick={() => window.scrollTo(0, 0)} ref={myRef8} to='/fyTrading'
-              className={`Link G-alignItems-center ${visible8 ? 'scrollAnimation2' : ''}`}>
-          <div className='textBlock'>
-            <div className='textLine G-alignItems-center'>
-              {FyTrading.map((el) => {
-                if (el !== ' ') {
-                  return (<div className='letter'>{el}</div>)
-                } else {
-                  return (<div className='space'></div>)
-                }
-              })}
-            </div>
-            <div className='textLine G-alignItems-center'>
-              {FyTrading.map((el) => {
-                if (el !== ' ') {
-                  return (<div className='letter'>{el}</div>)
-                } else {
-                  return (<div className='space'></div>)
-                }
-              })}
-            </div>
-          </div>
-          <img className='imgArrowTop' src={arrowRightTop} alt='' />
-        </Link>
-        
-        <Link style={{ marginBottom: `50px` }} onClick={() => window.scrollTo(0, 0)} ref={myRef8} to='/sassSolution'
-              className={`Link G-alignItems-center ${visible8 ? 'scrollAnimation2' : ''}`}>
-          <div className='textBlock'>
-            <div className='textLine G-alignItems-center'>
-              {SaasSolution.map((el) => {
-                if (el !== ' ') {
-                  return (<div className='letter'>{el}</div>)
-                } else {
-                  return (<div className='space'></div>)
-                }
-              })}
-            </div>
-            <div className='textLine G-alignItems-center'>
-              {SaasSolution.map((el) => {
-                if (el !== ' ') {
-                  return (<div className='letter'>{el}</div>)
-                } else {
-                  return (<div className='space'></div>)
-                }
-              })}
-            </div>
-          </div>
-          <img className='imgArrowTop' src={arrowRightTop} alt='' />
-        </Link>
-      
+       <div className="globalLinks">
+         <Link onClick={() => window.scrollTo(0, 0)} ref={myRef8} to='/fyTrading'
+               className={`Link G-alignItems-center ${visible8 ? 'scrollAnimation2' : ''}`}>
+           <div className='textBlock'>
+             <div className='textLine G-alignItems-center'>
+               {FyTrading.map((el) => {
+                 if (el !== ' ') {
+                   return (<div className='letter'>{el}</div>)
+                 } else {
+                   return (<div className='space'></div>)
+                 }
+               })}
+             </div>
+             <div className='textLine G-alignItems-center'>
+               {FyTrading.map((el) => {
+                 if (el !== ' ') {
+                   return (<div className='letter'>{el}</div>)
+                 } else {
+                   return (<div className='space'></div>)
+                 }
+               })}
+             </div>
+           </div>
+           <img className='imgArrowTop' src={arrowRightTop} alt='' />
+         </Link>
+  
+         <Link style={{ marginBottom: `50px` }} onClick={() => window.scrollTo(0, 0)} ref={myRef8} to='/sassSolution'
+               className={`Link G-alignItems-center ${visible8 ? 'scrollAnimation2' : ''}`}>
+           <div className='textBlock'>
+             <div className='textLine G-alignItems-center'>
+               {SaasSolution.map((el) => {
+                 if (el !== ' ') {
+                   return (<div className='letter'>{el}</div>)
+                 } else {
+                   return (<div className='space'></div>)
+                 }
+               })}
+             </div>
+             <div className='textLine G-alignItems-center'>
+               {SaasSolution.map((el) => {
+                 if (el !== ' ') {
+                   return (<div className='letter'>{el}</div>)
+                 } else {
+                   return (<div className='space'></div>)
+                 }
+               })}
+             </div>
+           </div>
+           <img className='imgArrowTop' src={arrowRightTop} alt='' />
+         </Link>
+
+       </div>
       
       </div>
       
@@ -387,7 +397,8 @@ function Footer() {
         <p className='copyright'>Copyright © 2021 Fytechnology LTD . All Rights Reserved.</p>
         
         <div className='linksToPolicy'>
-          <Link className='LinkToPrivacy' onClick={() => window.scrollTo(0, 0)} to='/privacy&terms'>Privacy Policy</Link>
+          <Link className='LinkToPrivacy' onClick={() => window.scrollTo(0, 0)} to='/privacy&terms'>Privacy
+            Policy</Link>
         
         </div>
       </div>

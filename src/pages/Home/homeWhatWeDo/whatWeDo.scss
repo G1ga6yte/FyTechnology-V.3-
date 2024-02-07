@@ -5,11 +5,20 @@
   margin: 0 auto;
   flex-wrap: wrap;
   z-index: 6;
-  height: 1600px;
-  overflow: hidden;
+  height: 1500px;
   background-color: #E5E4E0;
   position: relative;
-  //max-width: 1570px;
+  @include screen($wide-ll){
+    height: 1400px;
+  }
+  @include screen($wide){
+    height: 1200px ;
+  }
+  @include screen($tablet-m){
+    height: 1500px;
+  }
+
+
 
   .BubbleImg1{
     pointer-events: none;
@@ -20,6 +29,9 @@
     rotate: -140deg;
     z-index: -1;
     opacity: 0.6;
+    @include screen($tablet-w){
+      display: none;
+    }
   }
 
   .BubbleImg2{
@@ -31,6 +43,10 @@
     rotate: -270deg;
     z-index: -1;
     opacity: 0.6;
+    @include screen($tablet-w){
+      display: none;
+    }
+
   }
 
   .headerBlock{
@@ -44,11 +60,23 @@
     margin-bottom: 16px;
     transition: 1s ease-in-out;
     border-bottom: 1px solid #C7C7C7;
-    @include screen($tablet-l){
-      font-size: 64px;
+    @include screen($wide-ll){
+      font-size: 110px;
+      padding: 40px 10px;
+    }
+    @include screen($wide){
+      font-size: 80px;
+      padding: 30px 10px;
+    }
+    @include screen($tablet-w){
+      font-size: 60px;
+      padding: 20px 10px;
     }
     @include screen($tablet){
-      font-size: 32px;
+      line-height: 60px;
+    }
+    @include screen($mobile-l){
+      font-size: 42px;
     }
   }
 
@@ -56,10 +84,23 @@
     margin-left: 11%;
     display: flex;
     align-items: center;
+    @include screen($wide-l){
+      margin-left: 5%;
+    }
     .blackLine{
       width: 145px;
       height: 5px;
       background-color: black;
+      @include screen($wide-l){
+        height: 4px;
+      }
+      @include screen($wide){
+        height: 3px;
+      }
+      @include screen($tablet){
+        height: 2px;
+        width: 100px;
+      }
     }
     .underHeader{
       margin-left: 2px;
@@ -67,6 +108,15 @@
       font-size: 48px;
       color: black;
       line-height: 40px;
+      @include screen($wide-l){
+        font-size: 40px;
+      }
+      @include screen($wide){
+        font-size: 32px;
+      }
+      @include screen($tablet){
+        font-size: 26px;
+      }
     }
   }
 
@@ -75,6 +125,16 @@
     position: relative;
     z-index: 5;
     margin: 56px auto 0;
+    @include screen($wide-lll){
+      padding: 0 10px;
+    }
+    @include screen($tablet-l){
+      justify-content: space-between;
+    }
+    @include screen($tablet){
+      margin: 20px auto 0;
+    }
+
 
     .bck2{
       height: 450px;
@@ -85,6 +145,21 @@
       margin-top: 56px;
       transition: 0.5s ease-in-out all;
       cursor: pointer;
+      @include screen($wide-ll){
+        height: 400px;
+        margin-top: 40px;
+      }
+      @include screen($wide){
+        margin-top: 25px;
+      }
+      @include screen($wide){
+        height: 350px;
+      }
+      @include screen($tablet-l){
+        display: none;
+      }
+
+
       &:hover{
         border-radius: 100px;
       }
@@ -102,7 +177,6 @@
       text-decoration: none;
       padding: 40px 0;
       transition: 0.5s ease-in-out all !important;
-
       &:hover{
         border-radius: 100px !important;
         svg{
@@ -135,6 +209,12 @@
             line-height: 1;
             margin-top: 100% !important;
             margin-left: 50% !important;
+            @include screen($tablet-l){
+              transform: none !important;
+              margin: 0 !important;
+              width: 100%;
+            }
+
           }
         }
       }
@@ -145,6 +225,12 @@
       display: flex;
       justify-content: end;
       margin-top: 50px;
+      @include screen($wide-ll){
+        margin-right: 50px;
+      }
+      @include screen($tablet){
+        margin-right: 20px;
+      }
 
       .textBlock{
         width: min-content;
@@ -157,6 +243,14 @@
           font-size: 32px;
           line-height: 50px;
           white-space: nowrap;
+          @include screen($mobile-l){
+            font-size: 26px;
+            line-height: 40px;
+          }
+          @include screen($mobile-m){
+            font-size: 20px;
+            line-height: 35px;
+          }
         }
         .underLine{
           height: 1px;

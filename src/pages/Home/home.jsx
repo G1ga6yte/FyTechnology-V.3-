@@ -23,10 +23,10 @@ function Home() {
       <div className={`index1 section ${visible1 ? "section1" : ""}`}>
         <HomeHead />
       </div>
-      <div ref={myRef1}  className={`index2 section  ${visible2 ? "section2" : ""}`}>
+      <div ref={myRef1}  className={`index2 section `}>
         <WhatWeDo />
       </div>
-      <div ref={myRef2} className={`index3 section ${visible3 ? "section3" : ""}`}>
+      <div ref={myRef2} className={`index3 section `}>
         <FeaturedWork />
       </div>
       <div ref={myRef3} className={`index4 section  ${visible4 ? "section4" : ""}`}>

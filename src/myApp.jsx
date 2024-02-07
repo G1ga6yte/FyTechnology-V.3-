@@ -31,7 +31,6 @@ function MyApp() {
   })
   function raf(time) {
         lenis.raf(time)
-    console.log(window.scrollY)
     requestAnimationFrame(raf)
   }
   requestAnimationFrame(raf)
@@ -83,7 +82,7 @@ function MyApp() {
     
     <div style={{ height: appSettings.height, overflow: appSettings.overflow }} className='App'>
       
-      {showNavigation && <LoadingComponent />}
+      {/*{showNavigation && <LoadingComponent />}*/}
       
       
       <div style={{ position: 'relative', zIndex: 1000 }}  className='MainRoutes'>

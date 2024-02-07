@@ -13,6 +13,13 @@
   @include screen($wide-l){
     padding: 0 60px;
   }
+  @include screen($tablet){
+    padding: 0 30px;
+  }
+  @include screen($mobile-l){
+    padding: 0 15px;
+    top: 5px;
+  }
 
   .logoNew{
     svg{
@@ -25,7 +32,7 @@
       @include screen($wide){
         width: 80px;
       }
-      @include screen($desktop) {
+      @include screen($tablet) {
         width: 60px;
       }
     }
