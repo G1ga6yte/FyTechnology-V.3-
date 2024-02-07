@@ -83,7 +83,7 @@ function MyApp() {
     
     <div style={{ height: appSettings.height, overflow: appSettings.overflow }} className='App'>
       
-      {/*{showNavigation && <LoadingComponent />}*/}
+      {showNavigation && <LoadingComponent />}
       
       
       <div style={{ position: 'relative', zIndex: 1000 }}  className='MainRoutes'>
