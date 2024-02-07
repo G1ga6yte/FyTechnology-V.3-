@@ -11,6 +11,7 @@ function WhatPayingFor() {
   const {ref: myRef1, inView: visibleEl1} = useInView()
   const {ref: myRef2, inView: visibleEl2} = useInView()
   const {ref: myRef3, inView: visibleEl3} = useInView()
+  const {ref: myRef4, inView: visibleEl4} = useInView()
   
   
   
@@ -22,7 +23,7 @@ function WhatPayingFor() {
        <img className="BubbleImg2 bubbleAnim" src={Bubbles} alt=""/>
   
        <div className="headerBlock">
-         <p className="header">What are you paying for?</p>
+         <p ref={myRef4} className={`header ${visibleEl4 ? "scrollAnimation" : ""}`}>What are you paying for?</p>
        </div>
        
        <div className="cards G-flex-between G-flex-wrap">
