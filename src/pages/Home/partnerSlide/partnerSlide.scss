@@ -6,42 +6,11 @@
   z-index: 3;
   overflow: hidden;
   background-color: #E5E4E0;
-  height: 1320px;
+  height: 100vh;
 
-  .header{
-    font-size: 148px;
-    font-family: 'IFBosch', sans-serif;
-    color: black;
-    margin: 0 0 50px 10%;
-  }
 
   .introCont{
     width: 100%;
     height: 100vh;
   }
-
-  .Blocks{
-    width: 100%;
-    display: flex;
-    .block{
-      width: 5%;
-      height: 40px;
-      border: 1px solid #EAEAEA;
-    }
-  }
-
-  .slick-slider{
-    margin-bottom: 50px;
-    button{
-      display: none !important;
-    }
-    .slick-track{
-      display: flex;
-      img{
-        height: 100px;
-      }
-    }
-
-  }
-
 }
