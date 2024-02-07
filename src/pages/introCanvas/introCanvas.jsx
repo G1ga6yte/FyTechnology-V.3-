@@ -3,6 +3,8 @@ import React, { Suspense, useEffect, useState } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { Reflector, Text, useTexture, useGLTF } from '@react-three/drei'
 import "./introCanvas.css"
+
+
 export default function IntroCanvas() {
   return (
     <Canvas concurrent gl={{ alpha: false }} pixelRatio={[1, 1.5]} camera={{ position: [0, 3, 100], fov: 15 }}>
@@ -31,8 +33,10 @@ function Carla(props) {
 function VideoText(props) {
   const [video] = useState(() => Object.assign(document.createElement('video'), { src: '/drei.mp4', crossOrigin: 'Anonymous', loop: true, muted: true }))
   useEffect(() => void video.play(), [video])
+  const fontPath = './DarkerGrotesque-VariableFont_wght.ttf';
+  
   return (
-    <Text font="/Inter-Bold.woff" fontSize={1} letterSpacing={-0.06} {...props}>
+    <Text font={fontPath} fontSize={1.2} letterSpacing={-0.06} {...props}>
       Fy Technology
       <meshBasicMaterial toneMapped={false}>
         <videoTexture attach="map" args={[video]} encoding={THREE.sRGBEncoding} />

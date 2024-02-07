@@ -19,6 +19,7 @@
 }
 
 .menu {
+
     position: absolute;
     top: 0;
     left: 0;
@@ -44,8 +45,6 @@
 }
 
 .menu > div {
-    word-wrap: none;
-    word-break: none;
     white-space: pre;
     padding-left: 25px;
     padding-right: 25px;
